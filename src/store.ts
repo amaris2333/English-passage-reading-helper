@@ -6,6 +6,7 @@ import type {
 } from './types';
 import { ATLAS_ARTICLES, ATLAS_IDS } from './data/atlas';
 import { ensureDict } from './lib/lookup';
+import { ensureExamples } from './lib/examples';
 import { initNlp } from './lib/analyze';
 import { analyzeFirstSentenceOnly, analyzeWholeArticle, recalcMeta, TAG_VOCAB } from './lib/article';
 import {
@@ -173,7 +174,7 @@ export const useStore = create<AppState>((set, get) => ({
     const currentId = settings.lastArticleId && seeded[settings.lastArticleId] ? settings.lastArticleId : order[0] ?? null;
 
     set({ ready: true, articles: seeded, order, settings, notes, currentId, favFolders, favItems, customTags });
-    void ensureDict();
+    void ensureDict().then(() => ensureExamples());
     void initNlp();
     if (currentId) void get().initHighlightsFor(currentId);
   },

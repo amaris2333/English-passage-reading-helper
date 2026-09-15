@@ -2,6 +2,7 @@ import { nanoid } from 'nanoid';
 import type { Article, Paragraph, Sentence, Difficulty } from '../types';
 import { countWords, splitParagraphs, splitSentences } from './split';
 import { analyzeSentence } from './analyze';
+import { extractPhrases } from './phrases';
 import { SCHEMA_VERSION } from '../types';
 
 export const TAG_VOCAB = [
@@ -122,7 +123,7 @@ export function analyzeFirstSentenceOnly(article: Article): Article {
     sentences: p.sentences.map((s) => {
       if (done || s.analysis) return s;
       done = true;
-      return { ...s, analysis: analyzeSentence(s.en) };
+      return { ...s, analysis: analyzeSentence(s.en), phrases: extractPhrases(s.en) };
     }),
   }));
   return { ...article, paragraphs };
@@ -132,7 +133,7 @@ export function analyzeFirstSentenceOnly(article: Article): Article {
 export function analyzeWholeArticle(article: Article): Article {
   const paragraphs = article.paragraphs.map((p) => ({
     ...p,
-    sentences: p.sentences.map((s) => (s.analysis ? s : { ...s, analysis: analyzeSentence(s.en) })),
+    sentences: p.sentences.map((s) => (s.analysis ? s : { ...s, analysis: analyzeSentence(s.en), phrases: extractPhrases(s.en) })),
   }));
   return { ...article, paragraphs };
 }

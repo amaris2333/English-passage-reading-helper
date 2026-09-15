@@ -300,8 +300,8 @@ export function Reader({ article, readerRef, inkCanvasRef }: Props) {
       {pop && (
         <WordCard
           word={pop.word}
-          anchor={pop.rect}
           sentenceEn={pop.sentenceEn}
+          anchor={pop.rect}
           rate={ttsRate}
           accent={ttsAccent}
           onAccentChange={setTtsAccent}

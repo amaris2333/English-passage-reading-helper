@@ -57,6 +57,13 @@ export function Toolbar() {
             <div className="hint">
               所有数据都保存在本机浏览器（IndexedDB）中，不会上传。建议定期备份。
             </div>
+            <div className="hint" style={{ marginTop: 8 }}>
+              <b>数据与授权</b><br />
+              · 释义与考试分级：<a href="https://github.com/skywind3000/ECDICT" target="_blank" rel="noreferrer">ECDICT</a>（MIT License）<br />
+              · 例句：<a href="https://tatoeba.org" target="_blank" rel="noreferrer">Tatoeba</a>（CC BY 2.0 FR），
+              由 <a href="https://tatoeba.org/zh-cn/stats/sentences_by_language/eng" target="_blank" rel="noreferrer">社区贡献者</a> 提供<br />
+              · 内置范例：美国国会研究服务处（CRS）、NASA（均为公共领域）
+            </div>
 
             <div className="row" style={{ marginTop: 12 }}>
               <label>朗读语速：{useStore.getState().settings.ttsRate.toFixed(2)}</label>

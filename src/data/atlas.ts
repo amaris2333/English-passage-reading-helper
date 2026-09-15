@@ -58,7 +58,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p0-s1",
@@ -105,7 +106,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-182-0",
+                "text": "to name a few",
+                "zh": "仅举几例",
+                "kind": "习语"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p0-s2",
@@ -126,7 +135,15 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-114-0",
+                "text": "depend on",
+                "zh": "取决于；依赖",
+                "kind": "短语动词"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p0-s3",
@@ -164,7 +181,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p0-s4",
@@ -200,7 +218,8 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           }
         ]
       },
@@ -253,7 +272,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p1-s1",
@@ -299,7 +319,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-63-0",
+                "text": "focused on",
+                "zh": "聚焦于；集中于",
+                "kind": "短语动词"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p1-s2",
@@ -346,7 +374,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p1-s3",
@@ -398,7 +427,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "本句含 2 个从属分句，先锁定主句主干，再逐层挂回修饰成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-50-0",
+                "text": "in part",
+                "zh": "部分地",
+                "kind": "习语"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p1-s4",
@@ -419,7 +456,15 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-25-0",
+                "text": "in the spotlight",
+                "zh": "备受关注",
+                "kind": "习语"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p1-s5",
@@ -442,7 +487,21 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-14-0",
+                "text": "refers to",
+                "zh": "指的是；提及",
+                "kind": "短语动词"
+              },
+              {
+                "id": "ph-215-1",
+                "text": "depend on",
+                "zh": "取决于；依赖",
+                "kind": "短语动词"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p1-s6",
@@ -488,7 +547,21 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-228-0",
+                "text": "in the form of",
+                "zh": "以…的形式",
+                "kind": "介词框架"
+              },
+              {
+                "id": "ph-166-1",
+                "text": "raised concerns",
+                "zh": "引发担忧",
+                "kind": "固定搭配"
+              }
+            ]
           }
         ]
       },
@@ -531,7 +604,15 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-41-0",
+                "text": "depend on",
+                "zh": "取决于；依赖",
+                "kind": "短语动词"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p2-s1",
@@ -562,7 +643,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p2-s2",
@@ -593,7 +675,21 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-67-0",
+                "text": "the number of",
+                "zh": "…的数量",
+                "kind": "习语"
+              },
+              {
+                "id": "ph-0-1",
+                "text": "According to",
+                "zh": "根据",
+                "kind": "介词框架"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p2-s3",
@@ -616,7 +712,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p2-s4",
@@ -639,7 +736,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "注意句中的否定范围，否定词可能只作用于局部成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p2-s5",
@@ -686,7 +784,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "注意句中的否定范围，否定词可能只作用于局部成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p2-s6",
@@ -724,7 +823,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p2-s7",
@@ -777,7 +877,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p2-s8",
@@ -813,7 +914,8 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p2-s9",
@@ -858,7 +960,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "本句含 1 个从属分句，先锁定主句主干，再逐层挂回修饰成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p2-s10",
@@ -881,7 +984,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "注意句中的否定范围，否定词可能只作用于局部成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p2-s11",
@@ -919,7 +1023,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p2-s12",
@@ -958,7 +1063,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-0-0",
+                "text": "According to",
+                "zh": "根据",
+                "kind": "介词框架"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p2-s13",
@@ -979,7 +1092,15 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-155-0",
+                "text": "take over",
+                "zh": "接管；取代",
+                "kind": "短语动词"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p2-s14",
@@ -1024,7 +1145,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "本句含 1 个从属分句，先锁定主句主干，再逐层挂回修饰成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-0-0",
+                "text": "As such",
+                "zh": "因此；就其本身而言",
+                "kind": "习语"
+              }
+            ]
           }
         ]
       },
@@ -1069,7 +1198,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p3-s1",
@@ -1122,7 +1252,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p3-s2",
@@ -1158,7 +1289,15 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-41-0",
+                "text": "with regard to",
+                "zh": "关于",
+                "kind": "习语"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p3-s3",
@@ -1210,7 +1349,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "本句含 3 个从属分句，先锁定主句主干，再逐层挂回修饰成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p3-s4",
@@ -1257,7 +1397,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "注意句中的否定范围，否定词可能只作用于局部成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-68-0",
+                "text": "on average",
+                "zh": "平均而言",
+                "kind": "习语"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p3-s5",
@@ -1302,7 +1450,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "本句含 1 个从属分句，先锁定主句主干，再逐层挂回修饰成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p3-s6",
@@ -1326,7 +1475,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "注意句中的否定范围，否定词可能只作用于局部成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-182-0",
+                "text": "in the long run",
+                "zh": "从长远来看",
+                "kind": "习语"
+              }
+            ]
           }
         ]
       },
@@ -1378,7 +1535,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "本句含 2 个从属分句，先锁定主句主干，再逐层挂回修饰成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p4-s1",
@@ -1423,7 +1581,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "本句含 2 个从属分句，先锁定主句主干，再逐层挂回修饰成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p4-s2",
@@ -1476,7 +1635,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p4-s3",
@@ -1523,7 +1683,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-94-0",
+                "text": "in part",
+                "zh": "部分地",
+                "kind": "习语"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p4-s4",
@@ -1569,7 +1737,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p4-s5",
@@ -1614,7 +1783,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "本句含 1 个从属分句，先锁定主句主干，再逐层挂回修饰成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-75-0",
+                "text": "accounts for",
+                "zh": "解释；占（比例）；导致",
+                "kind": "短语动词"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p4-s6",
@@ -1660,7 +1837,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-22-0",
+                "text": "results in",
+                "zh": "导致；造成",
+                "kind": "短语动词"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p4-s7",
@@ -1698,7 +1883,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "本句含 1 个从属分句，先锁定主句主干，再逐层挂回修饰成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-24-0",
+                "text": "in the short run",
+                "zh": "从短期来看",
+                "kind": "习语"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p4-s8",
@@ -1734,7 +1927,8 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p4-s9",
@@ -1770,7 +1964,8 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p4-s10",
@@ -1806,7 +2001,8 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p4-s11",
@@ -1844,7 +2040,21 @@ export const ATLAS_ARTICLES: Article[] = [
                 "本句含 1 个从属分句，先锁定主句主干，再逐层挂回修饰成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-72-0",
+                "text": "result in",
+                "zh": "导致；造成",
+                "kind": "短语动词"
+              },
+              {
+                "id": "ph-85-1",
+                "text": "up to",
+                "zh": "多达；直到",
+                "kind": "介词框架"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p4-s12",
@@ -1890,7 +2100,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-107-0",
+                "text": "in addition to",
+                "zh": "除…之外还",
+                "kind": "介词框架"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p4-s13",
@@ -1921,7 +2139,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p4-s14",
@@ -1950,7 +2169,8 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p4-s15",
@@ -1988,7 +2208,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p4-s16",
@@ -2042,7 +2263,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "注意句中的否定范围，否定词可能只作用于局部成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-49-0",
+                "text": "in the long run",
+                "zh": "从长远来看",
+                "kind": "习语"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p4-s17",
@@ -2081,7 +2310,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-67-0",
+                "text": "in the long run",
+                "zh": "从长远来看",
+                "kind": "习语"
+              }
+            ]
           }
         ]
       },
@@ -2119,7 +2356,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p5-s1",
@@ -2165,7 +2403,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "注意句中的否定范围，否定词可能只作用于局部成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p5-s2",
@@ -2203,7 +2442,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p5-s3",
@@ -2249,7 +2489,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "注意句中的否定范围，否定词可能只作用于局部成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p5-s4",
@@ -2288,7 +2529,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p5-s5",
@@ -2333,7 +2575,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "本句含 1 个从属分句，先锁定主句主干，再逐层挂回修饰成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p5-s6",
@@ -2369,7 +2612,15 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-0-0",
+                "text": "On average",
+                "zh": "平均而言",
+                "kind": "习语"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p5-s7",
@@ -2407,7 +2658,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-90-0",
+                "text": "resulting in",
+                "zh": "导致；造成",
+                "kind": "短语动词"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p5-s8",
@@ -2443,7 +2702,15 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-0-0",
+                "text": "On the other hand",
+                "zh": "另一方面",
+                "kind": "习语"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p5-s9",
@@ -2481,7 +2748,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "本句含 1 个从属分句，先锁定主句主干，再逐层挂回修饰成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           }
         ]
       },
@@ -2524,7 +2792,15 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-26-0",
+                "text": "arise from",
+                "zh": "由…产生",
+                "kind": "短语动词"
+              }
+            ]
           },
           {
             "id": "crs-if12762-ai-macro-p6-s1",
@@ -2570,7 +2846,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p6-s2",
@@ -2615,7 +2892,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "本句含 2 个从属分句，先锁定主句主干，再逐层挂回修饰成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "crs-if12762-ai-macro-p6-s3",
@@ -2675,7 +2953,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-211-0",
+                "text": "take effect",
+                "zh": "生效",
+                "kind": "固定搭配"
+              }
+            ]
           }
         ]
       }
@@ -2745,7 +3031,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p0-s1",
@@ -2781,7 +3068,8 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p0-s2",
@@ -2827,7 +3115,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p0-s3",
@@ -2863,7 +3152,8 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p0-s4",
@@ -2901,7 +3191,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           }
         ]
       },
@@ -2953,7 +3244,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p1-s1",
@@ -2991,7 +3283,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           }
         ]
       },
@@ -3044,7 +3337,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p2-s1",
@@ -3084,7 +3378,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-22-0",
+                "text": "responds to",
+                "zh": "对…作出反应",
+                "kind": "短语动词"
+              }
+            ]
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p2-s2",
@@ -3120,7 +3422,8 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           }
         ]
       },
@@ -3171,7 +3474,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "本句含 1 个从属分句，先锁定主句主干，再逐层挂回修饰成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-26-0",
+                "text": "account for",
+                "zh": "解释；占（比例）；导致",
+                "kind": "短语动词"
+              }
+            ]
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p3-s1",
@@ -3209,7 +3520,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p3-s2",
@@ -3245,7 +3557,8 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p3-s3",
@@ -3283,7 +3596,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p3-s4",
@@ -3328,7 +3642,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "本句含 1 个从属分句，先锁定主句主干，再逐层挂回修饰成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           }
         ]
       },
@@ -3373,7 +3688,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p4-s1",
@@ -3419,7 +3735,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           }
         ]
       },
@@ -3463,7 +3780,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-182-0",
+                "text": "respond to",
+                "zh": "对…作出反应",
+                "kind": "短语动词"
+              }
+            ]
           }
         ]
       },
@@ -3516,7 +3841,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-56-0",
+                "text": "in addition to",
+                "zh": "除…之外还",
+                "kind": "介词框架"
+              }
+            ]
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p6-s1",
@@ -3554,7 +3887,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "本句含 1 个从属分句，先锁定主句主干，再逐层挂回修饰成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           }
         ]
       },
@@ -3599,7 +3933,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s1",
@@ -3645,7 +3980,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s2",
@@ -3683,7 +4019,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s3",
@@ -3707,7 +4044,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s4",
@@ -3745,7 +4083,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s5",
@@ -3792,7 +4131,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s6",
@@ -3838,7 +4178,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s7",
@@ -3874,7 +4215,8 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s8",
@@ -3912,7 +4254,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-107-0",
+                "text": "building up",
+                "zh": "逐渐积累；增强",
+                "kind": "短语动词"
+              }
+            ]
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s9",
@@ -3948,7 +4298,8 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s10",
@@ -3977,7 +4328,8 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s11",
@@ -4015,7 +4367,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           }
         ]
       },
@@ -4067,7 +4420,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-67-0",
+                "text": "up to",
+                "zh": "多达；直到",
+                "kind": "介词框架"
+              }
+            ]
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p8-s1",
@@ -4105,7 +4466,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p8-s2",
@@ -4141,7 +4503,15 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-106-0",
+                "text": "up to",
+                "zh": "多达；直到",
+                "kind": "介词框架"
+              }
+            ]
           }
         ]
       },
@@ -4187,7 +4557,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s1",
@@ -4211,7 +4582,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-90-0",
+                "text": "end up with",
+                "zh": "以…收场",
+                "kind": "短语动词"
+              }
+            ]
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s2",
@@ -4257,7 +4636,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-19-0",
+                "text": "responds to",
+                "zh": "对…作出反应",
+                "kind": "短语动词"
+              }
+            ]
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s3",
@@ -4303,7 +4690,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s4",
@@ -4326,7 +4714,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s5",
@@ -4379,7 +4768,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s6",
@@ -4433,7 +4823,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s7",
@@ -4471,7 +4862,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "本句含 1 个从属分句，先锁定主句主干，再逐层挂回修饰成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s8",
@@ -4517,7 +4909,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s9",
@@ -4563,7 +4956,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s10",
@@ -4601,7 +4995,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s11",
@@ -4624,7 +5019,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s12",
@@ -4662,7 +5058,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "注意句中的否定范围，否定词可能只作用于局部成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s13",
@@ -4698,7 +5095,8 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s14",
@@ -4734,7 +5132,8 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s15",
@@ -4772,7 +5171,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s16",
@@ -4801,7 +5201,8 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s17",
@@ -4840,7 +5241,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s18",
@@ -4878,7 +5280,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s19",
@@ -4917,7 +5320,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-40-0",
+                "text": "respond to",
+                "zh": "对…作出反应",
+                "kind": "短语动词"
+              }
+            ]
           }
         ]
       },
@@ -4960,7 +5371,8 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "notes": [],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p10-s1",
@@ -4998,7 +5410,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "本句含 1 个从属分句，先锁定主句主干，再逐层挂回修饰成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p10-s2",
@@ -5036,7 +5449,15 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-88-0",
+                "text": "prior to",
+                "zh": "在…之前",
+                "kind": "介词框架"
+              }
+            ]
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p10-s3",
@@ -5060,7 +5481,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "注意句中的否定范围，否定词可能只作用于局部成分。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p10-s4",
@@ -5083,7 +5505,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p10-s5",
@@ -5121,7 +5544,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句中有插入成分，阅读时可先跳过，主句依然完整。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p10-s6",
@@ -5167,7 +5591,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": []
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p10-s7",
@@ -5220,7 +5645,21 @@ export const ATLAS_ARTICLES: Article[] = [
                 "句首出现分词短语时，它通常作状语，真正的主语在逗号之后。"
               ],
               "generatedBy": "rule"
-            }
+            },
+            "phrases": [
+              {
+                "id": "ph-181-0",
+                "text": "responding to",
+                "zh": "对…作出反应",
+                "kind": "短语动词"
+              },
+              {
+                "id": "ph-306-1",
+                "text": "depend on",
+                "zh": "取决于；依赖",
+                "kind": "短语动词"
+              }
+            ]
           }
         ]
       }

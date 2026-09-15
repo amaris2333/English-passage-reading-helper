@@ -132,12 +132,14 @@ export function AnalysisPanel({ sentence, showPhrases, onUpdate, onCollapse, onS
         {showPhrases && sentence.phrases && sentence.phrases.length > 0 ? (
           sentence.phrases.map((p) => (
             <div className="phrase-item" key={p.id}>
-              <b>{p.text}</b> — {p.zh}
+              <b>{p.text}</b>
+              {p.kind && <span className="phrase-kind">{p.kind}</span>}
+              {' — '}{p.zh}
             </div>
           ))
         ) : (
           <div style={{ fontSize: 12.5, color: 'var(--text-2)' }}>
-            该句暂无预置词组标注。
+            该句没有命中词组标准（短语动词 / 固定搭配 / 习语 / 介词框架），不强行凑数。
           </div>
         )}
       </div>

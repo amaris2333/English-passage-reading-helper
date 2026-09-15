@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import { EXAM_LABEL, lookupWord, ensureDict, dictReady, dictSize } from '../lib/lookup';
 import { speak, type Accent } from '../lib/speech';
+import { ensureExamples, examplesReady, getExamples } from '../lib/examples';
+import { lookupOnline, isLikelyProperNoun, type NetDef } from '../lib/netdict';
 
 interface Props {
   word: string;
-  anchor: DOMRect;
   sentenceEn?: string;
+  anchor: DOMRect;
   rate: number;
   accent: Accent;
   onAccentChange: (a: Accent) => void;
@@ -20,10 +22,29 @@ export function WordCard({
   const ref = useRef<HTMLDivElement>(null);
   const [pos, setPos] = useState<{ top: number; left: number }>({ top: -9999, left: -9999 });
   const [, force] = useState(0);
+  const [net, setNet] = useState<NetDef[] | null | undefined>(undefined);
+
+  const result = lookupWord(word);
+  const entry = result.entry;
+  const netDefs = net;
 
   useEffect(() => {
     if (!dictReady()) void ensureDict().then(() => force((n) => n + 1));
+    if (!examplesReady()) void ensureExamples().then(() => force((n) => n + 1));
   }, [word]);
+
+  // 词典未收录时，联网补一条基础释义（结果只存本机）
+  useEffect(() => {
+    if (!dictReady() || entry || net !== undefined) return;
+    if (isLikelyProperNoun(result.surface, sentenceEn)) return;
+    let alive = true;
+    void lookupOnline(result.surface).then((d) => {
+      if (!alive) return;
+      setNet(d ?? null);
+      force((n) => n + 1);
+    });
+    return () => { alive = false; };
+  }, [word, entry, net, result.surface]);
 
   useEffect(() => {
     const el = ref.current;
@@ -45,21 +66,28 @@ export function WordCard({
     return () => window.removeEventListener('keydown', onKey);
   }, [onClose]);
 
-  const result = lookupWord(word);
-  const entry = result.entry;
   const exams = entry?.tags?.split(',').filter(Boolean) ?? [];
   const ready = dictReady();
+  const ex = getExamples(result.surface);
+  const isProper = !entry && isLikelyProperNoun(result.surface, sentenceEn);
 
   return (
     <div className="word-card" ref={ref} style={{ top: pos.top, left: pos.left }} onMouseDown={(e) => e.stopPropagation()}>
       <div className="wc-top">
         <span className="wc-word">{result.surface}</span>
-        {entry?.ph && <span className="wc-ph">/{entry.ph.replace(/^[/]|[/]$/g, '')}/</span>}
+        {entry?.ph && (
+          <span className="wc-ph">
+            /{entry.ph.replace(/^[/]|[/]$/g, '').replace(/^[.·]+|[.·]+$/g, '')}/
+          </span>
+        )}
         <button className="icon-btn" title="朗读" onClick={() => speak(result.surface, accent, rate)}>🔊</button>
-        <div className="seg" style={{ marginLeft: 2 }}>
-          <button className={accent === 'us' ? 'on' : ''} onClick={() => onAccentChange('us')} style={{ padding: '1px 6px', fontSize: 11 }}>美</button>
-          <button className={accent === 'uk' ? 'on' : ''} onClick={() => onAccentChange('uk')} style={{ padding: '1px 6px', fontSize: 11 }}>英</button>
-        </div>
+        <button
+          className="accent-btn"
+          title={accent === 'us' ? '当前：美音（点击切换为英音）' : '当前：英音（点击切换为美音）'}
+          onClick={() => onAccentChange(accent === 'us' ? 'uk' : 'us')}
+        >
+          {accent === 'us' ? '美' : '英'}
+        </button>
         <button
           className={`star-btn inline${starred ? ' on' : ''}`}
           title={starred ? '取消收藏此词' : '收藏此词到「单词收藏」'}
@@ -67,7 +95,6 @@ export function WordCard({
         >
           {starred ? '★' : '☆'}
         </button>
-        <span style={{ flex: 1 }} />
         <button className="icon-btn" title="关闭" onClick={onClose}>✕</button>
       </div>
 
@@ -106,16 +133,64 @@ export function WordCard({
             </div>
           )}
           <div className="wc-row" style={{ fontSize: 11, color: 'var(--text-3)' }}>
-            词典词条 {dictSize().toLocaleString()} 条
+            词典词条 {dictSize().toLocaleString()} 条 · 例句来源 Tatoeba (CC BY 2.0 FR)
           </div>
         </>
       ) : (
-        <div className="wc-row wc-miss">未收录该词。可点 🔊 听发音，或记录到便签。</div>
+        <>
+          {isProper ? (
+            <div className="wc-row">
+              这看起来是<b>专有名词</b>（人名 / 地名 / 机构名等），词典一般不会收录，也不影响理解。
+              <div style={{ marginTop: 4, color: 'var(--text-3)', fontSize: 12 }}>可点 🔊 听发音，或收藏到便签。</div>
+            </div>
+          ) : (
+            <>
+              <div className="wc-row wc-miss">
+                本地词库未收录该词。
+                {net === undefined && <div style={{ marginTop: 4 }}>正在联网查询基础释义…（最长约 4 秒）</div>}
+                {net !== undefined && netDefs == null && <div style={{ marginTop: 4 }}>网络释义也未查到。可点 🔊 听发音，或记录到便签。</div>}
+              </div>
+              {netDefs && netDefs.length > 0 && (
+                <div className="wc-row">
+                  <div className="wc-label">网络释义</div>
+                  {netDefs.slice(0, 4).map((d, i) => (
+                    <div key={i}>
+                      {d.pos && <span style={{ color: 'var(--text-3)', marginRight: 4 }}>{d.pos}.</span>}
+                      {d.text}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </>
+          )}
+          {netDefs && netDefs.length > 0 && (
+            <div className="wc-row">
+              <div className="wc-label">网络释义</div>
+              {netDefs.slice(0, 4).map((d, i) => (
+                <div key={i}>
+                  {d.pos && <span style={{ color: 'var(--text-3)', marginRight: 4 }}>{d.pos}.</span>}
+                  {d.text}
+                </div>
+              ))}
+            </div>
+          )}
+        </>
       )}
 
-      {sentenceEn && (
+      {ex.examples.length > 0 && (
         <div className="wc-sent">
-          {sentenceEn.replace(new RegExp(`\\b${result.surface.replace(/[-']/g, '.')}\\b`, 'i'), '【$&】')}
+          <div className="wc-label">例句</div>
+          {ex.examples.map((s, i) => (
+            <div className="wc-eg" key={i}>
+              {s.replace(new RegExp(`\\b${result.surface.replace(/[-']/g, '.')}\\w{0,3}\\b`, 'i'), '【$&】')}
+            </div>
+          ))}
+        </div>
+      )}
+      {!ex.examples.length && ex.definition && (
+        <div className="wc-sent">
+          <div className="wc-label">英文释义</div>
+          <div className="wc-eg">{ex.definition}</div>
         </div>
       )}
     </div>

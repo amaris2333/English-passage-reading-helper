@@ -27,6 +27,8 @@ export interface Phrase {
   text: string;
   zh: string;
   level?: 'common' | 'idiomatic' | 'academic';
+  /** 词组类别：短语动词 / 固定搭配 / 习语 / 介词框架 */
+  kind?: string;
 }
 
 export interface Sentence {

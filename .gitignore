@@ -22,6 +22,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# 本地专属文章（真实外刊原文，版权敏感，绝不提交到公开仓库）
+public/local/
+
 # 环境变量（若将来接入 AI Key，务必不要提交）
 .env
 .env.*

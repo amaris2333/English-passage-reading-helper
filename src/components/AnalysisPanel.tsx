@@ -1,16 +1,6 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import type { Sentence } from '../types';
-
-const ROLE_LABEL: Record<string, string> = {
-  S: '主语 S',
-  V: '谓语 V',
-  O: '宾语 O',
-  C: '表/补 C',
-  M: '状语 M',
-  Clause: '从句',
-  Appositive: '同位语',
-  Insert: '插入语',
-};
+import { buildStructure, ROLE_LABEL } from '../lib/structure';
 
 interface Props {
   sentence: Sentence;
@@ -23,6 +13,7 @@ export function AnalysisPanel({ sentence, showPhrases, onUpdate, onCollapse }: P
   const [editing, setEditing] = useState(false);
   const [zh, setZh] = useState(sentence.zh ?? '');
   const a = sentence.analysis;
+  const structure = useMemo(() => buildStructure(sentence), [sentence]);
 
   const saveZh = () => {
     onUpdate({ zh });
@@ -31,6 +22,46 @@ export function AnalysisPanel({ sentence, showPhrases, onUpdate, onCollapse }: P
 
   return (
     <div className="panel">
+      <div className="sec">
+        <h4>结构拆解</h4>
+        {structure ? (
+          <div className="struct">
+            <div className="struct-trunk">
+              <span className="struct-label">句子主干</span>
+              <div className="struct-trunk-text">{structure.trunk || '（暂无）'}</div>
+              {structure.trunkParts.length > 0 && (
+                <div className="struct-branch">
+                  {structure.trunkParts.map((c, i) => (
+                    <div className="struct-item" key={i}>
+                      <span className="role-tag">{ROLE_LABEL[c.role] ?? c.role}</span>
+                      <span className={`chunk-${c.role}`}>{c.text}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+            {structure.levels.map((lv) => (
+              <div className="struct-branch" key={lv.key}>
+                <span className="struct-label">{lv.label}</span>
+                {lv.items.map((c, i) => (
+                  <div className="struct-item" key={i}>
+                    <span className="role-tag">{ROLE_LABEL[c.role] ?? c.role}</span>
+                    <span>
+                      <span className={`chunk-${c.role}`}>{c.text}</span>
+                      {c.note && <div className="chunk-note">{c.note}</div>}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div style={{ fontSize: 12.5, color: 'var(--text-2)' }}>
+            该句暂无预置结构拆解（短句或尚未标注）。
+          </div>
+        )}
+      </div>
+
       <div className="sec">
         <h4>句型分析</h4>
         {a ? (

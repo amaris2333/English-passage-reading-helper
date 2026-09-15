@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import type { AppSettings, Article, Note, Sentence } from './types';
 import { SAMPLE_ARTICLES, SAMPLE_IDS } from './data/samples';
+import { ensureDict } from './lib/lookup';
 import {
   DEFAULT_SETTINGS,
   loadArticles,
@@ -37,6 +38,7 @@ interface AppState {
   setDisplay: (d: AppSettings['display']) => void;
   setFontScale: (v: number) => void;
   setTtsRate: (v: number) => void;
+  setTtsAccent: (v: 'us' | 'uk') => void;
   setShowPhrases: (v: boolean) => void;
   addArticle: (a: Article) => void;
   updateArticle: (a: Article) => void;
@@ -53,6 +55,18 @@ interface AppState {
   setExportOpen: (v: boolean) => void;
   saveNote: (n: Note) => void;
   setNoteVisible: (v: boolean) => void;
+}
+
+/** 本地专属文章：放在 public/local/articles.json，不进 git（真实外刊有版权） */
+async function loadLocalArticles(): Promise<Article[]> {
+  try {
+    const res = await fetch(`${import.meta.env.BASE_URL}local/articles.json`);
+    if (!res.ok) return [];
+    const data = await res.json();
+    return Array.isArray(data) ? (data as Article[]) : [];
+  } catch {
+    return [];
+  }
 }
 
 let saveTimer: number | undefined;
@@ -74,7 +88,7 @@ export const useStore = create<AppState>((set, get) => ({
   focusSentenceId: null,
   editMode: 'off',
   penColor: '#e53935',
-  penSize: 4,
+  penSize: 3,
   eraserSize: 18,
 
   libraryOpen: true,
@@ -85,7 +99,7 @@ export const useStore = create<AppState>((set, get) => ({
     const [articles, settings, notes] = await Promise.all([loadArticles(), loadSettings(), loadNotes()]);
     const seeded = { ...articles };
     let changed = false;
-    for (const s of SAMPLE_ARTICLES) {
+    for (const s of [...SAMPLE_ARTICLES, ...(await loadLocalArticles())]) {
       if (!seeded[s.id]) {
         seeded[s.id] = s;
         changed = true;
@@ -97,6 +111,7 @@ export const useStore = create<AppState>((set, get) => ({
     const currentId = settings.lastArticleId && seeded[settings.lastArticleId] ? settings.lastArticleId : order[0] ?? null;
 
     set({ ready: true, articles: seeded, order, settings, notes, currentId });
+    void ensureDict();
   },
 
   selectArticle: (id) => {
@@ -124,6 +139,12 @@ export const useStore = create<AppState>((set, get) => ({
     void saveSettings(next);
   },
 
+  setTtsAccent: (ttsAccent) => {
+    const next = { ...get().settings, ttsAccent };
+    set({ settings: next });
+    void saveSettings(next);
+  },
+
   setShowPhrases: (showPhrases) => {
     const next = { ...get().settings, showPhrases };
     set({ settings: next });
@@ -145,6 +166,7 @@ export const useStore = create<AppState>((set, get) => ({
 
   removeArticle: (id) => {
     if (SAMPLE_IDS.has(id)) return;
+    if (get().articles[id]?.sourceType === 'local') return;
     const articles = { ...get().articles };
     delete articles[id];
     const order = get().order.filter((x) => x !== id);

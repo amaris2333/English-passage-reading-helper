@@ -3,6 +3,13 @@ import { useStore } from '../store';
 import { TAG_VOCAB, difficultyLabel } from '../lib/article';
 import { SAMPLE_IDS } from '../data/samples';
 
+const DIFF_GROUPS: Array<{ label: string; levels: number[] }> = [
+  { label: '入门', levels: [1, 2] },
+  { label: '进阶', levels: [3] },
+  { label: '挑战', levels: [4] },
+  { label: '高阶', levels: [5] },
+];
+
 export function Sidebar() {
   const articles = useStore((s) => s.articles);
   const order = useStore((s) => s.order);
@@ -37,7 +44,11 @@ export function Sidebar() {
   }, [order, articles, q, tags, diff]);
 
   const toggleTag = (t: string) => setTags((prev) => (prev.includes(t) ? prev.filter((x) => x !== t) : [...prev, t]));
-  const toggleDiff = (d: number) => setDiff((prev) => (prev.includes(d) ? prev.filter((x) => x !== d) : [...prev, d]));
+  const toggleDiffGroup = (levels: number[]) =>
+    setDiff((prev) => {
+      const allOn = levels.every((l) => prev.includes(l));
+      return allOn ? prev.filter((l) => !levels.includes(l)) : Array.from(new Set([...prev, ...levels]));
+    });
 
   return (
     <aside className="sidebar">
@@ -61,9 +72,13 @@ export function Sidebar() {
         <div className="filter-block">
           <div className="filter-title">难度</div>
           <div className="tag-list">
-            {[1, 2, 3, 4, 5].map((d) => (
-              <span key={d} className={`tag-chip${diff.includes(d) ? ' on' : ''}`} onClick={() => toggleDiff(d)}>
-                {difficultyLabel(d as 1 | 2 | 3 | 4 | 5)}
+            {DIFF_GROUPS.map((g) => (
+              <span
+                key={g.label}
+                className={`tag-chip${g.levels.some((l) => diff.includes(l)) ? ' on' : ''}`}
+                onClick={() => toggleDiffGroup(g.levels)}
+              >
+                {g.label}
               </span>
             ))}
             {(tags.length > 0 || diff.length > 0 || q) && (
@@ -79,7 +94,7 @@ export function Sidebar() {
             className={`article-card${a.id === currentId ? ' on' : ''}`}
             onClick={() => selectArticle(a.id)}
           >
-            {!SAMPLE_IDS.has(a.id) && (
+            {a.sourceType !== 'builtin' && a.sourceType !== 'local' && (
               <span
                 className="del"
                 onClick={(e) => {

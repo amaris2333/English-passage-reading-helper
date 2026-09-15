@@ -1,6 +1,6 @@
 export type Id = string;
 export type DisplayMode = 'en' | 'bilingual' | 'zh';
-export type SourceType = 'builtin' | 'paste' | 'pdf';
+export type SourceType = 'builtin' | 'paste' | 'pdf' | 'local';
 export type ExamTag = 'cet4' | 'cet6' | 'ky' | 'ielts' | 'toefl' | 'gre';
 export type Difficulty = 1 | 2 | 3 | 4 | 5;
 
@@ -112,6 +112,7 @@ export interface AppSettings {
   display: DisplayMode;
   fontScale: number;
   ttsRate: number;
+  ttsAccent: 'us' | 'uk';
   showPhrases: boolean;
   lastArticleId?: Id;
 }

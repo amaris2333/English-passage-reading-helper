@@ -25,6 +25,8 @@ export function Reader({ article, readerRef, inkCanvasRef }: Props) {
   const showPhrases = useStore((s) => s.settings.showPhrases);
   const fontScale = useStore((s) => s.settings.fontScale);
   const ttsRate = useStore((s) => s.settings.ttsRate);
+  const ttsAccent = useStore((s) => s.settings.ttsAccent);
+  const setTtsAccent = useStore((s) => s.setTtsAccent);
   const focusId = useStore((s) => s.focusSentenceId);
   const setFocus = useStore((s) => s.setFocus);
   const updateSentence = useStore((s) => s.updateSentence);
@@ -172,6 +174,8 @@ export function Reader({ article, readerRef, inkCanvasRef }: Props) {
           anchor={pop.rect}
           sentenceEn={pop.sentenceEn}
           rate={ttsRate}
+          accent={ttsAccent}
+          onAccentChange={setTtsAccent}
           onClose={() => setPop(null)}
         />
       )}

@@ -42,6 +42,7 @@ export const DEFAULT_SETTINGS: AppSettings = {
   display: 'bilingual',
   fontScale: 1,
   ttsRate: 0.9,
+  ttsAccent: 'us' as const,
   showPhrases: true,
 };
 

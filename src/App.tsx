@@ -6,6 +6,7 @@ import { Reader } from './components/Reader';
 import { StickyNote } from './components/StickyNote';
 import { ImportDialog } from './components/ImportDialog';
 import { ExportDialog } from './components/ExportDialog';
+import { FavoritesDialog } from './components/FavoritesDialog';
 
 export default function App() {
   const ready = useStore((s) => s.ready);
@@ -15,6 +16,7 @@ export default function App() {
   const libraryOpen = useStore((s) => s.libraryOpen);
   const importOpen = useStore((s) => s.importOpen);
   const exportOpen = useStore((s) => s.exportOpen);
+  const favOpen = useStore((s) => s.favOpen);
 
   const readerRef = useRef<HTMLDivElement>(null);
   const inkCanvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -43,6 +45,7 @@ export default function App() {
 
       <StickyNote />
       {importOpen && <ImportDialog />}
+      {favOpen && <FavoritesDialog />}
       {exportOpen && <ExportDialog readerEl={readerEl} inkCanvas={inkCanvasRef.current} />}
     </div>
   );

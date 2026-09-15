@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useStore } from '../store';
 import { buildArticle, autoTags, estimateDifficulty, TAG_VOCAB } from '../lib/article';
 import { extractPdf } from '../lib/pdf';
+import { initNlp } from '../lib/analyze';
 import { countWords } from '../lib/split';
 
 type Tab = 'paste' | 'pdf';
@@ -45,7 +46,8 @@ export function ImportDialog() {
     setStage('preview');
   };
 
-  const save = () => {
+  const save = async () => {
+    await initNlp();
     const finalTitle = title.trim() || raw.trim().slice(0, 40) + '…';
     const article = buildArticle(raw, {
       title: finalTitle,
@@ -128,7 +130,7 @@ export function ImportDialog() {
             <div className="hint">预计 {countWords(raw)} 词 · 可选标签：{TAG_VOCAB.join('、')}</div>
             <div className="actions">
               <button onClick={() => setStage('input')}>返回</button>
-              <button className="primary" onClick={save}>保存并开始精读</button>
+              <button className="primary" onClick={() => void save()}>保存并开始精读</button>
             </div>
           </>
         )}

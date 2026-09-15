@@ -3,6 +3,7 @@ import type { InkDoc, InkPoint, Stroke } from '../types';
 import { emptyInk, renderInk, resizeCanvas, createStroke } from '../lib/ink';
 import { loadInk, saveInk } from '../lib/storage';
 import { useStore, type EditMode } from '../store';
+import { HL_COLORS } from '../lib/highlight';
 
 interface Props {
   articleId: string;
@@ -24,6 +25,10 @@ export function InkLayer({
   const setEditModeStore = useStore((s) => s.setEditMode);
   const setPenSizeStore = useStore((s) => s.setPenSize);
   const setEraserSizeStore = useStore((s) => s.setEraserSize);
+  const hlColor = useStore((s) => s.hlColor);
+  const setHlColor = useStore((s) => s.setHlColor);
+  const clearHighlights = useStore((s) => s.clearHighlights);
+  const hlCount = useStore((s) => (s.highlights[articleId] ?? []).length);
 
   const [doc, setDoc] = useState<InkDoc>(() => emptyInk(articleId, 1000, 1000));
   const drawing = useRef<Stroke | null>(null);
@@ -149,44 +154,85 @@ export function InkLayer({
       {editMode !== 'off' && (
         <div className="ink-toolbar no-print">
           <strong style={{ fontSize: 12.5 }}>编辑模式</strong>
-          <div style={{ display: 'flex', gap: 6 }}>
-            {COLORS.map((c) => (
-              <span
-                key={c}
-                className={`swatch${penColor === c && editMode === 'pen' ? ' on' : ''}`}
-                style={{ background: c }}
-                onClick={() => { setPenColor(c); setEditModeStore('pen'); }}
-                title="选择颜色"
-              />
-            ))}
-          </div>
           <button className={editMode === 'pen' ? 'active' : ''} onClick={() => setEditModeStore('pen')}>画笔</button>
           <button className={editMode === 'eraser' ? 'active' : ''} onClick={() => setEditModeStore('eraser')}>橡皮</button>
-          <label style={{ fontSize: 12, display: 'flex', alignItems: 'center', gap: 4 }}>
-            粗细
-            <input
-              type="range"
-              min={1}
-              max={24}
-              value={editMode === 'eraser' ? eraserSize : penSize}
-              onChange={(e) => {
-                const v = Number(e.target.value);
-                if (editMode === 'eraser') setEraserSizeStore(v);
-                else setPenSizeStore(v);
-              }}
-              style={{ width: 80 }}
-            />
-          </label>
-          <button onClick={undo} disabled={!doc.strokes.length}>撤销</button>
-          <button onClick={clear} disabled={!doc.strokes.length}>清空</button>
+          <button
+            className={editMode === 'highlight' ? 'active' : ''}
+            onClick={() => setEditModeStore('highlight')}
+            title="拖动鼠标选中句子或单词即可标记重点"
+          >
+            荧光笔
+          </button>
+
+          {editMode === 'highlight' ? (
+            <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+              {HL_COLORS.map((c) => (
+                <span
+                  key={c.key}
+                  className={`swatch${hlColor === c.key ? ' on' : ''}`}
+                  style={{ background: c.swatch }}
+                  title={c.label}
+                  onClick={() => setHlColor(c.key)}
+                />
+              ))}
+            </div>
+          ) : (
+            <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+              {COLORS.map((c) => (
+                <span
+                  key={c}
+                  className={`swatch${penColor === c && editMode === 'pen' ? ' on' : ''}`}
+                  style={{ background: c }}
+                  onClick={() => { setPenColor(c); setEditModeStore('pen'); }}
+                  title="选择颜色"
+                />
+              ))}
+            </div>
+          )}
+
+          {editMode !== 'highlight' && (
+            <label style={{ fontSize: 12, display: 'flex', alignItems: 'center', gap: 4 }}>
+              粗细
+              <input
+                type="range"
+                min={1}
+                max={24}
+                value={editMode === 'eraser' ? eraserSize : penSize}
+                onChange={(e) => {
+                  const v = Number(e.target.value);
+                  if (editMode === 'eraser') setEraserSizeStore(v);
+                  else setPenSizeStore(v);
+                }}
+                style={{ width: 80 }}
+              />
+            </label>
+          )}
+
+          <button onClick={undo} disabled={!doc.strokes.length}>撤销笔迹</button>
+          <button onClick={clear} disabled={!doc.strokes.length}>清空笔迹</button>
+          <button
+            onClick={() => {
+              if (!hlCount) return;
+              if (window.confirm('清空本文所有荧光笔标记？')) clearHighlights(articleId);
+            }}
+            disabled={!hlCount}
+          >
+            清空荧光笔
+          </button>
+
           <span style={{ flex: 1 }} />
-          <span style={{ fontSize: 12, color: 'var(--text-2)' }}>已记录 {doc.strokes.length} 笔</span>
+          <span style={{ fontSize: 12, color: 'var(--text-2)' }}>
+            笔迹 {doc.strokes.length} 笔 · 荧光 {hlCount} 处
+          </span>
+          {editMode === 'highlight' && (
+            <span style={{ fontSize: 12, color: 'var(--accent)' }}>拖动选词/句即可标记；单击已有标记可擦除</span>
+          )}
           <button className="primary" onClick={onExit}>退出编辑</button>
         </div>
       )}
       <canvas
         ref={canvasRef}
-        className={`ink-layer${editMode === 'off' ? ' off' : ''}`}
+        className={`ink-layer${editMode === 'off' ? ' off' : ''}${editMode === 'highlight' ? ' passthrough' : ''}`}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}

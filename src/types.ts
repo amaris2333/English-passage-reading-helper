@@ -34,9 +34,45 @@ export interface Sentence {
   index: number;
   en: string;
   zh?: string;
+  /** 用户自己的翻译，初始为空，用于先自译 / 学完检测 */
+  userZh?: string;
   wordCount: number;
   analysis?: SentenceAnalysis;
   phrases?: Phrase[];
+}
+
+export type HlColor = 'purple' | 'blue' | 'yellow';
+
+export interface Highlight {
+  id: Id;
+  articleId: Id;
+  sentenceId: Id;
+  start: number;
+  end: number;
+  color: HlColor;
+}
+
+export type FavKind = 'sentence' | 'word';
+
+export interface FavoriteFolder {
+  id: Id;
+  name: string;
+  kind: FavKind;
+  createdAt: string;
+}
+
+export interface FavoriteItem {
+  id: Id;
+  kind: FavKind;
+  folderId: Id;
+  articleId?: Id;
+  sentenceId?: Id;
+  articleTitle?: string;
+  /** 句子原文 或 单词 */
+  text: string;
+  /** 句子参考译文 或 单词释义 */
+  sub?: string;
+  createdAt: string;
 }
 
 export interface Paragraph {
@@ -53,6 +89,7 @@ export interface ArticleMeta {
   sentenceCount: number;
   readMinutes: number;
   license?: string;
+  sourceUrl?: string;
 }
 
 export interface Article {

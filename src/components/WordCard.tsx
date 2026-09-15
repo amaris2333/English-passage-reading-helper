@@ -9,10 +9,14 @@ interface Props {
   rate: number;
   accent: Accent;
   onAccentChange: (a: Accent) => void;
+  starred: boolean;
+  onToggleStar: (word: string, zh: string) => void;
   onClose: () => void;
 }
 
-export function WordCard({ word, anchor, sentenceEn, rate, accent, onAccentChange, onClose }: Props) {
+export function WordCard({
+  word, anchor, sentenceEn, rate, accent, onAccentChange, starred, onToggleStar, onClose,
+}: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const [pos, setPos] = useState<{ top: number; left: number }>({ top: -9999, left: -9999 });
   const [, force] = useState(0);
@@ -56,6 +60,13 @@ export function WordCard({ word, anchor, sentenceEn, rate, accent, onAccentChang
           <button className={accent === 'us' ? 'on' : ''} onClick={() => onAccentChange('us')} style={{ padding: '1px 6px', fontSize: 11 }}>美</button>
           <button className={accent === 'uk' ? 'on' : ''} onClick={() => onAccentChange('uk')} style={{ padding: '1px 6px', fontSize: 11 }}>英</button>
         </div>
+        <button
+          className={`star-btn inline${starred ? ' on' : ''}`}
+          title={starred ? '取消收藏此词' : '收藏此词到「单词收藏」'}
+          onClick={() => onToggleStar(result.surface, result.senses.map((s) => s.text).join('；') || entry?.zh || '')}
+        >
+          {starred ? '★' : '☆'}
+        </button>
         <span style={{ flex: 1 }} />
         <button className="icon-btn" title="关闭" onClick={onClose}>✕</button>
       </div>

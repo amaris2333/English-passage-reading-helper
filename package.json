@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "compromise": "^14.17.0",
     "idb-keyval": "^6.2.1",
     "nanoid": "^5.0.7",
     "pdfjs-dist": "^4.10.38",

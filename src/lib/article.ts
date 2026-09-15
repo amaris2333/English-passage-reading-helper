@@ -1,6 +1,7 @@
 import { nanoid } from 'nanoid';
 import type { Article, Paragraph, Sentence, Difficulty } from '../types';
 import { countWords, splitParagraphs, splitSentences } from './split';
+import { analyzeSentence } from './analyze';
 import { SCHEMA_VERSION } from '../types';
 
 export const TAG_VOCAB = [
@@ -107,6 +108,37 @@ export function buildSentences(paragraphText: string, articleId: string, pIdx: n
     en,
     wordCount: countWords(en),
   }));
+}
+
+export function flattenSentences(article: Article): Sentence[] {
+  return article.paragraphs.flatMap((p) => p.sentences);
+}
+
+/** 导入时只分析第一句：先让用户看到"能拆"，再决定要不要花时间跑全篇 */
+export function analyzeFirstSentenceOnly(article: Article): Article {
+  let done = false;
+  const paragraphs = article.paragraphs.map((p) => ({
+    ...p,
+    sentences: p.sentences.map((s) => {
+      if (done || s.analysis) return s;
+      done = true;
+      return { ...s, analysis: analyzeSentence(s.en) };
+    }),
+  }));
+  return { ...article, paragraphs };
+}
+
+/** 生成整篇的句子分析 */
+export function analyzeWholeArticle(article: Article): Article {
+  const paragraphs = article.paragraphs.map((p) => ({
+    ...p,
+    sentences: p.sentences.map((s) => (s.analysis ? s : { ...s, analysis: analyzeSentence(s.en) })),
+  }));
+  return { ...article, paragraphs };
+}
+
+export function pendingAnalysisCount(article: Article): number {
+  return flattenSentences(article).filter((s) => !s.analysis).length;
 }
 
 export interface BuildOptions {

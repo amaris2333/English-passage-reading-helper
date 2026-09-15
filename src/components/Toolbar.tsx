@@ -12,6 +12,8 @@ export function Toolbar() {
   const toggleEditMode = useStore((s) => s.toggleEditMode);
   const setImportOpen = useStore((s) => s.setImportOpen);
   const setExportOpen = useStore((s) => s.setExportOpen);
+  const setFavOpen = useStore((s) => s.setFavOpen);
+  const favCount = useStore((s) => s.favItems.length);
   const noteVisible = useStore((s) => s.noteVisible);
   const setNoteVisible = useStore((s) => s.setNoteVisible);
   const libraryOpen = useStore((s) => s.libraryOpen);
@@ -38,6 +40,7 @@ export function Toolbar() {
           {editMode !== 'off' ? '编辑中' : '编辑模式'}
         </button>
         <button className={noteVisible ? 'active' : ''} onClick={() => setNoteVisible(!noteVisible)}>便签</button>
+        <button onClick={() => setFavOpen(true)}>收藏夹{favCount > 0 ? `（${favCount}）` : ''}</button>
 
         <span className="spacer" />
 

@@ -174,7 +174,10 @@ export const useStore = create<AppState>((set, get) => ({
     const currentId = settings.lastArticleId && seeded[settings.lastArticleId] ? settings.lastArticleId : order[0] ?? null;
 
     set({ ready: true, articles: seeded, order, settings, notes, currentId, favFolders, favItems, customTags });
-    void ensureDict().then(() => ensureExamples());
+    void ensureDict().then(() => {
+      // 例句库延后 1.5s 再拉，让词典（点词时立即需要）优先下载
+      window.setTimeout(() => void ensureExamples(), 1500);
+    });
     void initNlp();
     if (currentId) void get().initHighlightsFor(currentId);
   },

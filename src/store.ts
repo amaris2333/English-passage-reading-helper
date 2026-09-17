@@ -8,7 +8,9 @@ import { ATLAS_ARTICLES, ATLAS_IDS } from './data/atlas';
 import { ensureDict } from './lib/lookup';
 import { ensureExamples } from './lib/examples';
 import { initNlp } from './lib/analyze';
-import { analyzeFirstSentenceOnly, analyzeWholeArticle, recalcMeta, TAG_VOCAB } from './lib/article';
+import { analyzeFirstSentenceOnly, analyzeWholeArticle, recalcMeta, TAG_VOCAB, flattenSentences } from './lib/article';
+import { translateSentences } from './lib/translate';
+import { track } from './lib/analytics';
 import {
   DEFAULT_SETTINGS,
   loadArticles,
@@ -64,6 +66,10 @@ interface AppState {
 
   analyzing: boolean;
   generateAnalysis: (articleId: string) => Promise<void>;
+
+  /** 导入文章的译文生成进度（瞬态 UI 状态，不落盘） */
+  translateStatus: Record<string, { status: 'running' | 'done' | 'failed'; done: number; total: number }>;
+  translateArticle: (articleId: string) => Promise<void>;
 
   libraryOpen: boolean;
   importOpen: boolean;
@@ -149,6 +155,7 @@ export const useStore = create<AppState>((set, get) => ({
 
   customTags: [],
   analyzing: false,
+  translateStatus: {},
 
   libraryOpen: true,
   importOpen: false,
@@ -292,6 +299,53 @@ export const useStore = create<AppState>((set, get) => ({
     } finally {
       set({ analyzing: false });
     }
+  },
+
+  translateArticle: async (articleId) => {
+    const art0 = get().articles[articleId];
+    if (!art0) return;
+
+    // 只翻译还没有译文（zh 为空）的句子，已有译文绝不覆盖，也绝不碰 userZh
+    const targets = flattenSentences(art0).filter((s) => !s.zh && s.en.trim());
+    const total = targets.length;
+    const patchStatus = (status: 'running' | 'done' | 'failed', done: number) =>
+      set({ translateStatus: { ...get().translateStatus, [articleId]: { status, done, total } } });
+
+    if (!total) {
+      patchStatus('done', 0);
+      return;
+    }
+
+    patchStatus('running', 0);
+    const map = await translateSentences(
+      targets.map((t) => t.en),
+      (done) => patchStatus('running', done),
+    );
+
+    // 用户可能在生成期间切换了文章，文章本身仍在，照常写回
+    const art = get().articles[articleId];
+    if (!art) return;
+
+    const writes: Array<{ index: number; zh: string }> = [];
+    const paragraphs = art.paragraphs.map((p) => ({
+      ...p,
+      sentences: p.sentences.map((s) => {
+        if (s.zh) return s; // 已有译文：不覆盖
+        const zh = map.get(s.en);
+        if (!zh) return s; // 该句翻译失败：跳过
+        writes.push({ index: s.index, zh });
+        return { ...s, zh };
+      }),
+    }));
+
+    get().updateArticle({ ...art, paragraphs });
+
+    for (const w of writes) {
+      track({ name: 'translation_write', articleId, sentenceIndex: w.index, length: w.zh.length });
+    }
+
+    // 全部失败（网络完全不通）才算 failed，否则视为 done（部分失败的句子只是没译文）
+    patchStatus(writes.length === 0 ? 'failed' : 'done', writes.length);
   },
 
   updateArticle: (a) => {

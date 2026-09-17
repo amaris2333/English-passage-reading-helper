@@ -50,6 +50,8 @@ export function Reader({ article, readerRef, inkCanvasRef }: Props) {
   const toggleArticleTag = useStore((s) => s.toggleArticleTag);
   const generateAnalysis = useStore((s) => s.generateAnalysis);
   const analyzing = useStore((s) => s.analyzing);
+  const translateState = useStore((s) => s.translateStatus[article.id]);
+  const translateArticle = useStore((s) => s.translateArticle);
   const [tagPickerOpen, setTagPickerOpen] = useState(false);
 
   const [pop, setPop] = useState<WordPop | null>(null);
@@ -256,6 +258,18 @@ export function Reader({ article, readerRef, inkCanvasRef }: Props) {
           </div>
         )}
         {analyzing && <div className="analysis-bar no-print">正在分析整篇文章，请稍候…</div>}
+
+        {translateState?.status === 'running' && (
+          <div className="analysis-bar no-print translate-bar">
+            正在生成中文译文 {translateState.done}/{translateState.total} · 可先阅读，生成完会自动出现
+          </div>
+        )}
+        {translateState?.status === 'failed' && (
+          <div className="analysis-bar no-print translate-bar">
+            <span>译文生成失败，</span>
+            <button className="retry" onClick={() => void translateArticle(article.id)}>点击重试</button>
+          </div>
+        )}
 
         {article.paragraphs.map((p) => {
           const hidden = !!focusedParagraphId && p.id !== focusedParagraphId;

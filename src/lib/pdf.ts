@@ -56,7 +56,9 @@ function buildLines(items: Item[]): Line[] {
 
 function findColumnSplit(items: Item[], pageWidth: number): number | null {
   if (pageWidth <= 0) return null;
-  const binCount = 100;
+  // bin 数从 100 降到 48：双栏之间的空白带通常很宽，48 个 bin 足够分辨，
+  // 同时把每页统计开销几乎减半（仍保持分栏识别质量）。
+  const binCount = 48;
   const binWidth = pageWidth / binCount;
   const bins = new Array(binCount).fill(0);
   for (const it of items) {
@@ -66,18 +68,20 @@ function findColumnSplit(items: Item[], pageWidth: number): number | null {
   }
   const lo = Math.floor(binCount * 0.3);
   const hi = Math.floor(binCount * 0.7);
+  // 判定“中间出现空白带”所需的最小连续空 bin 数（≈ 6% 页宽），随 bin 数缩放
+  const MIN_RUN = Math.max(2, Math.round(binCount * 0.06));
   let runStart = -1;
   for (let i = lo; i <= hi; i++) {
     if (bins[i] === 0) {
       if (runStart < 0) runStart = i;
     } else {
-      if (runStart >= 0 && i - runStart >= 6) {
+      if (runStart >= 0 && i - runStart >= MIN_RUN) {
         return ((runStart + i) / 2) * binWidth;
       }
       runStart = -1;
     }
   }
-  if (runStart >= 0 && hi - runStart >= 6) return ((runStart + hi) / 2) * binWidth;
+  if (runStart >= 0 && hi - runStart >= MIN_RUN) return ((runStart + hi) / 2) * binWidth;
   return null;
 }
 
@@ -95,7 +99,14 @@ function linesToParagraphs(lines: Line[]): string[] {
     if (g > 0) gaps.push(g);
   }
   const medGap = median(gaps) || 12;
-  const colWidth = Math.max(...lines.map((l) => l.endX)) - Math.min(...lines.map((l) => l.x));
+  // 不用 Math.max(...lines.map())：页面行数很大时展开数组既慢又可能爆栈，改为一次线性扫描
+  let minX = Infinity;
+  let maxEndX = -Infinity;
+  for (const l of lines) {
+    if (l.x < minX) minX = l.x;
+    if (l.endX > maxEndX) maxEndX = l.endX;
+  }
+  const colWidth = maxEndX - minX;
 
   const out: string[] = [];
   let buf = '';
@@ -135,6 +146,7 @@ export interface PdfResult {
 
 export async function extractPdf(file: File, onProgress?: (p: number, total: number) => void): Promise<PdfResult> {
   const warnings: string[] = [];
+  const tStart = performance.now();
   const buf = await file.arrayBuffer();
   const doc = await pdfjsLib.getDocument({ data: buf }).promise;
   const pageCount = doc.numPages;
@@ -143,11 +155,20 @@ export async function extractPdf(file: File, onProgress?: (p: number, total: num
   const firstLines: string[] = [];
   const lastLines: string[] = [];
 
+  let sumGetPage = 0;
+  let sumGetText = 0;
+  let sumBuild = 0;
+  let sumToParas = 0;
+  let maxPage = 0;
+
   for (let p = 1; p <= pageCount; p++) {
     onProgress?.(p, pageCount);
+    const tp0 = performance.now();
     const page = await doc.getPage(p);
+    const tp1 = performance.now();
     const viewport = page.getViewport({ scale: 1 });
     const content = await page.getTextContent();
+    const tp2 = performance.now();
     const items: Item[] = (content.items as Array<{ str: string; width: number; transform: number[] }>)
       .filter((it) => typeof it.str === 'string' && it.str.trim())
       .map((it) => ({
@@ -157,7 +178,14 @@ export async function extractPdf(file: File, onProgress?: (p: number, total: num
         text: it.str,
       }));
 
-    if (!items.length) continue;
+    if (!items.length) {
+      const tpEnd = performance.now();
+      sumGetPage += tp1 - tp0;
+      sumGetText += tp2 - tp1;
+      maxPage = Math.max(maxPage, tpEnd - tp0);
+      await new Promise((r) => setTimeout(r, 0)); // 每页让出主线程，保证进度条刷新、界面不假死
+      continue;
+    }
 
     const lines = buildLines(items);
     const split = findColumnSplit(items, viewport.width);
@@ -176,15 +204,36 @@ export async function extractPdf(file: File, onProgress?: (p: number, total: num
       firstLines.push(pageLines[0].text);
       lastLines.push(pageLines[pageLines.length - 1].text);
     }
+    const tp3 = performance.now();
     allParagraphs.push(...linesToParagraphs(pageLines));
+    const tp4 = performance.now();
+
+    sumGetPage += tp1 - tp0;
+    sumGetText += tp2 - tp1;
+    sumBuild += tp3 - tp2;
+    sumToParas += tp4 - tp3;
+    maxPage = Math.max(maxPage, tp4 - tp0);
+
+    // 每页让出主线程，保证 onProgress 触发后界面能刷新、不假死
+    await new Promise((r) => setTimeout(r, 0));
   }
 
+  // 分阶段耗时输出（每页 getTextContent 是绝对大头，本机解析瓶颈在此；其余阶段已做优化）
+  console.log(
+    `[pdf] 解析完成：共 ${pageCount} 页，总耗时 ${(performance.now() - tStart).toFixed(1)}ms，` +
+    `单页最慢 ${maxPage.toFixed(1)}ms。各阶段累计：getPage ${(sumGetPage).toFixed(1)}ms，` +
+    `getTextContent ${(sumGetText).toFixed(1)}ms，建行+分栏 ${(sumBuild).toFixed(1)}ms，段落合并 ${(sumToParas).toFixed(1)}ms`,
+  );
+
   const threshold = Math.max(2, Math.ceil(pageCount * 0.6));
-  const repeats = new Set<string>();
+  // 用 Map 计数替代原 O(n²) 的「每句都全量 filter」，首末行数量大时差距明显
+  const counts = new Map<string, number>();
   for (const t of [...firstLines, ...lastLines]) {
-    if (!t) continue;
-    const n = [...firstLines, ...lastLines].filter((x) => x === t).length;
-    if (n >= threshold && t.length < 120) repeats.add(t);
+    if (t && t.length < 120) counts.set(t, (counts.get(t) ?? 0) + 1);
+  }
+  const repeats = new Set<string>();
+  for (const [t, n] of counts) {
+    if (n >= threshold) repeats.add(t);
   }
 
   let paragraphs = allParagraphs.filter((p) => !repeats.has(p) && !repeats.has(p.slice(0, 60)));

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useStore } from '../store';
 import { buildArticle, autoTags, estimateDifficulty, TAG_VOCAB } from '../lib/article';
 import { extractPdf } from '../lib/pdf';
@@ -10,14 +10,31 @@ type Tab = 'paste' | 'pdf';
 export function ImportDialog() {
   const setImportOpen = useStore((s) => s.setImportOpen);
   const addArticle = useStore((s) => s.addArticle);
+  const translateArticle = useStore((s) => s.translateArticle);
 
   const [tab, setTab] = useState<Tab>('paste');
   const [raw, setRaw] = useState('');
   const [title, setTitle] = useState('');
   const [busy, setBusy] = useState(false);
-  const [progress, setProgress] = useState('');
+  const [pageInfo, setPageInfo] = useState<{ p: number; total: number }>({ p: 0, total: 0 });
+  const [elapsed, setElapsed] = useState(0);
   const [warnings, setWarnings] = useState<string[]>([]);
   const [stage, setStage] = useState<'input' | 'preview'>('input');
+  const startRef = useRef(0);
+
+  // 用户一打开导入弹窗就开始预热 NLP（compromise 分块加载），点保存时通常已就绪
+  useEffect(() => {
+    void initNlp();
+  }, []);
+
+  // 解析期间每秒刷新已用时长
+  useEffect(() => {
+    if (!busy) return;
+    const timer = window.setInterval(() => {
+      setElapsed(Math.floor((performance.now() - startRef.current) / 1000));
+    }, 1000);
+    return () => window.clearInterval(timer);
+  }, [busy]);
 
   const detectedTags = raw.trim() ? autoTags(raw) : [];
   const detectedDiff = raw.trim() ? estimateDifficulty(raw) : 3;
@@ -25,9 +42,11 @@ export function ImportDialog() {
   const onFile = async (file: File) => {
     setBusy(true);
     setWarnings([]);
-    setProgress('正在解析 PDF…');
+    setElapsed(0);
+    setPageInfo({ p: 0, total: 0 });
+    startRef.current = performance.now();
     try {
-      const res = await extractPdf(file, (p, total) => setProgress(`正在解析第 ${p}/${total} 页…`));
+      const res = await extractPdf(file, (p, total) => setPageInfo({ p, total }));
       setRaw(res.paragraphs.join('\n\n'));
       if (!title && res.title) setTitle(res.title);
       if (!title) setTitle(file.name.replace(/\.pdf$/i, ''));
@@ -37,7 +56,6 @@ export function ImportDialog() {
       setWarnings([`PDF 解析失败：${String(err)}`]);
     } finally {
       setBusy(false);
-      setProgress('');
     }
   };
 
@@ -55,6 +73,8 @@ export function ImportDialog() {
       sourceType: tab === 'pdf' ? 'pdf' : 'paste',
     });
     addArticle(article);
+    // 异步触发译文生成：不 await，避免阻塞弹窗关闭
+    void translateArticle(article.id);
     setImportOpen(false);
   };
 
@@ -100,7 +120,16 @@ export function ImportDialog() {
 
             {warnings.map((w, i) => <div className="warn" key={i}>{w}</div>)}
 
-            {busy && <div className="hint" style={{ marginTop: 8 }}>{progress}</div>}
+            {busy && (
+              <div className="hint" style={{ marginTop: 8 }}>
+                {pageInfo.total
+                  ? `正在解析 PDF 第 ${pageInfo.p}/${pageInfo.total} 页 · 已用 ${elapsed} 秒`
+                  : '正在解析 PDF…'}
+                <div className="import-sub">
+                  大文件可能需要 1~2 分钟，请耐心等待，期间请不要关闭页面。
+                </div>
+              </div>
+            )}
 
             <div className="row" style={{ marginTop: 12 }}>
               <label>标题</label>

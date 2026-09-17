@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import type { ErrorInfo, ReactNode } from 'react';
+import { track } from '../lib/analytics';
 
 interface Props {
   children: ReactNode;
@@ -23,6 +24,8 @@ export class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, info: ErrorInfo) {
     console.error('[ErrorBoundary]', error, info?.componentStack);
+    // 仅上报匿名错误信息（截断到 200 字符），不含任何用户内容
+    track({ name: 'error_boundary', message: String(error?.message || error).slice(0, 200) });
   }
 
   render() {

@@ -15,6 +15,7 @@ export function AnalysisPanel({ sentence, showPhrases, onUpdate, onCollapse, onS
   const [mine, setMine] = useState(sentence.userZh ?? '');
   const [showRef, setShowRef] = useState(false);
   const a = sentence.analysis;
+  const fs = sentence.fiveStep;
   const structure = useMemo(() => buildStructure(sentence), [sentence]);
 
   // 切换句子时同步输入框
@@ -57,10 +58,76 @@ export function AnalysisPanel({ sentence, showPhrases, onUpdate, onCollapse, onS
         )}
       </div>
 
-      {/* ===== 模块二：句型分析（结构拆解 + 成分标注取并集） ===== */}
+      {/* ===== 模块二：长难句五步法 ===== */}
       <div className="sec">
-        <h4>② 句型分析</h4>
-        {structure || a ? (
+        <h4>② 句型分析 · 五步拆解</h4>
+        {fs ? (
+          <div className="fs-wrap">
+            <div className="fs-step">
+              <div className="fs-head">
+                <span className="fs-no">①</span><b>数谓语动词</b>
+                <span className="fs-tag">{fs.step1.count} 件事</span>
+              </div>
+              <div className="fs-sum">{fs.step1.summary}</div>
+              <div className="fs-preds">
+                {fs.step1.predicates.map((p, i) => (
+                  <span className={`fs-pred fs-${p.role}`} key={i}>
+                    {p.text}
+                    <em>{p.role === 'predicate' ? '谓语' : p.role === 'nonfinite' ? '非谓语' : '介词'}</em>
+                  </span>
+                ))}
+              </div>
+              {fs.step1.predicates.filter((p) => p.note).slice(0, 3).map((p, i) => (
+                <div className="fs-note" key={i}>· <b>{p.text}</b> {p.note}</div>
+              ))}
+            </div>
+
+            <div className="fs-step">
+              <div className="fs-head">
+                <span className="fs-no">②</span><b>找断点</b>
+                <span className="fs-tag">{fs.step2.breaks.length} 处</span>
+              </div>
+              <div className="fs-sum">{fs.step2.summary}</div>
+              {fs.step2.breaks.map((b, i) => (
+                <div className="fs-break" key={i}><span className="fs-marker">【{b.marker}】</span>{b.reason}</div>
+              ))}
+            </div>
+
+            <div className="fs-step">
+              <div className="fs-head">
+                <span className="fs-no">③</span><b>定主句</b>
+                <span className="fs-tag">{fs.step3.segments.length} 段</span>
+              </div>
+              <div className="fs-sum">{fs.step3.summary}</div>
+              {fs.step3.segments.map((sg, i) => (
+                <div className={`fs-seg${sg.isMain ? ' main' : ''}`} key={i}>
+                  <span className="fs-seg-type">{sg.type}</span>
+                  <span className="fs-seg-text">{sg.text}</span>
+                  {sg.hint && <div className="fs-seg-hint">{sg.hint}</div>}
+                </div>
+              ))}
+            </div>
+
+            <div className="fs-step">
+              <div className="fs-head"><span className="fs-no">④</span><b>拆修饰</b></div>
+              <div className="fs-sum">{fs.step4.summary}</div>
+              {fs.step4.parallels.map((pl, i) => (
+                <div className="fs-par" key={i}>
+                  <span className="fs-par-kind">{pl.kind}</span>
+                  {pl.members.map((m, j) => <div className="fs-par-m" key={j}>{j + 1}. {m}</div>)}
+                  {pl.note && <div className="fs-note">· {pl.note}</div>}
+                </div>
+              ))}
+              {fs.step4.modifiers.map((m, i) => <div className="fs-note" key={i}>· {m}</div>)}
+            </div>
+
+            <div className="fs-step">
+              <div className="fs-head"><span className="fs-no">⑤</span><b>翻译路径</b></div>
+              <div className="fs-sum">{fs.step5.summary}</div>
+              {fs.step5.steps.map((t, i) => <div className="fs-tstep" key={i}>{t}</div>)}
+            </div>
+          </div>
+        ) : structure || a ? (
           <>
             {a?.pattern && (
               <div className="struct-label-row">
@@ -68,12 +135,10 @@ export function AnalysisPanel({ sentence, showPhrases, onUpdate, onCollapse, onS
                 <span style={{ fontSize: 12.5 }}>{a.pattern}</span>
               </div>
             )}
-
             {structure && (
               <div className="struct">
                 <span className="struct-label">句子主干</span>
                 <div className="struct-trunk-text">{structure.trunk || '（暂无）'}</div>
-
                 {structure.trunkParts.length > 0 && (
                   <div className="struct-branch">
                     <span className="struct-label">主干成分</span>
@@ -88,7 +153,6 @@ export function AnalysisPanel({ sentence, showPhrases, onUpdate, onCollapse, onS
                     ))}
                   </div>
                 )}
-
                 {structure.levels.map((lv) => (
                   <div className="struct-branch" key={lv.key}>
                     <span className="struct-label">{lv.label}</span>
@@ -105,17 +169,11 @@ export function AnalysisPanel({ sentence, showPhrases, onUpdate, onCollapse, onS
                 ))}
               </div>
             )}
-
-            {a?.skeleton && !structure && (
-              <div className="skeleton">主干：{a.skeleton}</div>
-            )}
-
+            {a?.skeleton && !structure && <div className="skeleton">主干：{a.skeleton}</div>}
             {a?.notes && a.notes.length > 0 && (
               <div className="struct-branch">
                 <span className="struct-label">点拨</span>
-                <ul className="notes-list">
-                  {a.notes.map((n, i) => <li key={i}>{n}</li>)}
-                </ul>
+                <ul className="notes-list">{a.notes.map((n, i) => <li key={i}>{n}</li>)}</ul>
               </div>
             )}
           </>

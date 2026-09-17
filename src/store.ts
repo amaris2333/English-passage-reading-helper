@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { nanoid } from 'nanoid';
 import type {
   AppSettings, Article, Note, Sentence,
-  Highlight, HlColor, FavoriteFolder, FavoriteItem, FavKind,
+  Highlight, HlColor, FavoriteFolder, FavoriteItem, FavKind, ReviewCard,
 } from './types';
 import { ATLAS_ARTICLES, ATLAS_IDS } from './data/atlas';
 import { ensureDict } from './lib/lookup';
@@ -25,6 +25,8 @@ import {
   saveFavFolders,
   loadFavItems,
   saveFavItems,
+  loadReviewCards,
+  saveReviewCards,
 } from './lib/storage';
 
 export type EditMode = 'off' | 'pen' | 'eraser' | 'highlight';
@@ -50,6 +52,10 @@ interface AppState {
   favItems: FavoriteItem[];
   favOpen: boolean;
   activeFolder: Partial<Record<FavKind, string>>;
+
+  reviewCards: ReviewCard[];
+  syncReviewCards: () => void;
+  setReviewCards: (cards: ReviewCard[]) => void;
 
   customTags: string[];
   addCustomTag: (name: string) => void;
@@ -139,6 +145,8 @@ export const useStore = create<AppState>((set, get) => ({
   favOpen: false,
   activeFolder: {},
 
+  reviewCards: [],
+
   customTags: [],
   analyzing: false,
 
@@ -147,8 +155,8 @@ export const useStore = create<AppState>((set, get) => ({
   exportOpen: false,
 
   init: async () => {
-    const [articles, settings, notes, favFolders, favItems, customTags] = await Promise.all([
-      loadArticles(), loadSettings(), loadNotes(), loadFavFolders(), loadFavItems(), loadCustomTags(),
+    const [articles, settings, notes, favFolders, favItems, customTags, reviewCards] = await Promise.all([
+      loadArticles(), loadSettings(), loadNotes(), loadFavFolders(), loadFavItems(), loadCustomTags(), loadReviewCards(),
     ]);
     // 内置范例（公共领域素材）在版本升级时会覆盖旧副本，保证内容与分析同步更新
     const seeded = { ...articles };
@@ -173,7 +181,9 @@ export const useStore = create<AppState>((set, get) => ({
     const order = Object.values(seeded).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt)).map((a) => a.id);
     const currentId = settings.lastArticleId && seeded[settings.lastArticleId] ? settings.lastArticleId : order[0] ?? null;
 
-    set({ ready: true, articles: seeded, order, settings, notes, currentId, favFolders, favItems, customTags });
+    set({ ready: true, articles: seeded, order, settings, notes, currentId, favFolders, favItems, customTags, reviewCards });
+    // 新收藏项补成卡片、已有卡片保留进度（由收藏项驱动，词典无关，可在 init 阶段安全合并）
+    get().syncReviewCards();
     void ensureDict().then(() => {
       // 例句库延后 1.5s 再拉，让词典（点词时立即需要）优先下载
       window.setTimeout(() => void ensureExamples(), 1500);
@@ -416,6 +426,42 @@ export const useStore = create<AppState>((set, get) => ({
   isFavorited: (kind, key) => get().favItems.some((i) => favKey(i.kind, i.text, i.sentenceId) === key),
 
   setFavOpen: (favOpen) => set({ favOpen }),
+
+  syncReviewCards: () => {
+    const existing = get().reviewCards;
+    const favItems = get().favItems;
+    const map = new Map(existing.map((c) => [c.id, c]));
+    // 已存在的卡（按 id 匹配）保留 box/due/stats；仅为新收藏项建卡
+    for (const f of favItems) {
+      if (!map.has(f.id)) {
+        const now = Date.now();
+        map.set(f.id, {
+          id: f.id,
+          kind: f.kind,
+          front: f.text,
+          back: f.sub ?? '',
+          sub: f.articleTitle,
+          articleId: f.articleId,
+          articleTitle: f.articleTitle,
+          sentenceId: f.sentenceId,
+          box: 0,
+          due: now,
+          right: 0,
+          wrong: 0,
+          updatedAt: new Date(now).toISOString(),
+        });
+      }
+    }
+    // 已取消收藏的卡不删除（保留其进度）
+    const merged = [...map.values()];
+    set({ reviewCards: merged });
+    void saveReviewCards(merged);
+  },
+
+  setReviewCards: (cards) => {
+    set({ reviewCards: cards });
+    void saveReviewCards(cards);
+  },
 
   setLibraryOpen: (libraryOpen) => set({ libraryOpen }),
   setImportOpen: (importOpen) => set({ importOpen }),

@@ -37,6 +37,26 @@ export async function initNlp(): Promise<boolean> {
   return !!nlp;
 }
 
+export interface TaggedTerm {
+  text: string;
+  tags: string[];
+  chunk: string;
+  index: number;
+}
+
+/** 供五步法引擎复用：把句子切成带词性标注的词条（含字符位置） */
+export function tagTerms(text: string): TaggedTerm[] {
+  if (!nlp) return [];
+  try {
+    const raw = (nlp as NlpFn)(text).terms().json({ offset: true });
+    return flattenTerms(raw)
+      .filter((t) => t.offset)
+      .map((t) => ({ text: t.text, tags: t.tags, chunk: t.chunk, index: t.offset!.index }));
+  } catch {
+    return [];
+  }
+}
+
 export function nlpReady(): boolean {
   return !!nlp;
 }

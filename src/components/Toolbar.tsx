@@ -2,6 +2,8 @@ import { useRef, useState } from 'react';
 import { useStore } from '../store';
 import { clearAll, exportBackup, importBackup } from '../lib/storage';
 import { downloadJson } from '../lib/export';
+import { ReviewDialog } from './ReviewDialog';
+import { QuizDialog } from './QuizDialog';
 
 export function Toolbar() {
   const display = useStore((s) => s.settings.display);
@@ -18,8 +20,11 @@ export function Toolbar() {
   const setNoteVisible = useStore((s) => s.setNoteVisible);
   const libraryOpen = useStore((s) => s.libraryOpen);
   const setLibraryOpen = useStore((s) => s.setLibraryOpen);
+  const dueCount = useStore((s) => s.reviewCards.filter((c) => c.due <= Date.now()).length);
 
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [reviewOpen, setReviewOpen] = useState(false);
+  const [quizOpen, setQuizOpen] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
   const [msg, setMsg] = useState('');
 
@@ -41,6 +46,8 @@ export function Toolbar() {
         </button>
         <button className={noteVisible ? 'active' : ''} onClick={() => setNoteVisible(!noteVisible)}>便签</button>
         <button onClick={() => setFavOpen(true)}>收藏夹{favCount > 0 ? `（${favCount}）` : ''}</button>
+        <button onClick={() => setReviewOpen(true)}>闪卡{dueCount > 0 ? ` ${dueCount}` : ''}</button>
+        <button onClick={() => setQuizOpen(true)}>小测</button>
 
         <span className="spacer" />
 
@@ -49,6 +56,9 @@ export function Toolbar() {
         <button onClick={() => setSettingsOpen(true)}>设置</button>
         <button className="primary" onClick={() => setExportOpen(true)}>导出 PDF</button>
       </div>
+
+      {reviewOpen && <ReviewDialog onClose={() => setReviewOpen(false)} />}
+      {quizOpen && <QuizDialog onClose={() => setQuizOpen(false)} />}
 
       {settingsOpen && (
         <div className="modal-backdrop" onMouseDown={(e) => { if (e.target === e.currentTarget) setSettingsOpen(false); }}>

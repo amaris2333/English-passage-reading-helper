@@ -22,13 +22,104 @@ export interface SentenceAnalysis {
   generatedBy: 'rule' | 'llm' | 'human';
 }
 
-export interface Phrase {
+/* ------------------------------------------------------------------ */
+/* 长难句五步分析法                                                     */
+/*   ① 数谓语动词 ② 找断点 ③ 定主句 ④ 拆修饰 ⑤ 翻译路径                */
+/* ------------------------------------------------------------------ */
+
+/** 第1步：动词候选。后三类是必须排除的干扰项 */
+export type PredicateRole = 'predicate' | 'nonfinite' | 'preposition' | 'conjunction';
+
+export interface PredicateItem {
+  text: string;
+  start: number;
+  end: number;
+  role: PredicateRole;
+  /** 中文说明，如「过去分词作定语，不是谓语」 */
+  note?: string;
+}
+
+export interface BreakPoint {
+  /** 断点在原句中的字符位置 */
+  pos: number;
+  /** 断点标记，如「逗号 + if」「who」 */
+  marker: string;
+  reason: string;
+}
+
+export interface Segment {
   id: Id;
   text: string;
-  zh: string;
-  level?: 'common' | 'idiomatic' | 'academic';
-  /** 词组类别：短语动词 / 固定搭配 / 习语 / 介词框架 */
-  kind?: string;
+  start: number;
+  end: number;
+  /** 主句 / 条件状语从句 / 非限定性定语从句 / 名词性从句 / 让步状语从句 … */
+  type: string;
+  isMain: boolean;
+  /** 该段的翻译提示 */
+  hint?: string;
+}
+
+export interface ParallelGroup {
+  /** 平行类型，如「介词短语平行」「谓语动词平行」 */
+  kind: string;
+  members: string[];
+  note?: string;
+}
+
+export interface FiveStep {
+  step1: { predicates: PredicateItem[]; count: number; summary: string };
+  step2: { breaks: BreakPoint[]; summary: string };
+  step3: { segments: Segment[]; mainText: string; summary: string };
+  step4: { parallels: ParallelGroup[]; modifiers: string[]; summary: string };
+  step5: { steps: string[]; summary: string };
+  generatedBy: 'rule' | 'human';
+}
+
+/* ------------------------------------------------------------------ */
+/* 复习：闪卡与小测                                                     */
+/* ------------------------------------------------------------------ */
+
+/** 间隔重复卡（正面/背面）。box 越大间隔越长：0→当天，5→约 30 天 */
+export interface ReviewCard {
+  id: Id;
+  kind: FavKind;
+  front: string;
+  back: string;
+  sub?: string;
+  articleId?: Id;
+  articleTitle?: string;
+  sentenceId?: Id;
+  box: number;
+  /** 下次到期时间戳（ms） */
+  due: number;
+  right: number;
+  wrong: number;
+  updatedAt: string;
+}
+
+export type QuizKind = 'choice' | 'judge' | 'correct';
+
+export interface QuizQuestion {
+  id: Id;
+  kind: QuizKind;
+  /** 题干；correct 型题干是含错拼的句子 */
+  stem: string;
+  options?: string[];
+  /** choice=选项原文；judge='对'|'错'；correct=正确拼写 */
+  answer: string;
+  explanation: string;
+  /** 该题考查的词 */
+  word?: string;
+  articleId?: Id;
+}
+
+export interface QuizAttempt {
+  id: Id;
+  articleId?: Id;
+  total: number;
+  right: number;
+  wrongIds: Id[];
+  finishedAt: string;
 }
 
 export interface Sentence {
@@ -40,7 +131,18 @@ export interface Sentence {
   userZh?: string;
   wordCount: number;
   analysis?: SentenceAnalysis;
+  /** 五步法拆解（句型分析模块的主体） */
+  fiveStep?: FiveStep;
   phrases?: Phrase[];
+}
+
+export interface Phrase {
+  id: Id;
+  text: string;
+  zh: string;
+  level?: 'common' | 'idiomatic' | 'academic';
+  /** 词组类别：短语动词 / 固定搭配 / 习语 / 介词框架 */
+  kind?: string;
 }
 
 export type HlColor = 'purple' | 'blue' | 'yellow';

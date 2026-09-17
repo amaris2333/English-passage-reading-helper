@@ -1,0 +1,163 @@
+/* ===================== 闪卡复习 & 本文小测 ===================== */
+/* 仅新增样式，复用 styles.css 中的 --变量 / .modal / .actions / .hint / .primary 等 */
+
+.review-modal { width: 520px; max-width: 92vw; }
+.quiz-modal   { width: 560px; max-width: 94vw; }
+
+/* ---------- 空状态 / 总结 ---------- */
+.review-empty, .review-summary {
+  text-align: center;
+  padding: 14px 6px 4px;
+}
+.review-empty-emoji { font-size: 40px; margin-bottom: 6px; }
+.review-empty p { margin: 6px 0; }
+.review-summary h4 { margin: 8px 0; font-size: 16px; }
+.review-summary p { margin: 8px 0; font-size: 15px; }
+.review-summary .actions, .review-empty .actions { justify-content: center; margin-top: 14px; }
+
+/* ---------- 进度 ---------- */
+.review-progress, .quiz-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text-2);
+  margin-bottom: 12px;
+}
+.review-due { color: var(--accent); }
+.quiz-kind {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: 12px;
+}
+
+/* ---------- 闪卡 ---------- */
+.flashcard {
+  min-height: 230px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--surface) 0%, var(--surface-2) 100%);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  cursor: pointer;
+}
+.flashcard-face {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.flashcard-kind {
+  font-size: 12px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 999px;
+  padding: 2px 12px;
+}
+.flashcard-text {
+  font-family: var(--reader-font);
+  font-size: 26px;
+  line-height: 1.6;
+  color: var(--text);
+  word-break: break-word;
+}
+.flashcard-sub {
+  font-size: 15px;
+  color: var(--text-2);
+}
+.flashcard-hint { font-size: 12px; color: var(--text-3); }
+
+.grade-btns {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.grade-btns button { padding: 8px 14px; font-size: 14px; }
+.grade-btns kbd {
+  margin-left: 4px;
+  font-size: 11px;
+  background: rgba(0,0,0,.06);
+  border-radius: 4px;
+  padding: 0 5px;
+  border: 1px solid var(--border);
+}
+
+/* ---------- 小测：加载 ---------- */
+.quiz-loading { text-align: center; padding: 30px 10px; color: var(--text-2); }
+.spinner {
+  width: 34px; height: 34px; margin: 0 auto 14px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: review-spin .8s linear infinite;
+}
+@keyframes review-spin { to { transform: rotate(360deg); } }
+
+/* ---------- 小测：题目 ---------- */
+.quiz-body { margin: 4px 0 14px; }
+.quiz-stem {
+  font-family: var(--reader-font);
+  font-size: 22px;
+  line-height: 1.7;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 6px;
+  word-break: break-word;
+}
+.quiz-sentence { font-size: 19px; }
+.quiz-sub { text-align: center; color: var(--text-2); margin-bottom: 16px; font-size: 13px; }
+
+.quiz-options { display: flex; flex-direction: column; gap: 10px; }
+.quiz-opt {
+  text-align: left;
+  padding: 11px 14px;
+  font-size: 15px;
+  border-radius: 10px;
+  background: var(--surface);
+}
+.quiz-opt:hover:not(:disabled) { border-color: var(--accent); }
+.quiz-opt.ok { background: #e6f4ea; border-color: #9fd3b0; color: #1f6b3f; }
+.quiz-opt.bad { background: #fdeaea; border-color: #f0b6b6; color: #b33939; }
+
+/* ---------- 小测：即时解析 ---------- */
+.quiz-feedback {
+  margin-top: 16px;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 13.5px;
+  border: 1px solid var(--border);
+}
+.quiz-feedback.ok { background: #eef8f1; border-color: #bfe3cb; }
+.quiz-feedback.bad { background: #fdf0f0; border-color: #f0c9c9; }
+.quiz-feedback-title { font-weight: 600; margin-bottom: 6px; }
+.quiz-feedback-row { color: var(--text); margin: 2px 0; }
+
+/* ---------- 小测：结果 ---------- */
+.quiz-result { padding: 4px 0; }
+.quiz-result h4 { text-align: center; margin: 6px 0; font-size: 16px; }
+.quiz-score { text-align: center; font-size: 30px; margin: 10px 0 16px; color: var(--accent); }
+.quiz-score b { font-size: 38px; }
+.wrong-list { margin: 8px 0 16px; max-height: 46vh; overflow-y: auto; }
+.wrong-title { font-size: 13px; color: var(--text-2); margin-bottom: 8px; }
+.wrong-item {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  background: var(--surface);
+}
+.wrong-stem { font-family: var(--reader-font); font-size: 15px; margin-bottom: 6px; }
+.wrong-row { font-size: 13px; margin: 2px 0; }
+.wrong-row .ok { color: #1f6b3f; font-weight: 600; }
+.wrong-row .bad { color: #b33939; font-weight: 600; }
+.wrong-exp { font-size: 12.5px; color: var(--text-2); margin-top: 4px; }
+.quiz-result .actions { justify-content: center; }

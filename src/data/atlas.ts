@@ -59,7 +59,128 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "have existed",
+                    "start": 65,
+                    "end": 77,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "been used",
+                    "start": 82,
+                    "end": 91,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "have spurred",
+                    "start": 162,
+                    "end": 174,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "research",
+                    "start": 183,
+                    "end": 191,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "debate",
+                    "start": 196,
+                    "end": 202,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "could",
+                    "start": 232,
+                    "end": 237,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "impact",
+                    "start": 238,
+                    "end": 244,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 4,
+                "summary": "句中共有 4 个谓语动词（have existed / been used / have spurred / could），意味着有 4 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 103,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 146,
+                    "marker": "such",
+                    "reason": "such 引导定语从句"
+                  },
+                  {
+                    "pos": 151,
+                    "marker": "as",
+                    "reason": "as 引导时间/原因状语从句"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "While various forms of artificial intelligence (AI) technologies have existed and been used for decades",
+                    "start": 0,
+                    "end": 103,
+                    "type": "时间/让步状语从句",
+                    "isMain": false,
+                    "hint": "作同时或让步成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "the recent popularization of AI products",
+                    "start": 105,
+                    "end": 145,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "such as ChatGPT have spurred further research and debate about how these technologies could impact the economy.",
+                    "start": 146,
+                    "end": 257,
+                    "type": "定语从句",
+                    "isMain": false,
+                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "the recent popularization of AI products",
+                "summary": "主句是「the recent popularization of AI products」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【时间/让步状语从句】「While various forms of artificia…」——作同时或让步成分，翻译时通常放在主句之前",
+                  "2. 先译【定语从句】「such as ChatGPT have spurred fur…」——作修饰成分，翻译时通常放在主句之前",
+                  "3. 再译【主句】「the recent popularization of AI …」——这是整句的骨架",
+                  "4. 按「同时或让步」关系组装：中文习惯把同时或让步类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 2 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p0-s1",
@@ -114,7 +235,147 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "仅举几例",
                 "kind": "习语"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "has",
+                    "start": 15,
+                    "end": 18,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "uses",
+                    "start": 32,
+                    "end": 36,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "services,",
+                    "start": 68,
+                    "end": 77,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "could",
+                    "start": 84,
+                    "end": 89,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "affect",
+                    "start": 90,
+                    "end": 96,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "name",
+                    "start": 185,
+                    "end": 189,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 4,
+                "summary": "句中共有 4 个谓语动词（has / uses / services, / could），意味着有 4 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 76,
+                    "marker": ", + which",
+                    "reason": "which 引导定语从句，此处必须断开"
+                  },
+                  {
+                    "pos": 138,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 159,
+                    "marker": ", + and",
+                    "reason": "and 连接并列成分，可在标点处断开"
+                  },
+                  {
+                    "pos": 180,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 4 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "AI potentially has wide-ranging uses in the production of goods and services",
+                    "start": 0,
+                    "end": 76,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "which could affect the macroeconomy through the labor market",
+                    "start": 78,
+                    "end": 138,
+                    "type": "非限定性定语从句",
+                    "isMain": false,
+                    "hint": "对前面的名词做补充说明，翻译时可另起一小句"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "productivity growth, and economic growth",
+                    "start": 140,
+                    "end": 180,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "to name a few.",
+                    "start": 182,
+                    "end": 196,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "AI potentially has wide-ranging uses in the production of goods and services",
+                "summary": "主句是「AI potentially has wide-ranging uses in the …」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [
+                  {
+                    "kind": "三项以上并列",
+                    "members": [
+                      "the macroeconomy through the labor market",
+                      "productivity growth",
+                      "economic growth"
+                    ],
+                    "note": "并列的几项词性相同、形式一致，可逐个对应翻译"
+                  }
+                ],
+                "modifiers": [
+                  "and economic growth（插入语——先跳过，主句依然完整）"
+                ],
+                "summary": "平行动 1 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【非限定性定语从句】「which could affect the macroecon…」——对前面的名词做补充说明，翻译时可另起一小句",
+                  "2. 再译【主句】「AI potentially has wide-ranging …」——这是整句的骨架",
+                  "3. 处理平行结构：the macroeconomy through the labor market ／ productivity growth ／ economic growth——平行成分逐一对译，不要打乱顺序",
+                  "4. 按「修饰」关系组装：中文习惯把修饰类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p0-s2",
@@ -143,7 +404,135 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "取决于；依赖",
                 "kind": "短语动词"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "will",
+                    "start": 20,
+                    "end": 24,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "prove",
+                    "start": 25,
+                    "end": 30,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "be",
+                    "start": 34,
+                    "end": 36,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "suggest",
+                    "start": 78,
+                    "end": 85,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "remains",
+                    "start": 86,
+                    "end": 93,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "be seen",
+                    "start": 97,
+                    "end": 104,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "will",
+                    "start": 109,
+                    "end": 113,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "depend",
+                    "start": 114,
+                    "end": 120,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 4,
+                "summary": "句中共有 4 个谓语动词（will / remains / be seen / will），意味着有 4 件事要译；另有 4 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 7,
+                    "marker": ", + whether",
+                    "reason": "whether 引导名词性从句，此处必须断开"
+                  },
+                  {
+                    "pos": 37,
+                    "marker": "as",
+                    "reason": "as 引导时间/原因状语从句"
+                  },
+                  {
+                    "pos": 70,
+                    "marker": "as",
+                    "reason": "as 引导时间/原因状语从句"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "However, whether AI will prove to be",
+                    "start": 0,
+                    "end": 36,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "as economically transformational",
+                    "start": 37,
+                    "end": 69,
+                    "type": "时间/原因状语从句",
+                    "isMain": false,
+                    "hint": "作时间或原因成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "as some suggest remains to be seen and will depend on a number of complex factors.",
+                    "start": 70,
+                    "end": 152,
+                    "type": "时间/原因状语从句",
+                    "isMain": false,
+                    "hint": "作时间或原因成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "However, whether AI will prove to be",
+                "summary": "主句是「However, whether AI will prove to be」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【时间/原因状语从句】「as economically transformational」——作时间或原因成分，翻译时通常放在主句之前",
+                  "2. 先译【时间/原因状语从句】「as some suggest remains to be se…」——作时间或原因成分，翻译时通常放在主句之前",
+                  "3. 再译【主句】「However, whether AI will prove t…」——这是整句的骨架",
+                  "4. 按「时间或原因」关系组装：中文习惯把时间或原因类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 2 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p0-s3",
@@ -182,7 +571,81 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "are",
+                    "start": 25,
+                    "end": 28,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "interested",
+                    "start": 42,
+                    "end": 52,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "including",
+                    "start": 60,
+                    "end": 69,
+                    "role": "preposition",
+                    "note": "是介词，不是动词"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（are / interested），意味着有 2 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 58,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Some Members of Congress are increasingly interested in AI",
+                    "start": 0,
+                    "end": 58,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "including its economic impacts.",
+                    "start": 60,
+                    "end": 91,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "Some Members of Congress are increasingly interested in AI",
+                "summary": "主句是「Some Members of Congress are increasingly in…」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Some Members of Congress are inc…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p0-s4",
@@ -219,7 +682,58 @@ export const ATLAS_ARTICLES: Article[] = [
               "notes": [],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "announced",
+                    "start": 23,
+                    "end": 32,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（announced），意味着有 1 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 11,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 1 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "For example, the House announced a bipartisan task force on AI in February 2024.",
+                    "start": 0,
+                    "end": 80,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "",
+                "summary": "未能确定主句，建议先按标点切分逐段理解。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           }
         ]
       },
@@ -273,7 +787,138 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "is",
+                    "start": 3,
+                    "end": 5,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "referring",
+                    "start": 19,
+                    "end": 28,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "aim",
+                    "start": 63,
+                    "end": 66,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "give",
+                    "start": 70,
+                    "end": 74,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "learn",
+                    "start": 107,
+                    "end": 112,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "tasks",
+                    "start": 129,
+                    "end": 134,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "reason",
+                    "start": 142,
+                    "end": 148,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "solve",
+                    "start": 153,
+                    "end": 158,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "mimics",
+                    "start": 193,
+                    "end": 199,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（is / tasks / mimics），意味着有 3 件事要译；另有 6 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 58,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 188,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "AI is a broad term referring to algorithms and techniques",
+                    "start": 0,
+                    "end": 57,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that aim to give computer systems the ability to learn new concepts or tasks and to reason and solve complex problems in a manner",
+                    "start": 58,
+                    "end": 187,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "that mimics human intelligence.",
+                    "start": 188,
+                    "end": 219,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "AI is a broad term referring to algorithms and techniques",
+                "summary": "主句是「AI is a broad term referring to algorithms a…」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that aim to give computer system…」——作说明成分，翻译时通常放在主句之前",
+                  "2. 先译【名词性 / 定语从句】「that mimics human intelligence.」——作说明成分，翻译时通常放在主句之前",
+                  "3. 再译【主句】「AI is a broad term referring to …」——这是整句的骨架",
+                  "4. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 2 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p1-s1",
@@ -327,7 +972,110 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "聚焦于；集中于",
                 "kind": "短语动词"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "is generally considered",
+                    "start": 22,
+                    "end": 45,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "focused",
+                    "start": 63,
+                    "end": 70,
+                    "role": "nonfinite",
+                    "note": "过去分词作后置定语（相当于省略了 which is），不能作谓语"
+                  },
+                  {
+                    "text": "can",
+                    "start": 98,
+                    "end": 101,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "learn",
+                    "start": 102,
+                    "end": 107,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "optimize",
+                    "start": 115,
+                    "end": 123,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（is generally considered / can），意味着有 2 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 93,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 113,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Machine learning (ML) is generally considered a subfield of AI focused on developing systems",
+                    "start": 0,
+                    "end": 92,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that can learn (i.e.",
+                    "start": 93,
+                    "end": 113,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "optimize model parameters) from data without explicit programming.",
+                    "start": 115,
+                    "end": 181,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "Machine learning (ML) is generally considered a subfield of AI focused on developing systems",
+                "summary": "主句是「Machine learning (ML) is generally considere…」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that can learn (i.e.」——作说明成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「Machine learning (ML) is general…」——这是整句的骨架",
+                  "3. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p1-s2",
@@ -375,7 +1123,90 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "is",
+                    "start": 6,
+                    "end": 8,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（is），意味着有 1 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 26,
+                    "marker": ", + such",
+                    "reason": "such 引导定语从句，此处必须断开"
+                  },
+                  {
+                    "pos": 33,
+                    "marker": "as",
+                    "reason": "as 引导时间/原因状语从句"
+                  },
+                  {
+                    "pos": 67,
+                    "marker": ", + nor",
+                    "reason": "nor 连接并列成分，可在标点处断开"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "AI/ML is neither one thing",
+                    "start": 0,
+                    "end": 26,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "such as a discrete computer application",
+                    "start": 28,
+                    "end": 67,
+                    "type": "定语从句",
+                    "isMain": false,
+                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "nor one technology.",
+                    "start": 69,
+                    "end": 88,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "AI/ML is neither one thing",
+                "summary": "主句是「AI/ML is neither one thing」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "such as a discrete computer application（插入语——先跳过，主句依然完整）"
+                ],
+                "summary": "平行动 0 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【定语从句】「such as a discrete computer appl…」——作修饰成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「AI/ML is neither one thing」——这是整句的骨架",
+                  "3. 按「修饰」关系组装：中文习惯把修饰类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p1-s3",
@@ -435,7 +1266,100 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "部分地",
                 "kind": "习语"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "is",
+                    "start": 12,
+                    "end": 14,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "is defined",
+                    "start": 39,
+                    "end": 49,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "used to",
+                    "start": 85,
+                    "end": 92,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "train",
+                    "start": 93,
+                    "end": 98,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "provided",
+                    "start": 139,
+                    "end": 147,
+                    "role": "nonfinite",
+                    "note": "过去分词作后置定语（相当于省略了 which is），不能作谓语"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（is / is defined / used to），意味着有 3 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 7,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 34,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Instead, it is a group of systems",
+                    "start": 0,
+                    "end": 33,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that is defined in part by the type of information used to train the model and the amount of involvement provided by human trainers.",
+                    "start": 34,
+                    "end": 166,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "Instead, it is a group of systems",
+                "summary": "主句是「Instead, it is a group of systems」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that is defined in part by the t…」——作说明成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「Instead, it is a group of systems」——这是整句的骨架",
+                  "3. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p1-s4",
@@ -464,7 +1388,69 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "备受关注",
                 "kind": "习语"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "are",
+                    "start": 58,
+                    "end": 61,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（are），意味着有 1 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 42,
+                    "marker": "since",
+                    "reason": "since 引导时间/原因状语从句"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "The suite of AI products in the spotlight",
+                    "start": 0,
+                    "end": 41,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "since late 2022 are “generative AI” tools.",
+                    "start": 42,
+                    "end": 84,
+                    "type": "时间/原因状语从句",
+                    "isMain": false,
+                    "hint": "作时间或原因成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "The suite of AI products in the spotlight",
+                "summary": "主句是「The suite of AI products in the spotlight」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【时间/原因状语从句】「since late 2022 are “generative …」——作时间或原因成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「The suite of AI products in the …」——这是整句的骨架",
+                  "3. 按「时间或原因」关系组装：中文习惯把时间或原因类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p1-s5",
@@ -501,7 +1487,211 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "取决于；依赖",
                 "kind": "短语动词"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "can",
+                    "start": 40,
+                    "end": 43,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "generate",
+                    "start": 44,
+                    "end": 52,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "written",
+                    "start": 69,
+                    "end": 76,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "prompts",
+                    "start": 114,
+                    "end": 121,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "using",
+                    "start": 122,
+                    "end": 127,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "help",
+                    "start": 153,
+                    "end": 157,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "models better",
+                    "start": 158,
+                    "end": 171,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "understand",
+                    "start": 172,
+                    "end": 182,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "influence",
+                    "start": 201,
+                    "end": 210,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "depend",
+                    "start": 215,
+                    "end": 221,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 4,
+                "summary": "句中共有 4 个谓语动词（can / written / prompts / models better），意味着有 4 件事要译；另有 6 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 35,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 60,
+                    "marker": "— + such",
+                    "reason": "such 引导定语从句，此处必须断开"
+                  },
+                  {
+                    "pos": 66,
+                    "marker": "as",
+                    "reason": "as 引导时间/原因状语从句"
+                  },
+                  {
+                    "pos": 85,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 90,
+                    "marker": ", + or",
+                    "reason": "or 连接并列成分，可在标点处断开"
+                  },
+                  {
+                    "pos": 108,
+                    "marker": "—",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 148,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  }
+                ],
+                "summary": "找到 7 个断点，可以把句子切成 6 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Generative AI refers to AI systems",
+                    "start": 0,
+                    "end": 34,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that can generate content",
+                    "start": 35,
+                    "end": 60,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "such as written material",
+                    "start": 61,
+                    "end": 85,
+                    "type": "定语从句",
+                    "isMain": false,
+                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "or computer code",
+                    "start": 92,
+                    "end": 108,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-4",
+                    "text": "from prompts using advanced techniques",
+                    "start": 109,
+                    "end": 147,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-5",
+                    "text": "that help models better understand how data elements influence and depend on one another.",
+                    "start": 148,
+                    "end": 237,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "Generative AI refers to AI systems",
+                "summary": "主句是「Generative AI refers to AI systems」，其余 5 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [
+                  {
+                    "kind": "三项以上并列",
+                    "members": [
+                      "generate content—such as written material",
+                      "art",
+                      "computer code—from prompts using advanced"
+                    ],
+                    "note": "并列的几项词性相同、形式一致，可逐个对应翻译"
+                  }
+                ],
+                "modifiers": [
+                  "such as written material（插入语——先跳过，主句依然完整）",
+                  "or computer code（插入语——先跳过，主句依然完整）"
+                ],
+                "summary": "平行动 1 处、修饰成分 2 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that can generate content」——作说明成分，翻译时通常放在主句之前",
+                  "2. 先译【定语从句】「such as written material」——作修饰成分，翻译时通常放在主句之前",
+                  "3. 先译【名词性 / 定语从句】「that help models better understa…」——作说明成分，翻译时通常放在主句之前",
+                  "4. 再译【主句】「Generative AI refers to AI systems」——这是整句的骨架",
+                  "5. 处理平行结构：generate content—such as written material ／ art ／ computer code—from prompts using advanced——平行成分逐一对译，不要打乱顺序",
+                  "6. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 3 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p1-s6",
@@ -561,7 +1751,135 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "引发担忧",
                 "kind": "固定搭配"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "believe",
+                    "start": 35,
+                    "end": 42,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "can",
+                    "start": 46,
+                    "end": 49,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "transform",
+                    "start": 50,
+                    "end": 59,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "rely",
+                    "start": 100,
+                    "end": 104,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "has also raised",
+                    "start": 157,
+                    "end": 172,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（can / has also raised），意味着有 2 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 95,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 152,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 254,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "While proponents of the technology believe it can transform delivery of services in industries",
+                    "start": 0,
+                    "end": 94,
+                    "type": "时间/让步状语从句",
+                    "isMain": false,
+                    "hint": "作同时或让步成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that rely on both general and specialized knowledge alike",
+                    "start": 95,
+                    "end": 152,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "it has also raised concerns of misuse by bad actors and misrepresentation in the form of “deep fakes",
+                    "start": 154,
+                    "end": 254,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "” among others.",
+                    "start": 255,
+                    "end": 270,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "it has also raised concerns of misuse by bad actors and misrepresentation in the form of “deep fakes",
+                "summary": "主句是「it has also raised concerns of misuse by bad…」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [
+                  {
+                    "kind": "both … and … 平行",
+                    "members": [
+                      "general",
+                      "specialized knowledge alike"
+                    ],
+                    "note": "\"两者都\"——两部分并列"
+                  }
+                ],
+                "modifiers": [],
+                "summary": "平行动 1 处、修饰成分 0 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【时间/让步状语从句】「While proponents of the technolo…」——作同时或让步成分，翻译时通常放在主句之前",
+                  "2. 先译【名词性 / 定语从句】「that rely on both general and sp…」——作说明成分，翻译时通常放在主句之前",
+                  "3. 再译【主句】「it has also raised concerns of m…」——这是整句的骨架",
+                  "4. 处理平行结构：general ／ specialized knowledge alike——平行成分逐一对译，不要打乱顺序",
+                  "5. 按「同时或让步」关系组装：中文习惯把同时或让步类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 2 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           }
         ]
       },
@@ -612,7 +1930,61 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "取决于；依赖",
                 "kind": "短语动词"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "depend",
+                    "start": 41,
+                    "end": 47,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "use.",
+                    "start": 68,
+                    "end": 72,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 0,
+                "summary": "未识别到明确的谓语动词，可先按标点分段理解。"
+              },
+              "step2": {
+                "breaks": [],
+                "summary": "句中无明显断点，结构较简单。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "The effects of AI on the economy largely depend on the extent of AI use.",
+                    "start": 0,
+                    "end": 72,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "The effects of AI on the economy largely depend on the extent of AI use.",
+                "summary": "主句是「The effects of AI on the economy largely dep…」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「The effects of AI on the economy…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p2-s1",
@@ -644,7 +2016,53 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "has been limited.",
+                    "start": 55,
+                    "end": 72,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（has been limited.），意味着有 1 件事要译。"
+              },
+              "step2": {
+                "breaks": [],
+                "summary": "句中无明显断点，结构较简单。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "The overall adoption of AI by businesses to this point has been limited.",
+                    "start": 0,
+                    "end": 72,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "The overall adoption of AI by businesses to this point has been limited.",
+                "summary": "主句是「The overall adoption of AI by businesses to …」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「The overall adoption of AI by bu…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p2-s2",
@@ -689,7 +2107,78 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "根据",
                 "kind": "介词框架"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "According",
+                    "start": 0,
+                    "end": 9,
+                    "role": "preposition",
+                    "note": "是介词，不是动词"
+                  },
+                  {
+                    "text": "using",
+                    "start": 92,
+                    "end": 97,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  }
+                ],
+                "count": 0,
+                "summary": "未识别到明确的谓语动词，可先按标点分段理解。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 65,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "According to the Census Business Trends and Outlook Survey (BTOS)",
+                    "start": 0,
+                    "end": 65,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "the number of businesses using AI rose from 3.7% in September 2023 to 5.4% in February 2024.",
+                    "start": 67,
+                    "end": 159,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "According to the Census Business Trends and Outlook Survey (BTOS)",
+                "summary": "主句是「According to the Census Business Trends and …」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "the number of businesses using AI rose from 3（同位语——解释前面那个名词）"
+                ],
+                "summary": "平行动 0 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「According to the Census Business…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p2-s3",
@@ -713,7 +2202,81 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "shown",
+                    "start": 12,
+                    "end": 17,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "has varied",
+                    "start": 55,
+                    "end": 65,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（shown / has varied），意味着有 2 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 7,
+                    "marker": ", + as",
+                    "reason": "as 引导时间/原因状语从句，此处必须断开"
+                  },
+                  {
+                    "pos": 29,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Further, as shown in Figure 1",
+                    "start": 0,
+                    "end": 29,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "adoption across sectors has varied widely.",
+                    "start": 31,
+                    "end": 73,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "Further, as shown in Figure 1",
+                "summary": "主句是「Further, as shown in Figure 1」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "as shown in Figure 1（插入语——先跳过，主句依然完整）"
+                ],
+                "summary": "平行动 0 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Further, as shown in Figure 1」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p2-s4",
@@ -737,7 +2300,90 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "are",
+                    "start": 167,
+                    "end": 170,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "using",
+                    "start": 179,
+                    "end": 184,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（are），意味着有 1 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 81,
+                    "marker": ", + but",
+                    "reason": "but 连接并列成分，可在标点处断开"
+                  },
+                  {
+                    "pos": 118,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "The information sector’s usage of AI (18.1%) far surpasses usage in other sectors",
+                    "start": 0,
+                    "end": 81,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "but it nonetheless still indicates",
+                    "start": 83,
+                    "end": 117,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "that a majority of information sector businesses are not yet using AI.",
+                    "start": 118,
+                    "end": 188,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "The information sector’s usage of AI (18.1%) far surpasses usage in other sectors",
+                "summary": "主句是「The information sector’s usage of AI (18.1%)…」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that a majority of information s…」——作说明成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「The information sector’s usage o…」——这是整句的骨架",
+                  "3. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p2-s5",
@@ -785,7 +2431,107 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "use",
+                    "start": 5,
+                    "end": 8,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "has been",
+                    "start": 15,
+                    "end": 23,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "limited does",
+                    "start": 33,
+                    "end": 45,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "indicate",
+                    "start": 62,
+                    "end": 70,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "will",
+                    "start": 79,
+                    "end": 83,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "remain",
+                    "start": 84,
+                    "end": 90,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（has been / limited does / will），意味着有 3 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 71,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 91,
+                    "marker": "so.",
+                    "reason": "so. 引导目的 / 结果状语从句"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "That use of AI has been somewhat limited does not necessarily indicate",
+                    "start": 0,
+                    "end": 70,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that it will remain",
+                    "start": 71,
+                    "end": 90,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "",
+                "summary": "未能确定主句，建议先按标点切分逐段理解。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「That use of AI has been somewhat…」——作说明成分，翻译时通常放在主句之前",
+                  "2. 先译【名词性 / 定语从句】「that it will remain」——作说明成分，翻译时通常放在主句之前",
+                  "3. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 2 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p2-s6",
@@ -824,7 +2570,98 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "indicated",
+                    "start": 29,
+                    "end": 38,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "use",
+                    "start": 62,
+                    "end": 65,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "fall",
+                    "start": 77,
+                    "end": 81,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（indicated），意味着有 1 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 16,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 86,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "In February 2024",
+                    "start": 0,
+                    "end": 16,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "businesses indicated an expected rate of AI use at 6.6% by fall 2024",
+                    "start": 18,
+                    "end": 86,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "an increase from earlier in the year.",
+                    "start": 88,
+                    "end": 125,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "In February 2024",
+                "summary": "主句是「In February 2024」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "an increase from earlier in the year（同位语——解释前面那个名词）"
+                ],
+                "summary": "平行动 0 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「In February 2024」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p2-s7",
@@ -878,7 +2715,127 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "indicate",
+                    "start": 16,
+                    "end": 24,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "could be adopted",
+                    "start": 121,
+                    "end": 137,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（could be adopted），意味着有 1 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 25,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 49,
+                    "marker": "— + such",
+                    "reason": "such 引导定语从句，此处必须断开"
+                  },
+                  {
+                    "pos": 55,
+                    "marker": "as",
+                    "reason": "as 引导时间/原因状语从句"
+                  },
+                  {
+                    "pos": 79,
+                    "marker": ", + which",
+                    "reason": "which 引导定语从句，此处必须断开"
+                  },
+                  {
+                    "pos": 120,
+                    "marker": "—",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 5 个断点，可以把句子切成 5 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Other estimates indicate",
+                    "start": 0,
+                    "end": 24,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that certain types of AI",
+                    "start": 25,
+                    "end": 49,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "such as large language models",
+                    "start": 50,
+                    "end": 79,
+                    "type": "定语从句",
+                    "isMain": false,
+                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "which underpin many generative AI tools",
+                    "start": 81,
+                    "end": 120,
+                    "type": "非限定性定语从句",
+                    "isMain": false,
+                    "hint": "对前面的名词做补充说明，翻译时可另起一小句"
+                  },
+                  {
+                    "id": "seg-4",
+                    "text": "could be adopted by a large swath of businesses.",
+                    "start": 121,
+                    "end": 169,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "Other estimates indicate",
+                "summary": "主句是「Other estimates indicate」，其余 4 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "such as large language models（插入语——先跳过，主句依然完整）"
+                ],
+                "summary": "平行动 0 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that certain types of AI」——作说明成分，翻译时通常放在主句之前",
+                  "2. 先译【定语从句】「such as large language models」——作修饰成分，翻译时通常放在主句之前",
+                  "3. 先译【非限定性定语从句】「which underpin many generative A…」——对前面的名词做补充说明，翻译时可另起一小句",
+                  "4. 再译【主句】「Other estimates indicate」——这是整句的骨架",
+                  "5. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 3 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p2-s8",
@@ -915,7 +2872,53 @@ export const ATLAS_ARTICLES: Article[] = [
               "notes": [],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "indicates",
+                    "start": 60,
+                    "end": 69,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（indicates），意味着有 1 件事要译。"
+              },
+              "step2": {
+                "breaks": [],
+                "summary": "句中无明显断点，结构较简单。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "One projection of future private U.S. investment in AI also indicates growth to $81.7 billion in 2025 from $47.4 billion in 2022.",
+                    "start": 0,
+                    "end": 129,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "One projection of future private U.S. investment in AI also indicates growth to $81.7 billion in 2025 from $47.4 billion in 2022.",
+                "summary": "主句是「One projection of future private U.S. invest…」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「One projection of future private…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p2-s9",
@@ -961,7 +2964,96 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "would",
+                    "start": 15,
+                    "end": 20,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "be",
+                    "start": 21,
+                    "end": 23,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "create",
+                    "start": 37,
+                    "end": 43,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "is",
+                    "start": 77,
+                    "end": 79,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "appear",
+                    "start": 126,
+                    "end": 132,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（would / is），意味着有 2 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 89,
+                    "marker": ", + although",
+                    "reason": "although 引导让步状语从句，此处必须断开"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "How much usage would be necessary to create structural shifts in the economy is uncertain",
+                    "start": 0,
+                    "end": 89,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "although the effects to this point appear somewhat limited.",
+                    "start": 91,
+                    "end": 150,
+                    "type": "让步状语从句",
+                    "isMain": false,
+                    "hint": "作让步成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "How much usage would be necessary to create structural shifts in the economy is uncertain",
+                "summary": "主句是「How much usage would be necessary to create …」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【让步状语从句】「although the effects to this poi…」——作让步成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「How much usage would be necessar…」——这是整句的骨架",
+                  "3. 按「让步」关系组装：中文习惯把让步类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p2-s10",
@@ -985,7 +3077,99 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "has",
+                    "start": 35,
+                    "end": 38,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "use",
+                    "start": 56,
+                    "end": 59,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "indicate",
+                    "start": 81,
+                    "end": 89,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "will be used",
+                    "start": 98,
+                    "end": 110,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（has / will be used），意味着有 2 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 7,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 14,
+                    "marker": "because",
+                    "reason": "because 引导原因状语从句"
+                  },
+                  {
+                    "pos": 90,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Further, just because a technology has the capacity for use does not necessarily indicate",
+                    "start": 0,
+                    "end": 89,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that it will be used quickly and broadly across economic activity or at all.",
+                    "start": 90,
+                    "end": 166,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "Further, just because a technology has the capacity for use does not necessarily indicate",
+                "summary": "主句是「Further, just because a technology has the c…」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that it will be used quickly and…」——作说明成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「Further, just because a technolo…」——这是整句的骨架",
+                  "3. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p2-s11",
@@ -1024,7 +3208,60 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "past",
+                    "start": 17,
+                    "end": 21,
+                    "role": "preposition",
+                    "note": "是介词，不是动词"
+                  },
+                  {
+                    "text": "has varied",
+                    "start": 35,
+                    "end": 45,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（has varied），意味着有 1 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [],
+                "summary": "句中无明显断点，结构较简单。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "The diffusion of past technologies has varied widely.",
+                    "start": 0,
+                    "end": 53,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "The diffusion of past technologies has varied widely.",
+                "summary": "主句是「The diffusion of past technologies has varie…」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「The diffusion of past technologi…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p2-s12",
@@ -1071,7 +3308,123 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "根据",
                 "kind": "介词框架"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "According",
+                    "start": 0,
+                    "end": 9,
+                    "role": "preposition",
+                    "note": "是介词，不是动词"
+                  },
+                  {
+                    "text": "appears",
+                    "start": 72,
+                    "end": 79,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "be",
+                    "start": 83,
+                    "end": 85,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "following",
+                    "start": 86,
+                    "end": 95,
+                    "role": "preposition",
+                    "note": "是介词，不是动词"
+                  },
+                  {
+                    "text": "cloud",
+                    "start": 139,
+                    "end": 144,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "computing,",
+                    "start": 145,
+                    "end": 155,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "were adopted",
+                    "start": 162,
+                    "end": 174,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（appears / be / were adopted），意味着有 3 件事要译；另有 4 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 50,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 154,
+                    "marker": ", + which",
+                    "reason": "which 引导定语从句，此处必须断开"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "According to the Federal Reserve Bank of St. Louis",
+                    "start": 0,
+                    "end": 50,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "the diffusion of AI appears to be following a pattern similar to personal computers or cloud computing",
+                    "start": 52,
+                    "end": 154,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "which were adopted slowly over multiple decades.",
+                    "start": 156,
+                    "end": 204,
+                    "type": "非限定性定语从句",
+                    "isMain": false,
+                    "hint": "对前面的名词做补充说明，翻译时可另起一小句"
+                  }
+                ],
+                "mainText": "According to the Federal Reserve Bank of St. Louis",
+                "summary": "主句是「According to the Federal Reserve Bank of St.…」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【非限定性定语从句】「which were adopted slowly over m…」——对前面的名词做补充说明，翻译时可另起一小句",
+                  "2. 再译【主句】「According to the Federal Reserve…」——这是整句的骨架",
+                  "3. 按「修饰」关系组装：中文习惯把修饰类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p2-s13",
@@ -1100,7 +3453,131 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "接管；取代",
                 "kind": "短语动词"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "use",
+                    "start": 23,
+                    "end": 26,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "is",
+                    "start": 63,
+                    "end": 65,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "suggests",
+                    "start": 98,
+                    "end": 106,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "use",
+                    "start": 122,
+                    "end": 125,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "could",
+                    "start": 149,
+                    "end": 154,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "take",
+                    "start": 155,
+                    "end": 159,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（is / suggests / could），意味着有 3 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 14,
+                    "marker": "which",
+                    "reason": "which 引导定语从句"
+                  },
+                  {
+                    "pos": 75,
+                    "marker": ", + but",
+                    "reason": "but 连接并列成分，可在标点处断开"
+                  },
+                  {
+                    "pos": 107,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "The extent to",
+                    "start": 0,
+                    "end": 13,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "which AI use becomes ubiquitous in the workplace is uncertain",
+                    "start": 14,
+                    "end": 75,
+                    "type": "定语从句",
+                    "isMain": false,
+                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "but current evidence suggests",
+                    "start": 77,
+                    "end": 106,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "that workplace use of roughly 40% or more could take over a decade.",
+                    "start": 107,
+                    "end": 174,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "The extent to",
+                "summary": "主句是「The extent to」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【定语从句】「which AI use becomes ubiquitous …」——作修饰成分，翻译时通常放在主句之前",
+                  "2. 先译【名词性 / 定语从句】「that workplace use of roughly 40…」——作说明成分，翻译时通常放在主句之前",
+                  "3. 再译【主句】「The extent to」——这是整句的骨架",
+                  "4. 按「修饰」关系组装：中文习惯把修饰类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 2 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p2-s14",
@@ -1153,7 +3630,91 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "因此；就其本身而言",
                 "kind": "习语"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "may",
+                    "start": 42,
+                    "end": 45,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "be",
+                    "start": 46,
+                    "end": 48,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "being",
+                    "start": 79,
+                    "end": 84,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "may",
+                    "start": 89,
+                    "end": 92,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "grow",
+                    "start": 93,
+                    "end": 97,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（may / may），意味着有 2 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 3,
+                    "marker": "such,",
+                    "reason": "such, 引导定语从句"
+                  },
+                  {
+                    "pos": 7,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 1 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "such, the effects of AI on the economy may be relatively small for the time being but may grow over time.",
+                    "start": 3,
+                    "end": 108,
+                    "type": "定语从句",
+                    "isMain": false,
+                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "",
+                "summary": "未能确定主句，建议先按标点切分逐段理解。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【定语从句】「such, the effects of AI on the e…」——作修饰成分，翻译时通常放在主句之前",
+                  "2. 按「修饰」关系组装：中文习惯把修饰类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           }
         ]
       },
@@ -1199,7 +3760,66 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "may",
+                    "start": 34,
+                    "end": 37,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "cause",
+                    "start": 38,
+                    "end": 43,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "are",
+                    "start": 75,
+                    "end": 78,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（may / are），意味着有 2 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [],
+                "summary": "句中无明显断点，结构较简单。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Questions around how technologies may cause structural labor market shifts are long-standing.",
+                    "start": 0,
+                    "end": 93,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "Questions around how technologies may cause structural labor market shifts are long-standing.",
+                "summary": "主句是「Questions around how technologies may cause …」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Questions around how technologie…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p3-s1",
@@ -1253,7 +3873,130 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "past,",
+                    "start": 7,
+                    "end": 12,
+                    "role": "preposition",
+                    "note": "是介词，不是动词"
+                  },
+                  {
+                    "text": "voiced concerns",
+                    "start": 29,
+                    "end": 44,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "could",
+                    "start": 82,
+                    "end": 87,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "replace",
+                    "start": 88,
+                    "end": 95,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "manufacturing.",
+                    "start": 113,
+                    "end": 127,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（voiced concerns / could），意味着有 2 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 11,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 65,
+                    "marker": "which",
+                    "reason": "which 引导定语从句"
+                  },
+                  {
+                    "pos": 100,
+                    "marker": ", + such",
+                    "reason": "such 引导定语从句，此处必须断开"
+                  },
+                  {
+                    "pos": 107,
+                    "marker": "as",
+                    "reason": "as 引导时间/原因状语从句"
+                  }
+                ],
+                "summary": "找到 4 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "In the past",
+                    "start": 0,
+                    "end": 11,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "some economists voiced concerns about the extent to",
+                    "start": 13,
+                    "end": 64,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "which automation could replace jobs",
+                    "start": 65,
+                    "end": 100,
+                    "type": "定语从句",
+                    "isMain": false,
+                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "such as in manufacturing.",
+                    "start": 102,
+                    "end": 127,
+                    "type": "定语从句",
+                    "isMain": false,
+                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "In the past",
+                "summary": "主句是「In the past」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【定语从句】「which automation could replace j…」——作修饰成分，翻译时通常放在主句之前",
+                  "2. 先译【定语从句】「such as in manufacturing.」——作修饰成分，翻译时通常放在主句之前",
+                  "3. 再译【主句】「In the past」——这是整句的骨架",
+                  "4. 按「修饰」关系组装：中文习惯把修饰类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 2 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p3-s2",
@@ -1297,7 +4040,72 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "关于",
                 "kind": "习语"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "are",
+                    "start": 25,
+                    "end": 28,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "being",
+                    "start": 29,
+                    "end": 34,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "asked",
+                    "start": 35,
+                    "end": 40,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（are / asked），意味着有 2 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 5,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 1 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Today, similar questions are being asked with regard to AI.",
+                    "start": 0,
+                    "end": 59,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "Today, similar questions are being asked with regard to AI.",
+                "summary": "主句是「Today, similar questions are being asked wit…」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Today, similar questions are bei…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p3-s3",
@@ -1350,7 +4158,158 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "shown",
+                    "start": 3,
+                    "end": 8,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "indicate",
+                    "start": 31,
+                    "end": 39,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "use",
+                    "start": 67,
+                    "end": 70,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "report",
+                    "start": 74,
+                    "end": 80,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "replacing",
+                    "start": 84,
+                    "end": 93,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "effects",
+                    "start": 127,
+                    "end": 134,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "are",
+                    "start": 155,
+                    "end": 158,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（shown / effects / are），意味着有 3 件事要译；另有 4 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 19,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 40,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 45,
+                    "marker": "while",
+                    "reason": "while 引导时间/让步状语从句"
+                  },
+                  {
+                    "pos": 62,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 114,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 5 个断点，可以把句子切成 5 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "As shown in Table 1",
+                    "start": 0,
+                    "end": 19,
+                    "type": "时间/原因状语从句",
+                    "isMain": false,
+                    "hint": "作时间或原因成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "BTOS data indicate",
+                    "start": 21,
+                    "end": 39,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "that while businesses",
+                    "start": 40,
+                    "end": 61,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "that use AI report it replacing some number of tasks",
+                    "start": 62,
+                    "end": 114,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-4",
+                    "text": "employment effects in either direction are relatively small.",
+                    "start": 116,
+                    "end": 176,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "BTOS data indicate",
+                "summary": "主句是「BTOS data indicate」，其余 4 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【时间/原因状语从句】「As shown in Table 1」——作时间或原因成分，翻译时通常放在主句之前",
+                  "2. 先译【名词性 / 定语从句】「that while businesses」——作说明成分，翻译时通常放在主句之前",
+                  "3. 先译【名词性 / 定语从句】「that use AI report it replacing …」——作说明成分，翻译时通常放在主句之前",
+                  "4. 再译【主句】「BTOS data indicate」——这是整句的骨架",
+                  "5. 按「时间或原因」关系组装：中文习惯把时间或原因类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 3 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p3-s4",
@@ -1405,7 +4364,102 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "平均而言",
                 "kind": "习语"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "indicates",
+                    "start": 5,
+                    "end": 14,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "used",
+                    "start": 24,
+                    "end": 28,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "is",
+                    "start": 43,
+                    "end": 45,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（indicates / used / is），意味着有 3 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 15,
+                    "marker": "that,",
+                    "reason": "that, 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 19,
+                    "marker": ", + as",
+                    "reason": "as 引导时间/原因状语从句，此处必须断开"
+                  },
+                  {
+                    "pos": 38,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "This indicates that",
+                    "start": 0,
+                    "end": 19,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "as used currently",
+                    "start": 21,
+                    "end": 38,
+                    "type": "时间/原因状语从句",
+                    "isMain": false,
+                    "hint": "作时间或原因成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "AI is not replacing workers on average.",
+                    "start": 40,
+                    "end": 79,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "This indicates that",
+                "summary": "主句是「This indicates that」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "as used currently（插入语——先跳过，主句依然完整）"
+                ],
+                "summary": "平行动 0 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【时间/原因状语从句】「as used currently」——作时间或原因成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「This indicates that」——这是整句的骨架",
+                  "3. 按「时间或原因」关系组装：中文习惯把时间或原因类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p3-s5",
@@ -1451,7 +4505,88 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "report",
+                    "start": 20,
+                    "end": 26,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "will",
+                    "start": 48,
+                    "end": 52,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "have",
+                    "start": 53,
+                    "end": 57,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（will），意味着有 1 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 7,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 40,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "However, businesses report expectations",
+                    "start": 0,
+                    "end": 39,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that AI will have a growing impact on firm employment.",
+                    "start": 40,
+                    "end": 94,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "However, businesses report expectations",
+                "summary": "主句是「However, businesses report expectations」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that AI will have a growing impa…」——作说明成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「However, businesses report expec…」——这是整句的骨架",
+                  "3. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p3-s6",
@@ -1483,7 +4618,114 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "从长远来看",
                 "kind": "习语"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "has happened",
+                    "start": 16,
+                    "end": 28,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "past",
+                    "start": 32,
+                    "end": 36,
+                    "role": "preposition",
+                    "note": "是介词，不是动词"
+                  },
+                  {
+                    "text": "may",
+                    "start": 74,
+                    "end": 77,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "result",
+                    "start": 78,
+                    "end": 84,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "including",
+                    "start": 122,
+                    "end": 131,
+                    "role": "preposition",
+                    "note": "是介词，不是动词"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（has happened / may），意味着有 2 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 11,
+                    "marker": ", + as",
+                    "reason": "as 引导时间/原因状语从句，此处必须断开"
+                  },
+                  {
+                    "pos": 69,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 120,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Nonetheless, as has happened in past episodes of technological change",
+                    "start": 0,
+                    "end": 69,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "AI may result in a changing mix of available jobs",
+                    "start": 71,
+                    "end": 120,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "including the creation of new ones but not fewer total jobs in the long run.",
+                    "start": 122,
+                    "end": 198,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "Nonetheless, as has happened in past episodes of technological change",
+                "summary": "主句是「Nonetheless, as has happened in past episode…」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Nonetheless, as has happened in …」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           }
         ]
       },
@@ -1536,7 +4778,104 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "agree",
+                    "start": 21,
+                    "end": 26,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "is",
+                    "start": 60,
+                    "end": 62,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "affect",
+                    "start": 73,
+                    "end": 79,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "is",
+                    "start": 92,
+                    "end": 94,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（is / is），意味着有 2 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 27,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 51,
+                    "marker": "which",
+                    "reason": "which 引导定语从句"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Economists generally agree",
+                    "start": 0,
+                    "end": 26,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that the main avenue by",
+                    "start": 27,
+                    "end": 50,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "which AI is likely to affect the economy is labor productivity.",
+                    "start": 51,
+                    "end": 114,
+                    "type": "定语从句",
+                    "isMain": false,
+                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "Economists generally agree",
+                "summary": "主句是「Economists generally agree」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that the main avenue by」——作说明成分，翻译时通常放在主句之前",
+                  "2. 先译【定语从句】「which AI is likely to affect the…」——作修饰成分，翻译时通常放在主句之前",
+                  "3. 再译【主句】「Economists generally agree」——这是整句的骨架",
+                  "4. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 2 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p4-s1",
@@ -1582,7 +4921,111 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "suggest",
+                    "start": 15,
+                    "end": 22,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "can",
+                    "start": 31,
+                    "end": 34,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "affect",
+                    "start": 35,
+                    "end": 41,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "may",
+                    "start": 92,
+                    "end": 95,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "differ",
+                    "start": 96,
+                    "end": 102,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（can / may），意味着有 2 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 23,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 67,
+                    "marker": ", + although",
+                    "reason": "although 引导让步状语从句，此处必须断开"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Many estimates suggest",
+                    "start": 0,
+                    "end": 22,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that AI can affect task productivity notably",
+                    "start": 23,
+                    "end": 67,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "although these effects may differ across skill levels.",
+                    "start": 69,
+                    "end": 123,
+                    "type": "让步状语从句",
+                    "isMain": false,
+                    "hint": "作让步成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "Many estimates suggest",
+                "summary": "主句是「Many estimates suggest」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that AI can affect task producti…」——作说明成分，翻译时通常放在主句之前",
+                  "2. 先译【让步状语从句】「although these effects may diffe…」——作让步成分，翻译时通常放在主句之前",
+                  "3. 再译【主句】「Many estimates suggest」——这是整句的骨架",
+                  "4. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 2 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p4-s2",
@@ -1636,7 +5079,137 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "tend",
+                    "start": 20,
+                    "end": 24,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "conclude",
+                    "start": 28,
+                    "end": 36,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "have found",
+                    "start": 123,
+                    "end": 133,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "made",
+                    "start": 146,
+                    "end": 150,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "can",
+                    "start": 157,
+                    "end": 160,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "be",
+                    "start": 161,
+                    "end": 163,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（have found / made / can），意味着有 3 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 10,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 37,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 99,
+                    "marker": ", + although",
+                    "reason": "although 引导让步状语从句，此处必须断开"
+                  },
+                  {
+                    "pos": 134,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  }
+                ],
+                "summary": "找到 4 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "In general, studies tend to conclude",
+                    "start": 0,
+                    "end": 36,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that the use of AI increases task productivity and performance",
+                    "start": 37,
+                    "end": 99,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "although some studies have found",
+                    "start": 101,
+                    "end": 133,
+                    "type": "让步状语从句",
+                    "isMain": false,
+                    "hint": "作让步成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "that errors made by AI can be counterproductive.",
+                    "start": 134,
+                    "end": 182,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "In general, studies tend to conclude",
+                "summary": "主句是「In general, studies tend to conclude」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that the use of AI increases tas…」——作说明成分，翻译时通常放在主句之前",
+                  "2. 先译【让步状语从句】「although some studies have found」——作让步成分，翻译时通常放在主句之前",
+                  "3. 先译【名词性 / 定语从句】「that errors made by AI can be co…」——作说明成分，翻译时通常放在主句之前",
+                  "4. 再译【主句】「In general, studies tend to conc…」——这是整句的骨架",
+                  "5. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 3 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p4-s3",
@@ -1691,7 +5264,122 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "部分地",
                 "kind": "习语"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "may be affected",
+                    "start": 29,
+                    "end": 44,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "is",
+                    "start": 51,
+                    "end": 53,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "estimate,",
+                    "start": 64,
+                    "end": 73,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "depends,",
+                    "start": 85,
+                    "end": 93,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "tasks",
+                    "start": 133,
+                    "end": 138,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "use",
+                    "start": 139,
+                    "end": 142,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 4,
+                "summary": "句中共有 4 个谓语动词（may be affected / is / depends, / tasks），意味着有 4 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 72,
+                    "marker": ", + because",
+                    "reason": "because 引导原因状语从句，此处必须断开"
+                  },
+                  {
+                    "pos": 92,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 101,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "How total labor productivity may be affected by AI is harder to estimate",
+                    "start": 0,
+                    "end": 72,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "because it depends",
+                    "start": 74,
+                    "end": 92,
+                    "type": "原因状语从句",
+                    "isMain": false,
+                    "hint": "作原因成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "in part, on how many and what types of tasks use AI.",
+                    "start": 94,
+                    "end": 146,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "How total labor productivity may be affected by AI is harder to estimate",
+                "summary": "主句是「How total labor productivity may be affected…」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "because it depends（插入语——先跳过，主句依然完整）"
+                ],
+                "summary": "平行动 0 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【原因状语从句】「because it depends」——作原因成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「How total labor productivity may…」——这是整句的骨架",
+                  "3. 按「原因」关系组装：中文习惯把原因类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p4-s4",
@@ -1738,7 +5426,107 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "estimates",
+                    "start": 14,
+                    "end": 23,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "tasks are automated",
+                    "start": 50,
+                    "end": 69,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "would",
+                    "start": 107,
+                    "end": 112,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "increase",
+                    "start": 113,
+                    "end": 121,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（estimates / tasks are automated / would），意味着有 3 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 24,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 29,
+                    "marker": "if",
+                    "reason": "if 引导条件状语从句"
+                  },
+                  {
+                    "pos": 86,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Goldman Sachs estimates",
+                    "start": 0,
+                    "end": 23,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that if 25% of total work tasks are automated by generative AI",
+                    "start": 24,
+                    "end": 86,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "labor productivity would increase 15%.",
+                    "start": 88,
+                    "end": 126,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "Goldman Sachs estimates",
+                "summary": "主句是「Goldman Sachs estimates」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that if 25% of total work tasks …」——作说明成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「Goldman Sachs estimates」——这是整句的骨架",
+                  "3. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p4-s5",
@@ -1791,7 +5579,82 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "解释；占（比例）；导致",
                 "kind": "短语动词"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "has",
+                    "start": 8,
+                    "end": 11,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "impact",
+                    "start": 29,
+                    "end": 35,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "accounts",
+                    "start": 75,
+                    "end": 83,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（has / accounts），意味着有 2 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 67,
+                    "marker": ", + which",
+                    "reason": "which 引导定语从句，此处必须断开"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "AI also has the potential to impact total factor productivity (TFP)",
+                    "start": 0,
+                    "end": 67,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "which accounts for the impact of technological growth.",
+                    "start": 69,
+                    "end": 123,
+                    "type": "非限定性定语从句",
+                    "isMain": false,
+                    "hint": "对前面的名词做补充说明，翻译时可另起一小句"
+                  }
+                ],
+                "mainText": "AI also has the potential to impact total factor productivity (TFP)",
+                "summary": "主句是「AI also has the potential to impact total fa…」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【非限定性定语从句】「which accounts for the impact of…」——对前面的名词做补充说明，翻译时可另起一小句",
+                  "2. 再译【主句】「AI also has the potential to imp…」——这是整句的骨架",
+                  "3. 按「修饰」关系组装：中文习惯把修饰类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p4-s6",
@@ -1845,7 +5708,76 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "导致；造成",
                 "kind": "短语动词"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "would",
+                    "start": 85,
+                    "end": 90,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "increase",
+                    "start": 91,
+                    "end": 99,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（would），意味着有 1 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 78,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "If the adoption of AI results in an increased pace of research and development",
+                    "start": 0,
+                    "end": 78,
+                    "type": "条件状语从句",
+                    "isMain": false,
+                    "hint": "作条件成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "this would increase the growth rate of TFP and long-run economic growth.",
+                    "start": 80,
+                    "end": 152,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "this would increase the growth rate of TFP and long-run economic growth.",
+                "summary": "主句是「this would increase the growth rate of TFP a…」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【条件状语从句】「If the adoption of AI results in…」——作条件成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「this would increase the growth r…」——这是整句的骨架",
+                  "3. 按「条件」关系组装：中文习惯把条件类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p4-s7",
@@ -1891,7 +5823,98 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "从短期来看",
                 "kind": "习语"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "suggests",
+                    "start": 10,
+                    "end": 18,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "would",
+                    "start": 78,
+                    "end": 83,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "be",
+                    "start": 84,
+                    "end": 86,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（suggests / would），意味着有 2 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 19,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 51,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "One study suggests",
+                    "start": 0,
+                    "end": 18,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that in the short run (10 years)",
+                    "start": 19,
+                    "end": 51,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "the effects of AI on TFP would be a roughly 0.53% cumulative increase.",
+                    "start": 53,
+                    "end": 123,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "One study suggests",
+                "summary": "主句是「One study suggests」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "the effects of AI on TFP would be a roughly 0（同位语——解释前面那个名词）"
+                ],
+                "summary": "平行动 0 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that in the short run (10 years)」——作说明成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「One study suggests」——这是整句的骨架",
+                  "3. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p4-s8",
@@ -1928,7 +5951,53 @@ export const ATLAS_ARTICLES: Article[] = [
               "notes": [],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "is",
+                    "start": 20,
+                    "end": 22,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（is），意味着有 1 件事要译。"
+              },
+              "step2": {
+                "breaks": [],
+                "summary": "句中无明显断点，结构较简单。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Productivity growth is an important determinant of long-term economic growth and income.",
+                    "start": 0,
+                    "end": 88,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "Productivity growth is an important determinant of long-term economic growth and income.",
+                "summary": "主句是「Productivity growth is an important determin…」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Productivity growth is an import…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p4-s9",
@@ -1965,7 +6034,82 @@ export const ATLAS_ARTICLES: Article[] = [
               "notes": [],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "allow",
+                    "start": 22,
+                    "end": 27,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "services,",
+                    "start": 75,
+                    "end": 84,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "increasing",
+                    "start": 93,
+                    "end": 103,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（services,），意味着有 1 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 83,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Gains in productivity allow for the more efficient production of goods and services",
+                    "start": 0,
+                    "end": 83,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "thereby increasing the productive capacity of the economy.",
+                    "start": 85,
+                    "end": 143,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "Gains in productivity allow for the more efficient production of goods and services",
+                "summary": "主句是「Gains in productivity allow for the more eff…」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Gains in productivity allow for …」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p4-s10",
@@ -2002,7 +6146,60 @@ export const ATLAS_ARTICLES: Article[] = [
               "notes": [],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "vary",
+                    "start": 94,
+                    "end": 98,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "are",
+                    "start": 103,
+                    "end": 106,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（are），意味着有 1 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [],
+                "summary": "句中无明显断点，结构较简单。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Estimates of the effects of AI on U.S. gross domestic product (GDP) in the short and long run vary but are typically positive.",
+                    "start": 0,
+                    "end": 126,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "Estimates of the effects of AI on U.S. gross domestic product (GDP) in the short and long run vary but are typically positive.",
+                "summary": "主句是「Estimates of the effects of AI on U.S. gross…」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Estimates of the effects of AI o…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p4-s11",
@@ -2054,7 +6251,82 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "多达；直到",
                 "kind": "介词框架"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "estimates",
+                    "start": 24,
+                    "end": 33,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "could",
+                    "start": 66,
+                    "end": 71,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "result",
+                    "start": 72,
+                    "end": 78,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（estimates / could），意味着有 2 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 34,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "The Goldman Sachs study estimates",
+                    "start": 0,
+                    "end": 33,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that this productivity increase could result in an up to 0.9% cumulative increase in GDP over the same time frame.",
+                    "start": 34,
+                    "end": 148,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "The Goldman Sachs study estimates",
+                "summary": "主句是「The Goldman Sachs study estimates」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that this productivity increase …」——作说明成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「The Goldman Sachs study estimates」——这是整句的骨架",
+                  "3. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p4-s12",
@@ -2108,7 +6380,111 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "除…之外还",
                 "kind": "介词框架"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "considering",
+                    "start": 5,
+                    "end": 16,
+                    "role": "preposition",
+                    "note": "是介词，不是动词"
+                  },
+                  {
+                    "text": "arise:",
+                    "start": 48,
+                    "end": 54,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "tasks will",
+                    "start": 86,
+                    "end": 96,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "create",
+                    "start": 100,
+                    "end": 106,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "automating",
+                    "start": 122,
+                    "end": 132,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（tasks will），意味着有 1 件事要译；另有 4 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 31,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 53,
+                    "marker": ":",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "When considering the longer run",
+                    "start": 0,
+                    "end": 31,
+                    "type": "时间状语从句",
+                    "isMain": false,
+                    "hint": "作时间成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "more questions arise",
+                    "start": 33,
+                    "end": 53,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "How many and what types of new tasks will AI create in addition to automating existing ones?",
+                    "start": 55,
+                    "end": 147,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "more questions arise",
+                "summary": "主句是「more questions arise」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【时间状语从句】「When considering the longer run」——作时间成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「more questions arise」——这是整句的骨架",
+                  "3. 按「时间」关系组装：中文习惯把时间类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p4-s13",
@@ -2140,7 +6516,73 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "Will",
+                    "start": 0,
+                    "end": 4,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "based tasks",
+                    "start": 8,
+                    "end": 19,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "become",
+                    "start": 20,
+                    "end": 26,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "learn?",
+                    "start": 65,
+                    "end": 71,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（Will / based tasks），意味着有 2 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [],
+                "summary": "句中无明显断点，结构较简单。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Will AI-based tasks become more advanced and therefore harder to learn?",
+                    "start": 0,
+                    "end": 71,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "Will AI-based tasks become more advanced and therefore harder to learn?",
+                "summary": "主句是「Will AI-based tasks become more advanced and…」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Will AI-based tasks become more …」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p4-s14",
@@ -2170,7 +6612,66 @@ export const ATLAS_ARTICLES: Article[] = [
               "notes": [],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "Will",
+                    "start": 0,
+                    "end": 4,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "be",
+                    "start": 17,
+                    "end": 19,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "tasks?",
+                    "start": 52,
+                    "end": 58,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（Will / tasks?），意味着有 2 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [],
+                "summary": "句中无明显断点，结构较简单。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Will AI adoption be even across sectors or types of tasks?",
+                    "start": 0,
+                    "end": 58,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "Will AI adoption be even across sectors or types of tasks?",
+                "summary": "主句是「Will AI adoption be even across sectors or t…」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Will AI adoption be even across …」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p4-s15",
@@ -2209,7 +6710,60 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "will",
+                    "start": 4,
+                    "end": 8,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "affect",
+                    "start": 74,
+                    "end": 80,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（will），意味着有 1 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [],
+                "summary": "句中无明显断点，结构较简单。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "How will short-run effects of AI and policy decisions in the coming years affect future economic and policy responses?",
+                    "start": 0,
+                    "end": 118,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "How will short-run effects of AI and policy decisions in the coming years affect future economic and policy responses?",
+                "summary": "主句是「How will short-run effects of AI and policy …」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「How will short-run effects of AI…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p4-s16",
@@ -2271,7 +6825,147 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "从长远来看",
                 "kind": "习语"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "suggests",
+                    "start": 10,
+                    "end": 18,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "could",
+                    "start": 65,
+                    "end": 70,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "vary",
+                    "start": 71,
+                    "end": 75,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "based",
+                    "start": 90,
+                    "end": 95,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "including",
+                    "start": 120,
+                    "end": 129,
+                    "role": "preposition",
+                    "note": "是介词，不是动词"
+                  },
+                  {
+                    "text": "is concentrated",
+                    "start": 159,
+                    "end": 174,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "gains",
+                    "start": 210,
+                    "end": 215,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "are",
+                    "start": 233,
+                    "end": 236,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 6,
+                "summary": "句中共有 6 个谓语动词（suggests / could / based / is concentrated / gains / are），意味着有 6 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 19,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 118,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 130,
+                    "marker": "which",
+                    "reason": "which 引导定语从句"
+                  },
+                  {
+                    "pos": 182,
+                    "marker": "whether",
+                    "reason": "whether 引导名词性从句"
+                  }
+                ],
+                "summary": "找到 4 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "One study suggests",
+                    "start": 0,
+                    "end": 18,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that the effects of AI on GDP in the long run could vary substantially based on a number of factors",
+                    "start": 19,
+                    "end": 118,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "including which industries AI adoption is concentrated in and",
+                    "start": 120,
+                    "end": 181,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "whether or not productivity gains from AI adoption are expected.",
+                    "start": 182,
+                    "end": 246,
+                    "type": "名词性从句",
+                    "isMain": false,
+                    "hint": "作选择成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "One study suggests",
+                "summary": "主句是「One study suggests」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that the effects of AI on GDP in…」——作说明成分，翻译时通常放在主句之前",
+                  "2. 先译【名词性从句】「whether or not productivity gain…」——作选择成分，翻译时通常放在主句之前",
+                  "3. 再译【主句】「One study suggests」——这是整句的骨架",
+                  "4. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 2 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p4-s17",
@@ -2318,7 +7012,95 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "从长远来看",
                 "kind": "习语"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "suggests",
+                    "start": 10,
+                    "end": 18,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "could",
+                    "start": 28,
+                    "end": 33,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "rise",
+                    "start": 34,
+                    "end": 38,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "could",
+                    "start": 87,
+                    "end": 92,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "be",
+                    "start": 93,
+                    "end": 95,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（suggests / could / could），意味着有 3 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 19,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "The study suggests",
+                    "start": 0,
+                    "end": 18,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that GDP could rise to about 35% above baseline in the long run but could be much smaller depending on the scenario.",
+                    "start": 19,
+                    "end": 135,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "The study suggests",
+                "summary": "主句是「The study suggests」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that GDP could rise to about 35%…」——作说明成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「The study suggests」——这是整句的骨架",
+                  "3. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           }
         ]
       },
@@ -2357,7 +7139,82 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "Owing",
+                    "start": 0,
+                    "end": 5,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "has",
+                    "start": 57,
+                    "end": 60,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "increase",
+                    "start": 78,
+                    "end": 86,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（has），意味着有 1 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 52,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Owing to the expected effects on productivity growth",
+                    "start": 0,
+                    "end": 52,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "AI has the potential to increase total income in the economy.",
+                    "start": 54,
+                    "end": 115,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "Owing to the expected effects on productivity growth",
+                "summary": "主句是「Owing to the expected effects on productivit…」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Owing to the expected effects on…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p5-s1",
@@ -2404,7 +7261,94 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "does",
+                    "start": 14,
+                    "end": 18,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "mean",
+                    "start": 23,
+                    "end": 27,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "will",
+                    "start": 53,
+                    "end": 57,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "benefit.",
+                    "start": 58,
+                    "end": 66,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（does / will），意味着有 2 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 7,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 28,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "However, this does not mean",
+                    "start": 0,
+                    "end": 27,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that all economic actors will benefit.",
+                    "start": 28,
+                    "end": 66,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "However, this does not mean",
+                "summary": "主句是「However, this does not mean」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that all economic actors will be…」——作说明成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「However, this does not mean」——这是整句的骨架",
+                  "3. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p5-s2",
@@ -2443,7 +7387,95 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "gains",
+                    "start": 45,
+                    "end": 50,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "have largely been concentrated",
+                    "start": 81,
+                    "end": 111,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（gains / have largely been concentrated），意味着有 2 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 11,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 30,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 129,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "For example, in recent decades",
+                    "start": 0,
+                    "end": 30,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "productivity gains from technological innovation have largely been concentrated among high-income",
+                    "start": 32,
+                    "end": 129,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "skilled workers.",
+                    "start": 131,
+                    "end": 147,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "productivity gains from technological innovation have largely been concentrated among high-income",
+                "summary": "主句是「productivity gains from technological innova…」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "in recent decades（插入语——先跳过，主句依然完整）"
+                ],
+                "summary": "平行动 0 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「productivity gains from technolo…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p5-s3",
@@ -2490,7 +7522,89 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "is",
+                    "start": 3,
+                    "end": 5,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "use",
+                    "start": 27,
+                    "end": 30,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "would",
+                    "start": 31,
+                    "end": 36,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "have",
+                    "start": 37,
+                    "end": 41,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（is / would），意味着有 2 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 16,
+                    "marker": "whether",
+                    "reason": "whether 引导名词性从句"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "It is not clear",
+                    "start": 0,
+                    "end": 15,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "whether AI use would have a similar effect.",
+                    "start": 16,
+                    "end": 59,
+                    "type": "名词性从句",
+                    "isMain": false,
+                    "hint": "作选择成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "It is not clear",
+                "summary": "主句是「It is not clear」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性从句】「whether AI use would have a simi…」——作选择成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「It is not clear」——这是整句的骨架",
+                  "3. 按「选择」关系组装：中文习惯把选择类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p5-s4",
@@ -2530,7 +7644,110 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "has suggested",
+                    "start": 26,
+                    "end": 39,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "may",
+                    "start": 97,
+                    "end": 100,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "benefit",
+                    "start": 101,
+                    "end": 108,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（has suggested / may），意味着有 2 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 15,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 40,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 73,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "On the one hand",
+                    "start": 0,
+                    "end": 15,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "evidence has suggested",
+                    "start": 17,
+                    "end": 39,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "that within certain types of work",
+                    "start": 40,
+                    "end": 73,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "lower-skilled workers may benefit more from AI.",
+                    "start": 75,
+                    "end": 122,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "On the one hand",
+                "summary": "主句是「On the one hand」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that within certain types of work」——作说明成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「On the one hand」——这是整句的骨架",
+                  "3. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p5-s5",
@@ -2576,7 +7793,85 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "conducted",
+                    "start": 43,
+                    "end": 52,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "used",
+                    "start": 138,
+                    "end": 142,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "based",
+                    "start": 149,
+                    "end": 154,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（conducted / used / based），意味着有 3 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 11,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 70,
+                    "marker": "which",
+                    "reason": "which 引导定语从句"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "For example, in a recent study the authors conducted an experiment in",
+                    "start": 0,
+                    "end": 69,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "which customer support agents of varying experience and skill level used an AI-based conversational assistant.",
+                    "start": 70,
+                    "end": 180,
+                    "type": "定语从句",
+                    "isMain": false,
+                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "",
+                "summary": "未能确定主句，建议先按标点切分逐段理解。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【定语从句】「which customer support agents of…」——作修饰成分，翻译时通常放在主句之前",
+                  "2. 按「修饰」关系组装：中文习惯把修饰类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p5-s6",
@@ -2620,7 +7915,86 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "平均而言",
                 "kind": "习语"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "use",
+                    "start": 17,
+                    "end": 20,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "increased",
+                    "start": 27,
+                    "end": 36,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "levels",
+                    "start": 115,
+                    "end": 121,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（increased / levels），意味着有 2 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 10,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 147,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "On average, this use of AI increased productivity significantly more for those with less experience or lower skill levels than for more experienced",
+                    "start": 0,
+                    "end": 147,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "higher-skilled workers.",
+                    "start": 149,
+                    "end": 172,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "On average, this use of AI increased productivity significantly more for those with less experience or lower skill levels than for more experienced",
+                "summary": "主句是「On average, this use of AI increased product…」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「On average, this use of AI incre…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p5-s7",
@@ -2666,7 +8040,94 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "导致；造成",
                 "kind": "短语动词"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "could",
+                    "start": 9,
+                    "end": 14,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "normalize",
+                    "start": 27,
+                    "end": 36,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "resulting",
+                    "start": 90,
+                    "end": 99,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "equalizing",
+                    "start": 103,
+                    "end": 113,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（could），意味着有 1 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 4,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 78,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Thus, AI could potentially normalize outcomes across workers within businesses",
+                    "start": 0,
+                    "end": 78,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "in theory resulting in equalizing productivity and wages.",
+                    "start": 80,
+                    "end": 137,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "Thus, AI could potentially normalize outcomes across workers within businesses",
+                "summary": "主句是「Thus, AI could potentially normalize outcome…」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Thus, AI could potentially norma…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p5-s8",
@@ -2710,7 +8171,81 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "另一方面",
                 "kind": "习语"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "is expected",
+                    "start": 22,
+                    "end": 33,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "produce",
+                    "start": 47,
+                    "end": 54,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "gains",
+                    "start": 75,
+                    "end": 80,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（is expected / gains），意味着有 2 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 17,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "On the other hand",
+                    "start": 0,
+                    "end": 17,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "AI is expected to generally produce higher productivity gains for higher income and skilled workers.",
+                    "start": 19,
+                    "end": 119,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "On the other hand",
+                "summary": "主句是「On the other hand」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「On the other hand」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p5-s9",
@@ -2749,7 +8284,92 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "suggests",
+                    "start": 27,
+                    "end": 35,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "gains",
+                    "start": 54,
+                    "end": 59,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "could",
+                    "start": 87,
+                    "end": 92,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "be",
+                    "start": 93,
+                    "end": 95,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（suggests / gains / could），意味着有 3 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 11,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 36,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "For example, some research suggests",
+                    "start": 0,
+                    "end": 35,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that productivity gains from large language models could be significantly larger for higher-income workers.",
+                    "start": 36,
+                    "end": 143,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "",
+                "summary": "未能确定主句，建议先按标点切分逐段理解。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that productivity gains from lar…」——作说明成分，翻译时通常放在主句之前",
+                  "2. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           }
         ]
       },
@@ -2800,7 +8420,71 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "由…产生",
                 "kind": "短语动词"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "arise",
+                    "start": 26,
+                    "end": 31,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "use",
+                    "start": 54,
+                    "end": 57,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 0,
+                "summary": "未识别到明确的谓语动词，可先按标点分段理解。"
+              },
+              "step2": {
+                "breaks": [],
+                "summary": "句中无明显断点，结构较简单。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Numerous policy questions arise from the adoption and use of AI in the production process.",
+                    "start": 0,
+                    "end": 90,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "Numerous policy questions arise from the adoption and use of AI in the production process.",
+                "summary": "主句是「Numerous policy questions arise from the ado…」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [
+                  {
+                    "kind": "from … to … 平行",
+                    "members": [
+                      "the adoption",
+                      "use of AI in the production process"
+                    ],
+                    "note": "范围的两端，形式通常一致"
+                  }
+                ],
+                "modifiers": [],
+                "summary": "平行动 1 处、修饰成分 0 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Numerous policy questions arise …」——这是整句的骨架",
+                  "2. 处理平行结构：the adoption ／ use of AI in the production process——平行成分逐一对译，不要打乱顺序",
+                  "3. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p6-s1",
@@ -2847,7 +8531,82 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "asked",
+                    "start": 28,
+                    "end": 33,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "involve",
+                    "start": 44,
+                    "end": 51,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "evidenced",
+                    "start": 78,
+                    "end": 87,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（asked / evidenced），意味着有 2 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 73,
+                    "marker": ", + as",
+                    "reason": "as 引导时间/原因状语从句，此处必须断开"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Many of the most frequently asked questions involve labor market outcomes",
+                    "start": 0,
+                    "end": 73,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "as evidenced by recent House Oversight and Accountability Committee and Joint Economic Committee hearings on AI and the labor market.",
+                    "start": 75,
+                    "end": 208,
+                    "type": "时间/原因状语从句",
+                    "isMain": false,
+                    "hint": "作时间或原因成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "Many of the most frequently asked questions involve labor market outcomes",
+                "summary": "主句是「Many of the most frequently asked questions …」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【时间/原因状语从句】「as evidenced by recent House Ove…」——作时间或原因成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「Many of the most frequently aske…」——这是整句的骨架",
+                  "3. 按「时间或原因」关系组装：中文习惯把时间或原因类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p6-s2",
@@ -2893,7 +8652,126 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "consider",
+                    "start": 16,
+                    "end": 24,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "could",
+                    "start": 36,
+                    "end": 41,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "change",
+                    "start": 55,
+                    "end": 61,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "might be distributed.",
+                    "start": 137,
+                    "end": 158,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（could / might be distributed.），意味着有 2 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 25,
+                    "marker": "whether",
+                    "reason": "whether 引导名词性从句"
+                  },
+                  {
+                    "pos": 84,
+                    "marker": ", + if",
+                    "reason": "if 引导条件状语从句，此处必须断开"
+                  },
+                  {
+                    "pos": 91,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 123,
+                    "marker": "such",
+                    "reason": "such 引导定语从句"
+                  }
+                ],
+                "summary": "找到 4 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Questions often consider",
+                    "start": 0,
+                    "end": 24,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "whether AI could structurally change the nature of work and",
+                    "start": 25,
+                    "end": 84,
+                    "type": "名词性从句",
+                    "isMain": false,
+                    "hint": "作选择成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "if so, how the costs and benefits of",
+                    "start": 86,
+                    "end": 122,
+                    "type": "条件状语从句",
+                    "isMain": false,
+                    "hint": "作条件成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "such a change might be distributed.",
+                    "start": 123,
+                    "end": 158,
+                    "type": "定语从句",
+                    "isMain": false,
+                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "Questions often consider",
+                "summary": "主句是「Questions often consider」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "if so（插入语——先跳过，主句依然完整）"
+                ],
+                "summary": "平行动 0 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性从句】「whether AI could structurally ch…」——作选择成分，翻译时通常放在主句之前",
+                  "2. 先译【条件状语从句】「if so, how the costs and benefit…」——作条件成分，翻译时通常放在主句之前",
+                  "3. 先译【定语从句】「such a change might be distribut…」——作修饰成分，翻译时通常放在主句之前",
+                  "4. 再译【主句】「Questions often consider」——这是整句的骨架",
+                  "5. 按「选择」关系组装：中文习惯把选择类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 3 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "crs-if12762-ai-macro-p6-s3",
@@ -2961,7 +8839,175 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "生效",
                 "kind": "固定搭配"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "may",
+                    "start": 9,
+                    "end": 12,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "wish",
+                    "start": 13,
+                    "end": 17,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "consider",
+                    "start": 21,
+                    "end": 29,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "would",
+                    "start": 44,
+                    "end": 49,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "prevent",
+                    "start": 57,
+                    "end": 64,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "mitigate",
+                    "start": 68,
+                    "end": 76,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "provide",
+                    "start": 118,
+                    "end": 125,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "are",
+                    "start": 158,
+                    "end": 161,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "displaced",
+                    "start": 181,
+                    "end": 190,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "do",
+                    "start": 208,
+                    "end": 210,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "take",
+                    "start": 211,
+                    "end": 215,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 5,
+                "summary": "句中共有 5 个谓语动词（may / would / are / displaced / do），意味着有 5 件事要译；另有 6 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 39,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 154,
+                    "marker": "who",
+                    "reason": "who 引导定语从句"
+                  },
+                  {
+                    "pos": 191,
+                    "marker": "once",
+                    "reason": "once 引导时间状语从句"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Congress may wish to consider policies",
+                    "start": 0,
+                    "end": 38,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that would either prevent or mitigate changes to the labor market or otherwise provide assistance to those workers",
+                    "start": 39,
+                    "end": 153,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "who are fully or partially displaced",
+                    "start": 154,
+                    "end": 190,
+                    "type": "定语从句",
+                    "isMain": false,
+                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "once any changes do take effect.",
+                    "start": 191,
+                    "end": 223,
+                    "type": "时间状语从句",
+                    "isMain": false,
+                    "hint": "作时间成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "Congress may wish to consider policies",
+                "summary": "主句是「Congress may wish to consider policies」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [
+                  {
+                    "kind": "either … or … 平行",
+                    "members": [
+                      "prevent",
+                      "mitigate changes to the labor market or otherwise provide as"
+                    ],
+                    "note": "\"要么…要么…\"——两部分地位相同、形式一致"
+                  }
+                ],
+                "modifiers": [],
+                "summary": "平行动 1 处、修饰成分 0 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that would either prevent or mit…」——作说明成分，翻译时通常放在主句之前",
+                  "2. 先译【定语从句】「who are fully or partially displ…」——作修饰成分，翻译时通常放在主句之前",
+                  "3. 先译【时间状语从句】「once any changes do take effect.」——作时间成分，翻译时通常放在主句之前",
+                  "4. 再译【主句】「Congress may wish to consider po…」——这是整句的骨架",
+                  "5. 处理平行结构：prevent ／ mitigate changes to the labor market or otherwise provide as——平行成分逐一对译，不要打乱顺序",
+                  "6. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 3 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           }
         ]
       }
@@ -3032,7 +9078,87 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "was",
+                    "start": 110,
+                    "end": 113,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（was），意味着有 1 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 102,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 114,
+                    "marker": "once",
+                    "reason": "once 引导时间状语从句"
+                  },
+                  {
+                    "pos": 150,
+                    "marker": "—",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Across the street from the Flamingo Visitor’s Center at the foot of Florida’s Everglades National Park",
+                    "start": 0,
+                    "end": 102,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "there was once a thriving mangrove population",
+                    "start": 104,
+                    "end": 149,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "part of the largest stand of mangroves in the Western Hemisphere.",
+                    "start": 152,
+                    "end": 217,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "Across the street from the Flamingo Visitor’s Center at the foot of Florida’s Everglades National Park",
+                "summary": "主句是「Across the street from the Flamingo Visitor’…」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Across the street from the Flami…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p0-s1",
@@ -3069,7 +9195,60 @@ export const ATLAS_ARTICLES: Article[] = [
               "notes": [],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "form",
+                    "start": 39,
+                    "end": 43,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 0,
+                "summary": "未识别到明确的谓语动词，可先按标点分段理解。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 3,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 1 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "the skeletal remains of the trees form one of the Everglades’ largest ghost forests.",
+                    "start": 5,
+                    "end": 89,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "the skeletal remains of the trees form one of the Everglades’ largest ghost forests.",
+                "summary": "主句是「the skeletal remains of the trees form one o…」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「the skeletal remains of the tree…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p0-s2",
@@ -3116,7 +9295,117 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "made",
+                    "start": 20,
+                    "end": 24,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "battered",
+                    "start": 89,
+                    "end": 97,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "swept",
+                    "start": 126,
+                    "end": 131,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "decimating",
+                    "start": 150,
+                    "end": 160,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（made / battered / swept），意味着有 3 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 52,
+                    "marker": "as",
+                    "reason": "as 引导时间/原因状语从句"
+                  },
+                  {
+                    "pos": 73,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 148,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "When Hurricane Irma made landfall in September 2017",
+                    "start": 0,
+                    "end": 51,
+                    "type": "时间状语从句",
+                    "isMain": false,
+                    "hint": "作时间成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "as a category 4 storm",
+                    "start": 52,
+                    "end": 73,
+                    "type": "时间/原因状语从句",
+                    "isMain": false,
+                    "hint": "作时间或原因成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "violent winds battered the shore and a storm surge swept across the coast",
+                    "start": 75,
+                    "end": 148,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "decimating large swaths of mangrove forest.",
+                    "start": 150,
+                    "end": 193,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "violent winds battered the shore and a storm surge swept across the coast",
+                "summary": "主句是「violent winds battered the shore and a storm…」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【时间状语从句】「When Hurricane Irma made landfal…」——作时间成分，翻译时通常放在主句之前",
+                  "2. 先译【时间/原因状语从句】「as a category 4 storm」——作时间或原因成分，翻译时通常放在主句之前",
+                  "3. 再译【主句】「violent winds battered the shore…」——这是整句的骨架",
+                  "4. 按「时间」关系组装：中文习惯把时间类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 2 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p0-s3",
@@ -3153,7 +9442,68 @@ export const ATLAS_ARTICLES: Article[] = [
               "notes": [],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "haven’t seen",
+                    "start": 46,
+                    "end": 58,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（haven’t seen），意味着有 1 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 17,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Seven years later",
+                    "start": 0,
+                    "end": 17,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "most of the mangroves here haven’t seen any new growth.",
+                    "start": 19,
+                    "end": 74,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "Seven years later",
+                "summary": "主句是「Seven years later」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Seven years later」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p0-s4",
@@ -3192,7 +9542,99 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "said",
+                    "start": 42,
+                    "end": 46,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（said），意味着有 1 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 14,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 39,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 63,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "“At this point",
+                    "start": 0,
+                    "end": 14,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "I doubt they’ll recover",
+                    "start": 16,
+                    "end": 39,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "” said David Lagomasino",
+                    "start": 40,
+                    "end": 63,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "a professor of coastal studies at East Carolina University.",
+                    "start": 65,
+                    "end": 124,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "“At this point",
+                "summary": "主句是「“At this point」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "I doubt they’ll recover（插入语——先跳过，主句依然完整）",
+                  "a professor of coastal studies at East Carolina University（同位语——解释前面那个名词）"
+                ],
+                "summary": "平行动 0 处、修饰成分 2 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「“At this point」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           }
         ]
       },
@@ -3245,7 +9687,118 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "was",
+                    "start": 11,
+                    "end": 14,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "aims",
+                    "start": 117,
+                    "end": 121,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "study",
+                    "start": 125,
+                    "end": 130,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "influence",
+                    "start": 157,
+                    "end": 166,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（was / aims），意味着有 2 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 54,
+                    "marker": "as",
+                    "reason": "as 引导时间/原因状语从句"
+                  },
+                  {
+                    "pos": 89,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 112,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Lagomasino was in the Everglades conducting fieldwork",
+                    "start": 0,
+                    "end": 53,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "as part of NASA’s BlueFlux Campaign",
+                    "start": 54,
+                    "end": 89,
+                    "type": "时间/原因状语从句",
+                    "isMain": false,
+                    "hint": "作时间或原因成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "a three-year project",
+                    "start": 91,
+                    "end": 111,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "that aims to study how sub-tropical wetlands influence atmospheric levels of carbon dioxide (CO2) and methane.",
+                    "start": 112,
+                    "end": 222,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "Lagomasino was in the Everglades conducting fieldwork",
+                "summary": "主句是「Lagomasino was in the Everglades conducting …」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【时间/原因状语从句】「as part of NASA’s BlueFlux Campa…」——作时间或原因成分，翻译时通常放在主句之前",
+                  "2. 先译【名词性 / 定语从句】「that aims to study how sub-tropi…」——作说明成分，翻译时通常放在主句之前",
+                  "3. 再译【主句】「Lagomasino was in the Everglades…」——这是整句的骨架",
+                  "4. 按「时间或原因」关系组装：中文习惯把时间或原因类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 2 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p1-s1",
@@ -3284,7 +9837,71 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "absorb",
+                    "start": 11,
+                    "end": 17,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "have",
+                    "start": 38,
+                    "end": 42,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 0,
+                "summary": "未识别到明确的谓语动词，可先按标点分段理解。"
+              },
+              "step2": {
+                "breaks": [],
+                "summary": "句中无明显断点，结构较简单。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Both gases absorb solar radiation and have a warming effect on Earth’s atmosphere.",
+                    "start": 0,
+                    "end": 82,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "Both gases absorb solar radiation and have a warming effect on Earth’s atmosphere.",
+                "summary": "主句是「Both gases absorb solar radiation and have a…」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [
+                  {
+                    "kind": "both … and … 平行",
+                    "members": [
+                      "gases absorb solar radiation",
+                      "have a warming effect on Earth’s atmosphere"
+                    ],
+                    "note": "\"两者都\"——两部分并列"
+                  }
+                ],
+                "modifiers": [],
+                "summary": "平行动 1 处、修饰成分 0 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Both gases absorb solar radiatio…」——这是整句的骨架",
+                  "2. 处理平行结构：gases absorb solar radiation ／ have a warming effect on Earth’s atmosphere——平行成分逐一对译，不要打乱顺序",
+                  "3. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           }
         ]
       },
@@ -3338,7 +9955,109 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "is led",
+                    "start": 13,
+                    "end": 19,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "studies",
+                    "start": 115,
+                    "end": 122,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "affect",
+                    "start": 165,
+                    "end": 171,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "cycle.",
+                    "start": 183,
+                    "end": 189,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（is led / studies），意味着有 2 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 34,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 99,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 109,
+                    "marker": ", + who",
+                    "reason": "who 引导定语从句，此处必须断开"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "The campaign is led by Ben Poulter",
+                    "start": 0,
+                    "end": 34,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "a researcher at NASA’s Goddard Space Flight Center in Greenbelt",
+                    "start": 36,
+                    "end": 99,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "Maryland, who studies the way human activity and climate change affect the carbon cycle.",
+                    "start": 101,
+                    "end": 189,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "The campaign is led by Ben Poulter",
+                "summary": "主句是「The campaign is led by Ben Poulter」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "Maryland（插入语——先跳过，主句依然完整）"
+                ],
+                "summary": "平行动 0 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「The campaign is led by Ben Poulter」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p2-s1",
@@ -3386,7 +10105,171 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "对…作出反应",
                 "kind": "短语动词"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "responds",
+                    "start": 22,
+                    "end": 30,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "increasing",
+                    "start": 34,
+                    "end": 44,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "rising",
+                    "start": 59,
+                    "end": 65,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "is",
+                    "start": 113,
+                    "end": 115,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "trying",
+                    "start": 116,
+                    "end": 122,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "determine",
+                    "start": 126,
+                    "end": 135,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "removes",
+                    "start": 179,
+                    "end": 186,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "methane",
+                    "start": 220,
+                    "end": 227,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "produces.",
+                    "start": 231,
+                    "end": 240,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 4,
+                "summary": "句中共有 4 个谓语动词（responds / is / removes / produces.），意味着有 4 件事要译；另有 5 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 57,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 76,
+                    "marker": ", + and",
+                    "reason": "and 连接并列成分，可在标点处断开"
+                  },
+                  {
+                    "pos": 96,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "As wetland vegetation responds to increasing temperatures",
+                    "start": 0,
+                    "end": 57,
+                    "type": "时间/原因状语从句",
+                    "isMain": false,
+                    "hint": "作时间或原因成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "rising sea levels",
+                    "start": 59,
+                    "end": 76,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "and severe weather",
+                    "start": 78,
+                    "end": 96,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "Poulter’s team is trying to determine how much carbon dioxide wetland vegetation removes from the atmosphere and how much methane it produces.",
+                    "start": 98,
+                    "end": 240,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "rising sea levels",
+                "summary": "主句是「rising sea levels」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [
+                  {
+                    "kind": "from … to … 平行",
+                    "members": [
+                      "the atmosphere",
+                      "how much methane it produces"
+                    ],
+                    "note": "范围的两端，形式通常一致"
+                  },
+                  {
+                    "kind": "三项以上并列",
+                    "members": [
+                      "responds to increasing temperatures",
+                      "rising sea levels",
+                      "severe weather"
+                    ],
+                    "note": "并列的几项词性相同、形式一致，可逐个对应翻译"
+                  }
+                ],
+                "modifiers": [
+                  "rising sea levels（插入语——先跳过，主句依然完整）"
+                ],
+                "summary": "平行动 2 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【时间/原因状语从句】「As wetland vegetation responds t…」——作时间或原因成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「rising sea levels」——这是整句的骨架",
+                  "3. 处理平行结构：the atmosphere ／ how much methane it produces——平行成分逐一对译，不要打乱顺序",
+                  "4. 按「时间或原因」关系组装：中文习惯把时间或原因类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p2-s2",
@@ -3423,7 +10306,81 @@ export const ATLAS_ARTICLES: Article[] = [
               "notes": [],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "will",
+                    "start": 25,
+                    "end": 29,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "help",
+                    "start": 30,
+                    "end": 34,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "develop",
+                    "start": 46,
+                    "end": 53,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "estimate",
+                    "start": 64,
+                    "end": 72,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "monitor",
+                    "start": 77,
+                    "end": 84,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（will），意味着有 1 件事要译；另有 4 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [],
+                "summary": "句中无明显断点，结构较简单。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Ultimately this research will help scientists develop models to estimate and monitor greenhouse gas concentrations in coastal areas around the globe.",
+                    "start": 0,
+                    "end": 149,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "Ultimately this research will help scientists develop models to estimate and monitor greenhouse gas concentrations in coastal areas around the globe.",
+                "summary": "主句是「Ultimately this research will help scientist…」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Ultimately this research will he…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           }
         ]
       },
@@ -3482,7 +10439,77 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "解释；占（比例）；导致",
                 "kind": "短语动词"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "account",
+                    "start": 26,
+                    "end": 33,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "remove",
+                    "start": 91,
+                    "end": 97,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 0,
+                "summary": "未识别到明确的谓语动词，可先按标点分段理解。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 84,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Although coastal wetlands account for less than 2% of the planet’s land-surface area",
+                    "start": 0,
+                    "end": 84,
+                    "type": "让步状语从句",
+                    "isMain": false,
+                    "hint": "作让步成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "they remove a significant amount of carbon dioxide from the atmosphere.",
+                    "start": 86,
+                    "end": 157,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "they remove a significant amount of carbon dioxide from the atmosphere.",
+                "summary": "主句是「they remove a significant amount of carbon d…」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【让步状语从句】「Although coastal wetlands accoun…」——作让步成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「they remove a significant amount…」——这是整句的骨架",
+                  "3. 按「让步」关系组装：中文习惯把让步类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p3-s1",
@@ -3521,7 +10548,60 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "remove",
+                    "start": 33,
+                    "end": 39,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "estimated",
+                    "start": 43,
+                    "end": 52,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（estimated），意味着有 1 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [],
+                "summary": "句中无明显断点，结构较简单。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Florida’s coastal wetlands alone remove an estimated 31.8 million metric tons each year.",
+                    "start": 0,
+                    "end": 88,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "Florida’s coastal wetlands alone remove an estimated 31.8 million metric tons each year.",
+                "summary": "主句是「Florida’s coastal wetlands alone remove an e…」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Florida’s coastal wetlands alone…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p3-s2",
@@ -3558,7 +10638,82 @@ export const ATLAS_ARTICLES: Article[] = [
               "notes": [],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "would have",
+                    "start": 22,
+                    "end": 32,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "circle",
+                    "start": 36,
+                    "end": 42,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "produce",
+                    "start": 79,
+                    "end": 86,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（would have），意味着有 1 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 65,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "A commercial aircraft would have to circle the globe more than 26",
+                    "start": 0,
+                    "end": 65,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "000 times to produce the same amount of carbon dioxide.",
+                    "start": 66,
+                    "end": 121,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "A commercial aircraft would have to circle the globe more than 26",
+                "summary": "主句是「A commercial aircraft would have to circle t…」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「A commercial aircraft would have…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p3-s3",
@@ -3597,7 +10752,106 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "store",
+                    "start": 22,
+                    "end": 27,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "keeping",
+                    "start": 56,
+                    "end": 63,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  }
+                ],
+                "count": 0,
+                "summary": "未识别到明确的谓语动词，可先按标点分段理解。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 54,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 79,
+                    "marker": "— + and",
+                    "reason": "and 连接并列成分，可在标点处断开"
+                  },
+                  {
+                    "pos": 107,
+                    "marker": "— + for",
+                    "reason": "for 连接并列成分，可在标点处断开"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Coastal wetlands also store carbon in marine sediments",
+                    "start": 0,
+                    "end": 54,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "keeping it underground",
+                    "start": 56,
+                    "end": 78,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "and out of the atmosphere",
+                    "start": 81,
+                    "end": 106,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "for thousands of years.",
+                    "start": 109,
+                    "end": 132,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "Coastal wetlands also store carbon in marine sediments",
+                "summary": "主句是「Coastal wetlands also store carbon in marine…」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "keeping it underground（插入语——先跳过，主句依然完整）"
+                ],
+                "summary": "平行动 0 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Coastal wetlands also store carb…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p3-s4",
@@ -3643,7 +10897,93 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "is",
+                    "start": 52,
+                    "end": 54,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "has",
+                    "start": 73,
+                    "end": 76,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（is / has），意味着有 2 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 55,
+                    "marker": "so",
+                    "reason": "so 引导目的 / 结果状语从句"
+                  },
+                  {
+                    "pos": 65,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 89,
+                    "marker": ":",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "This carbon storage capacity of oceans and wetlands is",
+                    "start": 0,
+                    "end": 54,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "so robust that it has its own name",
+                    "start": 55,
+                    "end": 89,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "blue carbon.",
+                    "start": 91,
+                    "end": 103,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "This carbon storage capacity of oceans and wetlands is",
+                "summary": "主句是「This carbon storage capacity of oceans and w…」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「This carbon storage capacity of …」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           }
         ]
       },
@@ -3689,7 +11029,83 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "said.",
+                    "start": 57,
+                    "end": 62,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（said.），意味着有 1 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 28,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 46,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "“We’re worried about losing",
+                    "start": 0,
+                    "end": 27,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that stored carbon",
+                    "start": 28,
+                    "end": 46,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "” Poulter said.",
+                    "start": 47,
+                    "end": 62,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "“We’re worried about losing",
+                "summary": "主句是「“We’re worried about losing」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that stored carbon」——作说明成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「“We’re worried about losing」——这是整句的骨架",
+                  "3. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p4-s1",
@@ -3736,7 +11152,80 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "offers",
+                    "start": 22,
+                    "end": 28,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "are",
+                    "start": 109,
+                    "end": 112,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "supported",
+                    "start": 122,
+                    "end": 131,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（offers / are / supported），意味着有 3 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 77,
+                    "marker": "if",
+                    "reason": "if 引导条件状语从句"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "“But blue carbon also offers tremendous opportunities for climate mitigation",
+                    "start": 0,
+                    "end": 76,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "if conservation and restoration are properly supported by science.”",
+                    "start": 77,
+                    "end": 144,
+                    "type": "条件状语从句",
+                    "isMain": false,
+                    "hint": "作条件成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "",
+                "summary": "未能确定主句，建议先按标点切分逐段理解。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【条件状语从句】「if conservation and restoration …」——作条件成分，翻译时通常放在主句之前",
+                  "2. 按「条件」关系组装：中文习惯把条件类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           }
         ]
       },
@@ -3788,7 +11277,108 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "对…作出反应",
                 "kind": "短语动词"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "collected",
+                    "start": 27,
+                    "end": 36,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "will be used to",
+                    "start": 51,
+                    "end": 66,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "identify",
+                    "start": 67,
+                    "end": 75,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "evaluate",
+                    "start": 145,
+                    "end": 153,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "respond",
+                    "start": 182,
+                    "end": 189,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "like",
+                    "start": 227,
+                    "end": 231,
+                    "role": "preposition",
+                    "note": "是介词，不是动词"
+                  },
+                  {
+                    "text": "cyclones.",
+                    "start": 287,
+                    "end": 296,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（collected / will be used to / cyclones.），意味着有 3 件事要译；另有 4 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 225,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "The one-meter core samples collected by Lagomasino will be used to identify historic rates of blue carbon development in mangrove forests and to evaluate how rates of carbon storage respond to specific environmental pressures",
+                    "start": 0,
+                    "end": 225,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "like sea level rise or the increasing frequency of tropical cyclones.",
+                    "start": 227,
+                    "end": 296,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "The one-meter core samples collected by Lagomasino will be used to identify historic rates of blue carbon development in mangrove forests and to evaluate how rates of carbon storage respond to specific environmental pressures",
+                "summary": "主句是「The one-meter core samples collected by Lago…」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「The one-meter core samples colle…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           }
         ]
       },
@@ -3849,7 +11439,159 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "除…之外还",
                 "kind": "介词框架"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "confirm",
+                    "start": 42,
+                    "end": 49,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "acting",
+                    "start": 71,
+                    "end": 77,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "are",
+                    "start": 125,
+                    "end": 128,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "traps",
+                    "start": 185,
+                    "end": 190,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "heat",
+                    "start": 191,
+                    "end": 195,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（are / traps），意味着有 2 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 50,
+                    "marker": "that,",
+                    "reason": "that, 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 54,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 78,
+                    "marker": "as",
+                    "reason": "as 引导时间/原因状语从句"
+                  },
+                  {
+                    "pos": 105,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 161,
+                    "marker": "—",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 180,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  }
+                ],
+                "summary": "找到 6 个断点，可以把句子切成 6 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Early findings from space-based flux data confirm",
+                    "start": 0,
+                    "end": 49,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that, in addition to acting",
+                    "start": 50,
+                    "end": 77,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "as a sink of carbon dioxide",
+                    "start": 78,
+                    "end": 105,
+                    "type": "时间/原因状语从句",
+                    "isMain": false,
+                    "hint": "作时间或原因成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "tropical wetlands are a significant source of methane",
+                    "start": 107,
+                    "end": 160,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-4",
+                    "text": "a greenhouse gas",
+                    "start": 163,
+                    "end": 179,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-5",
+                    "text": "that traps heat roughly 80 times more efficiently than carbon dioxide.",
+                    "start": 180,
+                    "end": 250,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "Early findings from space-based flux data confirm",
+                "summary": "主句是「Early findings from space-based flux data co…」，其余 5 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that, in addition to acting」——作说明成分，翻译时通常放在主句之前",
+                  "2. 先译【时间/原因状语从句】「as a sink of carbon dioxide」——作时间或原因成分，翻译时通常放在主句之前",
+                  "3. 先译【名词性 / 定语从句】「that traps heat roughly 80 times…」——作说明成分，翻译时通常放在主句之前",
+                  "4. 再译【主句】「Early findings from space-based …」——这是整句的骨架",
+                  "5. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 3 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p6-s1",
@@ -3888,7 +11630,88 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "estimate",
+                    "start": 21,
+                    "end": 29,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "produces",
+                    "start": 68,
+                    "end": 76,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "offset",
+                    "start": 95,
+                    "end": 101,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（produces），意味着有 1 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 7,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 30,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "In fact, researchers estimate",
+                    "start": 0,
+                    "end": 29,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that Florida’s entire wetland expanse produces enough methane to offset the benefits of wetland carbon removal by about 5%.",
+                    "start": 30,
+                    "end": 153,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "In fact, researchers estimate",
+                "summary": "主句是「In fact, researchers estimate」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that Florida’s entire wetland ex…」——作说明成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「In fact, researchers estimate」——这是整句的骨架",
+                  "3. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           }
         ]
       },
@@ -3934,7 +11757,98 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "used",
+                    "start": 56,
+                    "end": 60,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "are",
+                    "start": 148,
+                    "end": 151,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（used / are），意味着有 2 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 43,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 117,
+                    "marker": ";",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "During his most recent fieldwork deployment",
+                    "start": 0,
+                    "end": 43,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "Lagomasino used a small skiff to taxi from one research site to the next",
+                    "start": 45,
+                    "end": 117,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "many parts of the Everglades are virtually unreachable on foot.",
+                    "start": 119,
+                    "end": 182,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "During his most recent fieldwork deployment",
+                "summary": "主句是「During his most recent fieldwork deployment」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [
+                  {
+                    "kind": "from … to … 平行",
+                    "members": [
+                      "one research site",
+                      "the next"
+                    ],
+                    "note": "范围的两端，形式通常一致"
+                  }
+                ],
+                "modifiers": [],
+                "summary": "平行动 1 处、修饰成分 0 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「During his most recent fieldwork…」——这是整句的骨架",
+                  "2. 处理平行结构：one research site ／ the next——平行成分逐一对译，不要打乱顺序",
+                  "3. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s1",
@@ -3981,7 +11895,111 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "opened",
+                    "start": 17,
+                    "end": 23,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "removed",
+                    "start": 48,
+                    "end": 55,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "resembles",
+                    "start": 85,
+                    "end": 94,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（opened / removed / resembles），意味着有 3 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 12,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 31,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 77,
+                    "marker": ", + which",
+                    "reason": "which 引导定语从句，此处必须断开"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "At each site",
+                    "start": 0,
+                    "end": 12,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "he opened a broad",
+                    "start": 14,
+                    "end": 31,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "black case and removed a metallic peat auger",
+                    "start": 33,
+                    "end": 77,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "which resembles a giant letter opener.",
+                    "start": 79,
+                    "end": 117,
+                    "type": "非限定性定语从句",
+                    "isMain": false,
+                    "hint": "对前面的名词做补充说明，翻译时可另起一小句"
+                  }
+                ],
+                "mainText": "At each site",
+                "summary": "主句是「At each site」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "he opened a broad（插入语——先跳过，主句依然完整）"
+                ],
+                "summary": "平行动 0 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【非限定性定语从句】「which resembles a giant letter o…」——对前面的名词做补充说明，翻译时可另起一小句",
+                  "2. 再译【主句】「At each site」——这是整句的骨架",
+                  "3. 按「修饰」关系组装：中文习惯把修饰类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s2",
@@ -4020,7 +12038,60 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "is designed",
+                    "start": 15,
+                    "end": 26,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "extract",
+                    "start": 30,
+                    "end": 37,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（is designed），意味着有 1 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [],
+                "summary": "句中无明显断点，结构较简单。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "The instrument is designed to extract core samples from soft soils.",
+                    "start": 0,
+                    "end": 67,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "The instrument is designed to extract core samples from soft soils.",
+                "summary": "主句是「The instrument is designed to extract core s…」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「The instrument is designed to ex…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s3",
@@ -4045,7 +12116,137 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "is composed",
+                    "start": 24,
+                    "end": 35,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "decomposed",
+                    "start": 82,
+                    "end": 92,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "stems,",
+                    "start": 100,
+                    "end": 106,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "offers",
+                    "start": 133,
+                    "end": 139,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 4,
+                "summary": "句中共有 4 个谓语动词（is composed / decomposed / stems, / offers），意味着有 4 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 16,
+                    "marker": "— + which",
+                    "reason": "which 引导定语从句，此处必须断开"
+                  },
+                  {
+                    "pos": 70,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 98,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 105,
+                    "marker": ", + and",
+                    "reason": "and 连接并列成分，可在标点处断开"
+                  },
+                  {
+                    "pos": 131,
+                    "marker": "—",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 5 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Everglades peat — which is composed almost entirely of the carbon-rich",
+                    "start": 0,
+                    "end": 70,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "partially decomposed roots",
+                    "start": 72,
+                    "end": 98,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "stems, and leaves of mangroves",
+                    "start": 100,
+                    "end": 130,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "offers a perfect study subject.",
+                    "start": 133,
+                    "end": 164,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "Everglades peat — which is composed almost entirely of the carbon-rich",
+                "summary": "主句是「Everglades peat — which is composed almost e…」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [
+                  {
+                    "kind": "三项以上并列",
+                    "members": [
+                      "partially decomposed roots",
+                      "stems",
+                      "leaves of mangroves — offers a perfect st"
+                    ],
+                    "note": "并列的几项词性相同、形式一致，可逐个对应翻译"
+                  }
+                ],
+                "modifiers": [
+                  "stems（插入语——先跳过，主句依然完整）"
+                ],
+                "summary": "平行动 1 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Everglades peat — which is compo…」——这是整句的骨架",
+                  "2. 处理平行结构：partially decomposed roots ／ stems ／ leaves of mangroves — offers a perfect st——平行成分逐一对译，不要打乱顺序",
+                  "3. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s4",
@@ -4084,7 +12285,82 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "plunged",
+                    "start": 11,
+                    "end": 18,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "using",
+                    "start": 44,
+                    "end": 49,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "push",
+                    "start": 69,
+                    "end": 73,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（plunged），意味着有 1 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 42,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Lagomasino plunged the auger into the soil",
+                    "start": 0,
+                    "end": 42,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "using his body weight to push the instrument into the ground.",
+                    "start": 44,
+                    "end": 105,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "Lagomasino plunged the auger into the soil",
+                "summary": "主句是「Lagomasino plunged the auger into the soil」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Lagomasino plunged the auger int…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s5",
@@ -4132,7 +12408,98 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "was secured,",
+                    "start": 16,
+                    "end": 28,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "freed",
+                    "start": 32,
+                    "end": 37,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "presenting",
+                    "start": 63,
+                    "end": 73,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（was secured, / freed），意味着有 2 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 27,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 61,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Once the sample was secured",
+                    "start": 0,
+                    "end": 27,
+                    "type": "时间状语从句",
+                    "isMain": false,
+                    "hint": "作时间成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "he freed the tool from the Earth",
+                    "start": 29,
+                    "end": 61,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "presenting a half-cylinder of soil.",
+                    "start": 63,
+                    "end": 98,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "he freed the tool from the Earth",
+                "summary": "主句是「he freed the tool from the Earth」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "he freed the tool from the Earth（插入语——先跳过，主句依然完整）"
+                ],
+                "summary": "平行动 0 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【时间状语从句】「Once the sample was secured」——作时间成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「he freed the tool from the Earth」——这是整句的骨架",
+                  "3. 按「时间」关系组装：中文习惯把时间类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s6",
@@ -4179,7 +12546,87 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "was sealed",
+                    "start": 12,
+                    "end": 22,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "shipped",
+                    "start": 27,
+                    "end": 34,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "are sliced",
+                    "start": 64,
+                    "end": 74,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "analyzed",
+                    "start": 108,
+                    "end": 116,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 4,
+                "summary": "句中共有 4 个谓语动词（was sealed / shipped / are sliced / analyzed），意味着有 4 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 51,
+                    "marker": "— + where",
+                    "reason": "where 引导定语从句，此处必须断开"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Each sample was sealed and shipped back to the lab",
+                    "start": 0,
+                    "end": 50,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "where they are sliced horizontally into flat discs and analyzed for their age and carbon content.",
+                    "start": 53,
+                    "end": 150,
+                    "type": "定语从句",
+                    "isMain": false,
+                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "Each sample was sealed and shipped back to the lab",
+                "summary": "主句是「Each sample was sealed and shipped back to t…」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【定语从句】「where they are sliced horizontal…」——作修饰成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「Each sample was sealed and shipp…」——这是整句的骨架",
+                  "3. 按「修饰」关系组装：中文习惯把修饰类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s7",
@@ -4216,7 +12663,53 @@ export const ATLAS_ARTICLES: Article[] = [
               "notes": [],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "forms",
+                    "start": 16,
+                    "end": 21,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（forms），意味着有 1 件事要译。"
+              },
+              "step2": {
+                "breaks": [],
+                "summary": "句中无明显断点，结构较简单。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Everglades peat forms quickly.",
+                    "start": 0,
+                    "end": 30,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "Everglades peat forms quickly.",
+                "summary": "主句是「Everglades peat forms quickly.」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Everglades peat forms quickly.」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s8",
@@ -4262,7 +12755,96 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "逐渐积累；增强",
                 "kind": "短语动词"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "are added",
+                    "start": 66,
+                    "end": 75,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "building",
+                    "start": 107,
+                    "end": 115,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "like",
+                    "start": 129,
+                    "end": 133,
+                    "role": "preposition",
+                    "note": "是介词，不是动词"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（are added），意味着有 1 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 29,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 105,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "In Florida’s mangrove forests",
+                    "start": 0,
+                    "end": 29,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "around 2 to 10 millimeters of soil are added to the forest floor each year",
+                    "start": 31,
+                    "end": 105,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "building up over time like sand filling an hourglass.",
+                    "start": 107,
+                    "end": 160,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "In Florida’s mangrove forests",
+                "summary": "主句是「In Florida’s mangrove forests」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「In Florida’s mangrove forests」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s9",
@@ -4299,7 +12881,83 @@ export const ATLAS_ARTICLES: Article[] = [
               "notes": [],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "like",
+                    "start": 5,
+                    "end": 9,
+                    "role": "preposition",
+                    "note": "是介词，不是动词"
+                  },
+                  {
+                    "text": "offer",
+                    "start": 38,
+                    "end": 43,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "past.",
+                    "start": 66,
+                    "end": 71,
+                    "role": "preposition",
+                    "note": "是介词，不是动词"
+                  }
+                ],
+                "count": 0,
+                "summary": "未识别到明确的谓语动词，可先按标点分段理解。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 21,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Much like an ice core",
+                    "start": 0,
+                    "end": 21,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "sediment cores offer a window into Earth’s past.",
+                    "start": 23,
+                    "end": 71,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "Much like an ice core",
+                "summary": "主句是「Much like an ice core」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Much like an ice core」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s10",
@@ -4329,7 +12987,84 @@ export const ATLAS_ARTICLES: Article[] = [
               "notes": [],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "past",
+                    "start": 42,
+                    "end": 46,
+                    "role": "preposition",
+                    "note": "是介词，不是动词"
+                  },
+                  {
+                    "text": "can",
+                    "start": 51,
+                    "end": 54,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "see.",
+                    "start": 55,
+                    "end": 59,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（can），意味着有 1 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 19,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "The deeper the core",
+                    "start": 0,
+                    "end": 19,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "the further into the past one can see.",
+                    "start": 21,
+                    "end": 59,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "The deeper the core",
+                "summary": "主句是「The deeper the core」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "the further into the past one can see（同位语——解释前面那个名词）"
+                ],
+                "summary": "平行动 0 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「The deeper the core」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p7-s11",
@@ -4368,7 +13103,88 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "looking",
+                    "start": 3,
+                    "end": 10,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "can",
+                    "start": 60,
+                    "end": 63,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "uncover",
+                    "start": 64,
+                    "end": 71,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "formed.",
+                    "start": 136,
+                    "end": 143,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（can / formed.），意味着有 2 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 46,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "By looking closely at the contents of the soil",
+                    "start": 0,
+                    "end": 46,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "researchers can uncover information about the climate conditions from the time the soil formed.",
+                    "start": 48,
+                    "end": 143,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "By looking closely at the contents of the soil",
+                "summary": "主句是「By looking closely at the contents of the soil」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「By looking closely at the conten…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           }
         ]
       },
@@ -4428,7 +13244,123 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "多达；直到",
                 "kind": "介词框架"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "can",
+                    "start": 47,
+                    "end": 50,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "reach",
+                    "start": 51,
+                    "end": 56,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "might",
+                    "start": 109,
+                    "end": 114,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "represent",
+                    "start": 115,
+                    "end": 124,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "said.",
+                    "start": 177,
+                    "end": 182,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（can / might / said.），意味着有 3 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 31,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 91,
+                    "marker": ", + where",
+                    "reason": "where 引导定语从句，此处必须断开"
+                  },
+                  {
+                    "pos": 164,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "In some parts of the Everglades",
+                    "start": 0,
+                    "end": 31,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "soil deposits can reach depths of up to 3 meters (10 feet)",
+                    "start": 33,
+                    "end": 91,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "where one meter might represent close to 100 years of peat accumulation",
+                    "start": 93,
+                    "end": 164,
+                    "type": "非限定性定语从句",
+                    "isMain": false,
+                    "hint": "对前面的名词做补充说明，翻译时可另起一小句"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "Lagomasino said.",
+                    "start": 166,
+                    "end": 182,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "In some parts of the Everglades",
+                "summary": "主句是「In some parts of the Everglades」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【非限定性定语从句】「where one meter might represent …」——对前面的名词做补充说明，翻译时可另起一小句",
+                  "2. 再译【主句】「In some parts of the Everglades」——这是整句的骨架",
+                  "3. 按「修饰」关系组装：中文习惯把修饰类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p8-s1",
@@ -4467,7 +13399,124 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "sized,",
+                    "start": 58,
+                    "end": 64,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "could",
+                    "start": 83,
+                    "end": 88,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "take",
+                    "start": 89,
+                    "end": 93,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "develop.",
+                    "start": 119,
+                    "end": 127,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（sized, / could），意味着有 2 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 29,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 44,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 63,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 105,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 4 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Deep in the Amazon rainforest",
+                    "start": 0,
+                    "end": 29,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "by comparison, a similarly sized",
+                    "start": 31,
+                    "end": 63,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "one-meter deposit could take more than 1",
+                    "start": 65,
+                    "end": 105,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "000 years to develop.",
+                    "start": 106,
+                    "end": 127,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "Deep in the Amazon rainforest",
+                "summary": "主句是「Deep in the Amazon rainforest」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "by comparison（插入语——先跳过，主句依然完整）",
+                  "a similarly sized（同位语——解释前面那个名词）"
+                ],
+                "summary": "平行动 0 处、修饰成分 2 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Deep in the Amazon rainforest」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p8-s2",
@@ -4511,7 +13560,101 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "多达；直到",
                 "kind": "介词框架"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "is",
+                    "start": 5,
+                    "end": 7,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "can be restored",
+                    "start": 90,
+                    "end": 105,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "might",
+                    "start": 138,
+                    "end": 143,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "be",
+                    "start": 144,
+                    "end": 146,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（is / can be restored / might），意味着有 3 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 55,
+                    "marker": ":",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 76,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "This is important in the context of restoration efforts",
+                    "start": 0,
+                    "end": 55,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "in coastal wetlands",
+                    "start": 57,
+                    "end": 76,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "peat losses can be restored up to 10 times faster than they might be in other forest types.",
+                    "start": 78,
+                    "end": 169,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "This is important in the context of restoration efforts",
+                "summary": "主句是「This is important in the context of restorat…」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「This is important in the context…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           }
         ]
       },
@@ -4558,7 +13701,106 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "are",
+                    "start": 7,
+                    "end": 10,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "degraded",
+                    "start": 80,
+                    "end": 88,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "said",
+                    "start": 96,
+                    "end": 100,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（are / degraded / said），意味着有 3 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 93,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 115,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "“There are also significant differences in fluxes between healthy mangroves and degraded ones",
+                    "start": 0,
+                    "end": 93,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "” said Lola Fatoyinbo",
+                    "start": 94,
+                    "end": 115,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "a research scientist in the Biospheric Sciences Laboratory at NASA’s Goddard Space Flight Center.",
+                    "start": 117,
+                    "end": 214,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "“There are also significant differences in fluxes between healthy mangroves and degraded ones",
+                "summary": "主句是「“There are also significant differences in f…」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [
+                  {
+                    "kind": "from … to … 平行",
+                    "members": [
+                      "healthy mangroves",
+                      "degraded ones"
+                    ],
+                    "note": "范围的两端，形式通常一致"
+                  }
+                ],
+                "modifiers": [
+                  "” said Lola Fatoyinbo（插入语——先跳过，主句依然完整）"
+                ],
+                "summary": "平行动 1 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「“There are also significant diff…」——这是整句的骨架",
+                  "2. 处理平行结构：healthy mangroves ／ degraded ones——平行成分逐一对译，不要打乱顺序",
+                  "3. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s1",
@@ -4590,7 +13832,121 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "以…收场",
                 "kind": "短语动词"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "are",
+                    "start": 32,
+                    "end": 35,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "suffering,",
+                    "start": 36,
+                    "end": 46,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "said.",
+                    "start": 148,
+                    "end": 153,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（are / said.），意味着有 2 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 9,
+                    "marker": "where",
+                    "reason": "where 引导定语从句"
+                  },
+                  {
+                    "pos": 45,
+                    "marker": ", + for",
+                    "reason": "for 连接并列成分，可在标点处断开"
+                  },
+                  {
+                    "pos": 58,
+                    "marker": ", + after",
+                    "reason": "after 引导时间状语从句，此处必须断开"
+                  },
+                  {
+                    "pos": 83,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 141,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 5 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "In areas where mangrove forests are suffering",
+                    "start": 0,
+                    "end": 45,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "for example, after a major hurricane",
+                    "start": 47,
+                    "end": 83,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "“you end up with more greenhouse gases in the atmosphere",
+                    "start": 85,
+                    "end": 141,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "” she said.",
+                    "start": 142,
+                    "end": 153,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "In areas where mangrove forests are suffering",
+                "summary": "主句是「In areas where mangrove forests are suffering」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "for example（插入语——先跳过，主句依然完整）"
+                ],
+                "summary": "平行动 0 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「In areas where mangrove forests …」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s2",
@@ -4644,7 +14000,96 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "对…作出反应",
                 "kind": "短语动词"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "responds",
+                    "start": 19,
+                    "end": 27,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "intensifying",
+                    "start": 31,
+                    "end": 43,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "will",
+                    "start": 90,
+                    "end": 94,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "help",
+                    "start": 95,
+                    "end": 99,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "monitor",
+                    "start": 122,
+                    "end": 129,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（responds / will），意味着有 2 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 71,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "As wetland ecology responds to intensifying natural and human pressures",
+                    "start": 0,
+                    "end": 71,
+                    "type": "时间/原因状语从句",
+                    "isMain": false,
+                    "hint": "作时间或原因成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "the data product will help researchers precisely monitor the impact of ecological changes on global carbon dioxide and methane levels.",
+                    "start": 73,
+                    "end": 207,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "the data product will help researchers precisely monitor the impact of ecological changes on global carbon dioxide and methane levels.",
+                "summary": "主句是「the data product will help researchers preci…」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【时间/原因状语从句】「As wetland ecology responds to i…」——作时间或原因成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「the data product will help resea…」——这是整句的骨架",
+                  "3. 按「时间或原因」关系组装：中文习惯把时间或原因类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s3",
@@ -4691,7 +14136,75 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "is",
+                    "start": 8,
+                    "end": 10,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "produced",
+                    "start": 21,
+                    "end": 29,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（is / produced），意味着有 2 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 42,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Methane is naturally produced by microbes",
+                    "start": 0,
+                    "end": 41,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that live in wetland soils.",
+                    "start": 42,
+                    "end": 69,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "Methane is naturally produced by microbes",
+                "summary": "主句是「Methane is naturally produced by microbes」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that live in wetland soils.」——作说明成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「Methane is naturally produced by…」——这是整句的骨架",
+                  "3. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s4",
@@ -4715,7 +14228,111 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "change,",
+                    "start": 26,
+                    "end": 33,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "can",
+                    "start": 80,
+                    "end": 83,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "spike,",
+                    "start": 84,
+                    "end": 90,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "releasing",
+                    "start": 91,
+                    "end": 100,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（can），意味着有 1 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 4,
+                    "marker": "as",
+                    "reason": "as 引导时间/原因状语从句"
+                  },
+                  {
+                    "pos": 32,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 89,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "as wetland conditions change",
+                    "start": 4,
+                    "end": 32,
+                    "type": "时间/原因状语从句",
+                    "isMain": false,
+                    "hint": "作时间或原因成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "the growth rate of methane-producing microbes can spike",
+                    "start": 34,
+                    "end": 89,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "releasing the gas into the atmosphere at prodigious rates.",
+                    "start": 91,
+                    "end": 149,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "the growth rate of methane-producing microbes can spike",
+                "summary": "主句是「the growth rate of methane-producing microbe…」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "the growth rate of methane-producing microbes can spike（同位语——解释前面那个名词）"
+                ],
+                "summary": "平行动 0 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【时间/原因状语从句】「as wetland conditions change」——作时间或原因成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「the growth rate of methane-produ…」——这是整句的骨架",
+                  "3. 按「时间或原因」关系组装：中文习惯把时间或原因类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s5",
@@ -4769,7 +14386,134 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "is",
+                    "start": 14,
+                    "end": 16,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "possessing",
+                    "start": 81,
+                    "end": 91,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "undermine",
+                    "start": 170,
+                    "end": 179,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "provide",
+                    "start": 240,
+                    "end": 247,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（is），意味着有 1 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 79,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 150,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 212,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 248,
+                    "marker": "as",
+                    "reason": "as 引导时间/原因状语从句"
+                  }
+                ],
+                "summary": "找到 4 个断点，可以把句子切成 5 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Since methane is a significantly more potent greenhouse gas than carbon dioxide",
+                    "start": 0,
+                    "end": 79,
+                    "type": "时间/原因状语从句",
+                    "isMain": false,
+                    "hint": "作时间或原因成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "possessing a warming potential 84 times greater over a 25-year period",
+                    "start": 81,
+                    "end": 150,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "methane emissions undermine some of the beneficial services",
+                    "start": 152,
+                    "end": 211,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "that blue carbon ecosystems provide",
+                    "start": 212,
+                    "end": 247,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-4",
+                    "text": "as natural sinks for atmospheric carbon dioxide.",
+                    "start": 248,
+                    "end": 296,
+                    "type": "时间/原因状语从句",
+                    "isMain": false,
+                    "hint": "作时间或原因成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "possessing a warming potential 84 times greater over a 25-year period",
+                "summary": "主句是「possessing a warming potential 84 times grea…」，其余 4 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【时间/原因状语从句】「Since methane is a significantly…」——作时间或原因成分，翻译时通常放在主句之前",
+                  "2. 先译【名词性 / 定语从句】「that blue carbon ecosystems prov…」——作说明成分，翻译时通常放在主句之前",
+                  "3. 先译【时间/原因状语从句】「as natural sinks for atmospheric…」——作时间或原因成分，翻译时通常放在主句之前",
+                  "4. 再译【主句】「possessing a warming potential 8…」——这是整句的骨架",
+                  "5. 按「时间或原因」关系组装：中文习惯把时间或原因类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 3 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s6",
@@ -4824,7 +14568,165 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "studied",
+                    "start": 17,
+                    "end": 24,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "understand",
+                    "start": 37,
+                    "end": 47,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "measured",
+                    "start": 239,
+                    "end": 247,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "are exchanged",
+                    "start": 278,
+                    "end": 291,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（studied / measured / are exchanged），意味着有 3 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 85,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 101,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 157,
+                    "marker": ", + and",
+                    "reason": "and 连接并列成分，可在标点处断开"
+                  },
+                  {
+                    "pos": 176,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 237,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 260,
+                    "marker": "which",
+                    "reason": "which 引导定语从句"
+                  }
+                ],
+                "summary": "找到 6 个断点，可以把句子切成 6 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "While Lagomasino studied the soil to understand long-term storage of greenhouse gases",
+                    "start": 0,
+                    "end": 85,
+                    "type": "时间/让步状语从句",
+                    "isMain": false,
+                    "hint": "作同时或让步成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "Lola Fatoyinbo, a research scientist in NASA’s Biospheric Sciences Lab",
+                    "start": 87,
+                    "end": 157,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "and Peter Raymond",
+                    "start": 159,
+                    "end": 176,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "an ecologist at Yale University’s School of the Environment",
+                    "start": 178,
+                    "end": 237,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-4",
+                    "text": "measured the rate at",
+                    "start": 239,
+                    "end": 259,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-5",
+                    "text": "which these gases are exchanged between wetland vegetation and the atmosphere.",
+                    "start": 260,
+                    "end": 338,
+                    "type": "定语从句",
+                    "isMain": false,
+                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "Lola Fatoyinbo, a research scientist in NASA’s Biospheric Sciences Lab",
+                "summary": "主句是「Lola Fatoyinbo, a research scientist in NASA…」，其余 5 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [
+                  {
+                    "kind": "from … to … 平行",
+                    "members": [
+                      "wetland vegetation",
+                      "the atmosphere"
+                    ],
+                    "note": "范围的两端，形式通常一致"
+                  }
+                ],
+                "modifiers": [
+                  "Lola Fatoyinbo（插入语——先跳过，主句依然完整）",
+                  "and Peter Raymond（插入语——先跳过，主句依然完整）",
+                  "a research scientist in NASA’s Biospheric Sciences Lab（同位语——解释前面那个名词）",
+                  "an ecologist at Yale University’s School of the Environment（同位语——解释前面那个名词）"
+                ],
+                "summary": "平行动 1 处、修饰成分 4 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【时间/让步状语从句】「While Lagomasino studied the soi…」——作同时或让步成分，翻译时通常放在主句之前",
+                  "2. 先译【定语从句】「which these gases are exchanged …」——作修饰成分，翻译时通常放在主句之前",
+                  "3. 再译【主句】「Lola Fatoyinbo, a research scien…」——这是整句的骨架",
+                  "4. 处理平行结构：wetland vegetation ／ the atmosphere——平行成分逐一对译，不要打乱顺序",
+                  "5. 按「同时或让步」关系组装：中文习惯把同时或让步类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 2 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s7",
@@ -4863,7 +14765,69 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "is known",
+                    "start": 12,
+                    "end": 20,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（is known），意味着有 1 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 21,
+                    "marker": "as",
+                    "reason": "as 引导时间/原因状语从句"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "This metric is known",
+                    "start": 0,
+                    "end": 20,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "as gaseous flux.",
+                    "start": 21,
+                    "end": 37,
+                    "type": "时间/原因状语从句",
+                    "isMain": false,
+                    "hint": "作时间或原因成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "This metric is known",
+                "summary": "主句是「This metric is known」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【时间/原因状语从句】「as gaseous flux.」——作时间或原因成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「This metric is known」——这是整句的骨架",
+                  "3. 按「时间或原因」关系组装：中文习惯把时间或原因类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s8",
@@ -4910,7 +14874,96 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "measure",
+                    "start": 15,
+                    "end": 22,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "using",
+                    "start": 28,
+                    "end": 33,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "designed",
+                    "start": 43,
+                    "end": 51,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "points",
+                    "start": 72,
+                    "end": 78,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "occur.",
+                    "start": 119,
+                    "end": 125,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（designed / points），意味着有 2 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 79,
+                    "marker": "where",
+                    "reason": "where 引导定语从句"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "The scientists measure flux using chambers designed to adhere neatly to points",
+                    "start": 0,
+                    "end": 78,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "where significant rates of gas exchange occur.",
+                    "start": 79,
+                    "end": 125,
+                    "type": "定语从句",
+                    "isMain": false,
+                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "The scientists measure flux using chambers designed to adhere neatly to points",
+                "summary": "主句是「The scientists measure flux using chambers d…」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【定语从句】「where significant rates of gas e…」——作修饰成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「The scientists measure flux usin…」——这是整句的骨架",
+                  "3. 按「修饰」关系组装：中文习惯把修饰类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s9",
@@ -4957,7 +15010,89 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "secure",
+                    "start": 5,
+                    "end": 11,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "branches",
+                    "start": 56,
+                    "end": 64,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "domed",
+                    "start": 71,
+                    "end": 76,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "escaping",
+                    "start": 98,
+                    "end": 106,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（branches / domed），意味着有 2 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 65,
+                    "marker": "while",
+                    "reason": "while 引导时间/让步状语从句"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "They secure box-like chambers to above-ground roots and branches",
+                    "start": 0,
+                    "end": 64,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "while domed chambers measure gas escaping from the forest floor.",
+                    "start": 65,
+                    "end": 129,
+                    "type": "时间/让步状语从句",
+                    "isMain": false,
+                    "hint": "作同时或让步成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "They secure box-like chambers to above-ground roots and branches",
+                "summary": "主句是「They secure box-like chambers to above-groun…」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【时间/让步状语从句】「while domed chambers measure gas…」——作同时或让步成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「They secure box-like chambers to…」——这是整句的骨架",
+                  "3. 按「同时或让步」关系组装：中文习惯把同时或让步类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s10",
@@ -4996,7 +15131,60 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "trapped",
+                    "start": 27,
+                    "end": 34,
+                    "role": "nonfinite",
+                    "note": "过去分词作后置定语（相当于省略了 which is），不能作谓语"
+                  },
+                  {
+                    "text": "is",
+                    "start": 51,
+                    "end": 53,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（is），意味着有 1 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [],
+                "summary": "句中无明显断点，结构较简单。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "The concentration of gases trapped in each chamber is measured over time.",
+                    "start": 0,
+                    "end": 73,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "The concentration of gases trapped in each chamber is measured over time.",
+                "summary": "主句是「The concentration of gases trapped in each c…」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「The concentration of gases trapp…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s11",
@@ -5020,7 +15208,119 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "declines,",
+                    "start": 45,
+                    "end": 54,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "is",
+                    "start": 75,
+                    "end": 77,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "methane",
+                    "start": 96,
+                    "end": 103,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "is",
+                    "start": 104,
+                    "end": 106,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（declines, / is / is），意味着有 3 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 10,
+                    "marker": ", + as",
+                    "reason": "as 引导时间/原因状语从句，此处必须断开"
+                  },
+                  {
+                    "pos": 53,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 85,
+                    "marker": ", + and",
+                    "reason": "and 连接并列成分，可在标点处断开"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "In general, as the health of wetland ecology declines",
+                    "start": 0,
+                    "end": 53,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "less carbon dioxide is removed",
+                    "start": 55,
+                    "end": 85,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "and more methane is released.",
+                    "start": 87,
+                    "end": 116,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "In general, as the health of wetland ecology declines",
+                "summary": "主句是「In general, as the health of wetland ecology…」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [
+                  {
+                    "kind": "三项以上并列",
+                    "members": [
+                      "as the health of wetland ecology declines",
+                      "less carbon dioxide is removed",
+                      "more methane is released"
+                    ],
+                    "note": "并列的几项词性相同、形式一致，可逐个对应翻译"
+                  }
+                ],
+                "modifiers": [
+                  "as the health of wetland ecology declines（插入语——先跳过，主句依然完整）"
+                ],
+                "summary": "平行动 1 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「In general, as the health of wet…」——这是整句的骨架",
+                  "2. 处理平行结构：as the health of wetland ecology declines ／ less carbon dioxide is removed ／ more methane is released——平行成分逐一对译，不要打乱顺序",
+                  "3. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s12",
@@ -5059,7 +15359,62 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "is",
+                    "start": 81,
+                    "end": 83,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（is），意味着有 1 件事要译。"
+              },
+              "step2": {
+                "breaks": [],
+                "summary": "句中无明显断点，结构较简单。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "But the exact nature of the relationship between wetland health and gaseous flux is not well understood.",
+                    "start": 0,
+                    "end": 104,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "",
+                "summary": "未能确定主句，建议先按标点切分逐段理解。"
+              },
+              "step4": {
+                "parallels": [
+                  {
+                    "kind": "from … to … 平行",
+                    "members": [
+                      "wetland health",
+                      "gaseous flux is not well understood"
+                    ],
+                    "note": "范围的两端，形式通常一致"
+                  }
+                ],
+                "modifiers": [],
+                "summary": "平行动 1 处、修饰成分 0 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 处理平行结构：wetland health ／ gaseous flux is not well understood——平行成分逐一对译，不要打乱顺序",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s13",
@@ -5096,7 +15451,75 @@ export const ATLAS_ARTICLES: Article[] = [
               "notes": [],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "does",
+                    "start": 5,
+                    "end": 9,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "like",
+                    "start": 20,
+                    "end": 24,
+                    "role": "preposition",
+                    "note": "是介词，不是动词"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（does），意味着有 1 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 41,
+                    "marker": ", + for",
+                    "reason": "for 连接并列成分，可在标点处断开"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "What does flux look like in ghost forests",
+                    "start": 0,
+                    "end": 41,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "for example?",
+                    "start": 43,
+                    "end": 55,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "What does flux look like in ghost forests",
+                "summary": "主句是「What does flux look like in ghost forests」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「What does flux look like in ghos…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s14",
@@ -5133,7 +15556,60 @@ export const ATLAS_ARTICLES: Article[] = [
               "notes": [],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "do",
+                    "start": 8,
+                    "end": 10,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "like",
+                    "start": 44,
+                    "end": 48,
+                    "role": "preposition",
+                    "note": "是介词，不是动词"
+                  }
+                ],
+                "count": 0,
+                "summary": "未识别到明确的谓语动词，可先按标点分段理解。"
+              },
+              "step2": {
+                "breaks": [],
+                "summary": "句中无明显断点，结构较简单。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "And how do more subtle changes in variables like canopy coverage or species distribution influence levels of carbon dioxide sequestration or methane production?",
+                    "start": 0,
+                    "end": 160,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "",
+                "summary": "未能确定主句，建议先按标点切分逐段理解。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s15",
@@ -5172,7 +15648,68 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "said.",
+                    "start": 61,
+                    "end": 66,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（said.），意味着有 1 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 48,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "“We’re especially interested in the methane part",
+                    "start": 0,
+                    "end": 48,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "” Fatoyinbo said.",
+                    "start": 49,
+                    "end": 66,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "“We’re especially interested in the methane part",
+                "summary": "主句是「“We’re especially interested in the methane …」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「“We’re especially interested in …」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s16",
@@ -5202,7 +15739,68 @@ export const ATLAS_ARTICLES: Article[] = [
               "notes": [],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "thought.”",
+                    "start": 76,
+                    "end": 85,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（thought.”），意味着有 1 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 26,
+                    "marker": ", + and",
+                    "reason": "and 连接并列成分，可在标点处断开"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "“It’s the least understood",
+                    "start": 0,
+                    "end": 26,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "and there’s a lot more of it than we previously thought.”",
+                    "start": 28,
+                    "end": 85,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "“It’s the least understood",
+                "summary": "主句是「“It’s the least understood」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「“It’s the least understood」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s17",
@@ -5242,7 +15840,121 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "Based",
+                    "start": 0,
+                    "end": 5,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "collected",
+                    "start": 14,
+                    "end": 23,
+                    "role": "nonfinite",
+                    "note": "过去分词作后置定语（相当于省略了 which is），不能作谓语"
+                  },
+                  {
+                    "text": "finding",
+                    "start": 58,
+                    "end": 65,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "remove",
+                    "start": 88,
+                    "end": 94,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "produce",
+                    "start": 133,
+                    "end": 140,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "said.",
+                    "start": 182,
+                    "end": 187,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（Based / said.），意味着有 2 件事要译；另有 4 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 49,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 66,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 171,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Based on data collected during BlueFlux fieldwork",
+                    "start": 0,
+                    "end": 49,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "“we’re finding that coastal wetlands remove massive amounts of carbon dioxide and produce substantial amounts of methane",
+                    "start": 51,
+                    "end": 171,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "” Poulter said.",
+                    "start": 172,
+                    "end": 187,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "Based on data collected during BlueFlux fieldwork",
+                "summary": "主句是「Based on data collected during BlueFlux fiel…」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Based on data collected during B…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s18",
@@ -5281,7 +15993,104 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "appear",
+                    "start": 31,
+                    "end": 37,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "provide",
+                    "start": 41,
+                    "end": 48,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "removing",
+                    "start": 72,
+                    "end": 80,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "greenhouse",
+                    "start": 86,
+                    "end": 96,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "produce.”",
+                    "start": 113,
+                    "end": 122,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 0,
+                "summary": "未识别到明确的谓语动词，可先按标点分段理解。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 12,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 70,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "“But overall, these ecosystems appear to provide a net climate benefit",
+                    "start": 0,
+                    "end": 70,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "removing more greenhouse gases than they produce.”",
+                    "start": 72,
+                    "end": 122,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "removing more greenhouse gases than they produce.”",
+                "summary": "主句是「removing more greenhouse gases than they pro…」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "these ecosystems appear to provide a net climate benefit（插入语——先跳过，主句依然完整）"
+                ],
+                "summary": "平行动 0 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「removing more greenhouse gases t…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p9-s19",
@@ -5328,7 +16137,89 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "对…作出反应",
                 "kind": "短语动词"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "could",
+                    "start": 5,
+                    "end": 10,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "change",
+                    "start": 11,
+                    "end": 17,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "respond",
+                    "start": 40,
+                    "end": 47,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "continued",
+                    "start": 51,
+                    "end": 60,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（could / continued），意味着有 2 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 18,
+                    "marker": "as",
+                    "reason": "as 引导时间/原因状语从句"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "That could change",
+                    "start": 0,
+                    "end": 17,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "as Florida’s wetlands respond to continued climate disturbances.",
+                    "start": 18,
+                    "end": 82,
+                    "type": "时间/原因状语从句",
+                    "isMain": false,
+                    "hint": "作时间或原因成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "",
+                "summary": "未能确定主句，建议先按标点切分逐段理解。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「That could change」——作说明成分，翻译时通常放在主句之前",
+                  "2. 先译【时间/原因状语从句】「as Florida’s wetlands respond to…」——作时间或原因成分，翻译时通常放在主句之前",
+                  "3. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 2 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           }
         ]
       },
@@ -5372,7 +16263,68 @@ export const ATLAS_ARTICLES: Article[] = [
               "notes": [],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "are",
+                    "start": 19,
+                    "end": 22,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（are），意味着有 1 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 32,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Florida’s wetlands are roughly 5",
+                    "start": 0,
+                    "end": 32,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "000 years old.",
+                    "start": 33,
+                    "end": 47,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "Florida’s wetlands are roughly 5",
+                "summary": "主句是「Florida’s wetlands are roughly 5」，其余 1 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Florida’s wetlands are roughly 5」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p10-s1",
@@ -5411,7 +16363,109 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "past",
+                    "start": 16,
+                    "end": 20,
+                    "role": "preposition",
+                    "note": "是介词，不是动词"
+                  },
+                  {
+                    "text": "has been lost",
+                    "start": 86,
+                    "end": 99,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "was cleared",
+                    "start": 114,
+                    "end": 125,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "was drained",
+                    "start": 136,
+                    "end": 147,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "accommodate",
+                    "start": 151,
+                    "end": 162,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（has been lost / was cleared / was drained），意味着有 3 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 28,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 100,
+                    "marker": "as",
+                    "reason": "as 引导时间/原因状语从句"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "But in just the past century",
+                    "start": 0,
+                    "end": 28,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "more than half of the state’s original wetland coverage has been lost",
+                    "start": 30,
+                    "end": 99,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "as vegetation was cleared and water was drained to accommodate the growing population.",
+                    "start": 100,
+                    "end": 186,
+                    "type": "时间/原因状语从句",
+                    "isMain": false,
+                    "hint": "作时间或原因成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "more than half of the state’s original wetland coverage has been lost",
+                "summary": "主句是「more than half of the state’s original wetla…」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【时间/原因状语从句】「as vegetation was cleared and wa…」——作时间或原因成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「more than half of the state’s or…」——这是整句的骨架",
+                  "3. 按「时间或原因」关系组装：中文习惯把时间或原因类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p10-s2",
@@ -5457,7 +16511,65 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "在…之前",
                 "kind": "介词框架"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "contains",
+                    "start": 26,
+                    "end": 34,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "stored",
+                    "start": 62,
+                    "end": 68,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "did",
+                    "start": 84,
+                    "end": 87,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（contains / stored / did），意味着有 3 件事要译。"
+              },
+              "step2": {
+                "breaks": [],
+                "summary": "句中无明显断点，结构较简单。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "The Everglades system now contains 65% less peat and 77% less stored carbon than it did prior to drainage.",
+                    "start": 0,
+                    "end": 106,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "The Everglades system now contains 65% less peat and 77% less stored carbon than it did prior to drainage.",
+                "summary": "主句是「The Everglades system now contains 65% less …」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「The Everglades system now contai…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p10-s3",
@@ -5482,7 +16594,115 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "is",
+                    "start": 36,
+                    "end": 38,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "home",
+                    "start": 167,
+                    "end": 171,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "found",
+                    "start": 191,
+                    "end": 196,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "is",
+                    "start": 221,
+                    "end": 223,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 4,
+                "summary": "句中共有 4 个谓语动词（is / home / found / is），意味着有 4 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 28,
+                    "marker": "— + which",
+                    "reason": "which 引导定语从句，此处必须断开"
+                  },
+                  {
+                    "pos": 93,
+                    "marker": ", + but",
+                    "reason": "but 连接并列成分，可在标点处断开"
+                  },
+                  {
+                    "pos": 219,
+                    "marker": "—",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "The future of the ecosystem",
+                    "start": 0,
+                    "end": 27,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "which is not only an important reservoir for atmospheric carbon",
+                    "start": 30,
+                    "end": 93,
+                    "type": "定语从句",
+                    "isMain": false,
+                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "but a source of drinking water for more than 7 million Floridians and a home to flora and fauna found nowhere else on Earth",
+                    "start": 95,
+                    "end": 218,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "is uncertain.",
+                    "start": 221,
+                    "end": 234,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "The future of the ecosystem",
+                "summary": "主句是「The future of the ecosystem」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【定语从句】「which is not only an important r…」——作修饰成分，翻译时通常放在主句之前",
+                  "2. 再译【主句】「The future of the ecosystem」——这是整句的骨架",
+                  "3. 按「修饰」关系组装：中文习惯把修饰类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p10-s4",
@@ -5506,7 +16726,79 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "have dedicated",
+                    "start": 15,
+                    "end": 29,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "understanding",
+                    "start": 47,
+                    "end": 60,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "restoring",
+                    "start": 65,
+                    "end": 74,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "are",
+                    "start": 99,
+                    "end": 102,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（have dedicated / are），意味着有 2 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 11,
+                    "marker": "who",
+                    "reason": "who 引导定语从句"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 1 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "Scientists who have dedicated their careers to understanding and restoring South Florida’s ecology are hopeful.",
+                    "start": 0,
+                    "end": 111,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  }
+                ],
+                "mainText": "Scientists who have dedicated their careers to understanding and restoring South Florida’s ecology are hopeful.",
+                "summary": "主句是「Scientists who have dedicated their careers …」，其余 0 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「Scientists who have dedicated th…」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p10-s5",
@@ -5545,7 +16837,84 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "said",
+                    "start": 33,
+                    "end": 37,
+                    "role": "predicate"
+                  }
+                ],
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（said），意味着有 1 件事要译。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 30,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  },
+                  {
+                    "pos": 54,
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
+                  }
+                ],
+                "summary": "找到 2 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "“Nature and people can coexist",
+                    "start": 0,
+                    "end": 30,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "” said Meenakshi Chabba",
+                    "start": 31,
+                    "end": 54,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "an ecologist and resilience scientist at the Everglades Foundation in Florida’s Miami-Dade County.",
+                    "start": 56,
+                    "end": 154,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  }
+                ],
+                "mainText": "“Nature and people can coexist",
+                "summary": "主句是「“Nature and people can coexist」，其余 2 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [
+                  "” said Meenakshi Chabba（插入语——先跳过，主句依然完整）"
+                ],
+                "summary": "平行动 0 处、修饰成分 1 处。平行结构要逐项对应翻译；插入语可先跳过。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 再译【主句】「“Nature and people can coexist」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
+                ],
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p10-s6",
@@ -5592,7 +16961,61 @@ export const ATLAS_ARTICLES: Article[] = [
               ],
               "generatedBy": "rule"
             },
-            "phrases": []
+            "phrases": [],
+            "fiveStep": {
+              "step1": {
+                "predicates": [],
+                "count": 0,
+                "summary": "未识别到明确的谓语动词，可先按标点分段理解。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 55,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  }
+                ],
+                "summary": "找到 1 个断点，可以把句子切成 2 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "“But we need good science and good management to reach",
+                    "start": 0,
+                    "end": 54,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that goal.”",
+                    "start": 55,
+                    "end": 66,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "",
+                "summary": "未能确定主句，建议先按标点切分逐段理解。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that goal.”」——作说明成分，翻译时通常放在主句之前",
+                  "2. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           },
           {
             "id": "nasa-coastal-wetlands-blue-carbon-p10-s7",
@@ -5659,7 +17082,166 @@ export const ATLAS_ARTICLES: Article[] = [
                 "zh": "取决于；依赖",
                 "kind": "短语动词"
               }
-            ]
+            ],
+            "fiveStep": {
+              "step1": {
+                "predicates": [
+                  {
+                    "text": "campaign",
+                    "start": 34,
+                    "end": 42,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "is",
+                    "start": 43,
+                    "end": 45,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "can",
+                    "start": 101,
+                    "end": 104,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "help",
+                    "start": 105,
+                    "end": 109,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "evaluate",
+                    "start": 132,
+                    "end": 140,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "time",
+                    "start": 149,
+                    "end": 153,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "are",
+                    "start": 177,
+                    "end": 180,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "responding",
+                    "start": 181,
+                    "end": 191,
+                    "role": "nonfinite",
+                    "note": "动名词 / 现在分词 doing，不能作谓语"
+                  },
+                  {
+                    "text": "designed",
+                    "start": 215,
+                    "end": 223,
+                    "role": "nonfinite",
+                    "note": "过去分词作后置定语（相当于省略了 which is），不能作谓语"
+                  },
+                  {
+                    "text": "protect",
+                    "start": 227,
+                    "end": 234,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  },
+                  {
+                    "text": "depend",
+                    "start": 306,
+                    "end": 312,
+                    "role": "nonfinite",
+                    "note": "不定式 to do，不能作谓语"
+                  }
+                ],
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（is / can / are），意味着有 3 件事要译；另有 8 个\"看着像动词其实不是\"的干扰项，需要排除。"
+              },
+              "step2": {
+                "breaks": [
+                  {
+                    "pos": 96,
+                    "marker": "that",
+                    "reason": "that 引导名词性 / 定语从句"
+                  },
+                  {
+                    "pos": 286,
+                    "marker": "— + and",
+                    "reason": "and 连接并列成分，可在标点处断开"
+                  },
+                  {
+                    "pos": 302,
+                    "marker": "who",
+                    "reason": "who 引导定语从句"
+                  }
+                ],
+                "summary": "找到 3 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+              },
+              "step3": {
+                "segments": [
+                  {
+                    "id": "seg-0",
+                    "text": "The next step for NASA’s BlueFlux campaign is the development of a satellite-based data product",
+                    "start": 0,
+                    "end": 95,
+                    "type": "主句",
+                    "isMain": true,
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
+                  },
+                  {
+                    "id": "seg-1",
+                    "text": "that can help regional stakeholders evaluate in real-time how Florida’s wetlands are responding to restoration efforts designed to protect one of the state’s most precious natural resources",
+                    "start": 96,
+                    "end": 285,
+                    "type": "名词性 / 定语从句",
+                    "isMain": false,
+                    "hint": "作说明成分，翻译时通常放在主句之前"
+                  },
+                  {
+                    "id": "seg-2",
+                    "text": "and all those",
+                    "start": 288,
+                    "end": 301,
+                    "type": "并列分句（承接前文）",
+                    "isMain": false,
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
+                  },
+                  {
+                    "id": "seg-3",
+                    "text": "who depend on it.",
+                    "start": 302,
+                    "end": 319,
+                    "type": "定语从句",
+                    "isMain": false,
+                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                  }
+                ],
+                "mainText": "The next step for NASA’s BlueFlux campaign is the development of a satellite-based data product",
+                "summary": "主句是「The next step for NASA’s BlueFlux campaign i…」，其余 3 段都是挂在这一主干上的修饰或从句。"
+              },
+              "step4": {
+                "parallels": [],
+                "modifiers": [],
+                "summary": "本句没有明显的平行结构或插入成分。"
+              },
+              "step5": {
+                "steps": [
+                  "1. 先译【名词性 / 定语从句】「that can help regional stakehold…」——作说明成分，翻译时通常放在主句之前",
+                  "2. 先译【定语从句】「who depend on it.」——作修饰成分，翻译时通常放在主句之前",
+                  "3. 再译【主句】「The next step for NASA’s BlueFlu…」——这是整句的骨架",
+                  "4. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                ],
+                "summary": "全句由 2 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+              },
+              "generatedBy": "rule"
+            }
           }
         ]
       }

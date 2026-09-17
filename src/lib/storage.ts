@@ -1,7 +1,7 @@
 import { createStore, get, set, del, keys } from 'idb-keyval';
 import type {
   Article, InkDoc, Note, AppSettings,
-  Highlight, FavoriteFolder, FavoriteItem,
+  Highlight, FavoriteFolder, FavoriteItem, ReviewCard,
 } from '../types';
 import { SCHEMA_VERSION } from '../types';
 
@@ -15,6 +15,7 @@ export const K = {
   hl: (articleId: string) => `hl:${articleId}`,
   favFolders: 'favFolders',
   favItems: 'favItems',
+  reviewCards: 'reviewCards',
   customTags: 'customTags',
 };
 
@@ -51,6 +52,15 @@ export async function loadFavItems(): Promise<FavoriteItem[]> {
 
 export async function saveFavItems(v: FavoriteItem[]): Promise<void> {
   await set(K.favItems, v, store);
+}
+
+export async function loadReviewCards(): Promise<ReviewCard[]> {
+  const v = await get<ReviewCard[]>(K.reviewCards, store);
+  return v ?? [];
+}
+
+export async function saveReviewCards(v: ReviewCard[]): Promise<void> {
+  await set(K.reviewCards, v, store);
 }
 
 export async function loadArticles(): Promise<Record<string, Article>> {

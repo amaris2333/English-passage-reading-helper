@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useStore } from '../store';
 import { track } from '../lib/analytics';
-import { buildQuiz, QUIZ_KIND_LABEL } from '../lib/quiz';
-import type { QuizQuestion } from '../types';
+import { buildQuiz, DIMENSION_LABEL, DIMENSION_HINT, type Dimension } from '../lib/quiz';
+import type { QuizQuestion, Sentence } from '../types';
 import '../styles/review.css';
 
 interface Result {
@@ -28,12 +28,12 @@ export function QuizDialog({ onClose }: { onClose: () => void }) {
 
     const { currentId, articles, favItems } = useStore.getState();
     const article = currentId ? articles[currentId] : undefined;
-    const sentences: string[] = [];
+    const sentences: Sentence[] = [];
     const articleWords = new Set<string>();
     if (article) {
       for (const p of article.paragraphs) {
         for (const s of p.sentences) {
-          sentences.push(s.en);
+          sentences.push(s);
           for (const m of s.en.match(/[A-Za-z']+/g) ?? []) articleWords.add(m);
         }
       }
@@ -113,20 +113,20 @@ export function QuizDialog({ onClose }: { onClose: () => void }) {
           <>
             <div className="quiz-progress">
               <span>第 {index + 1} / {questions.length} 题</span>
-              <span className="quiz-kind">{QUIZ_KIND_LABEL[q.kind]}</span>
+              <span className="quiz-kind">{DIMENSION_LABEL[(q.word ?? '') as Dimension] ?? q.word ?? ''}</span>
             </div>
 
             <div className="quiz-body">
               {q.kind === 'choice' && (
                 <>
                   <div className="quiz-stem">{q.stem}</div>
-                  <div className="quiz-sub">这个词的意思最接近？</div>
+                  <div className="quiz-sub">{DIMENSION_HINT[(q.word ?? '') as Dimension] ?? '请选择最恰当的选项'}</div>
                 </>
               )}
               {q.kind === 'judge' && (
                 <>
                   <div className="quiz-stem">{q.stem}</div>
-                  <div className="quiz-sub">这个「单词 — 释义」配对正确吗？</div>
+                  <div className="quiz-sub">{DIMENSION_HINT[(q.word ?? '') as Dimension] ?? '请判断正误'}</div>
                 </>
               )}
               {q.kind === 'correct' && (
@@ -179,6 +179,21 @@ export function QuizDialog({ onClose }: { onClose: () => void }) {
             <h4>本次测验得分</h4>
             <div className="quiz-score">
               <b>{rightCount}</b> / {questions.length}
+            </div>
+            <div className="quiz-dim-stats">
+              {Object.entries(
+                results.reduce<Record<string, { total: number; right: number }>>((acc, r) => {
+                  const d = (r.q.word ?? 'unknown') as string;
+                  acc[d] = acc[d] ?? { total: 0, right: 0 };
+                  acc[d].total += 1;
+                  if (r.correct) acc[d].right += 1;
+                  return acc;
+                }, {}),
+              ).map(([dim, { total, right }]) => (
+                <span className="quiz-dim-chip" key={dim}>
+                  {DIMENSION_LABEL[dim as Dimension] ?? dim} {right}/{total}
+                </span>
+              ))}
             </div>
             {wrongList.length > 0 ? (
               <div className="wrong-list">

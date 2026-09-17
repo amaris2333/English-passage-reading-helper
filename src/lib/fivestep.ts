@@ -1,4 +1,4 @@
-import { tagTerms, type TaggedTerm } from './analyze';
+import { analyzeSentence, tagTerms, type TaggedTerm } from './analyze';
 import type { BreakPoint, FiveStep, ParallelGroup, PredicateItem, PredicateRole, Segment } from '../types';
 
 /**
@@ -44,6 +44,16 @@ const RELATIVE = new Set(['which', 'who', 'whom', 'whose', 'where', 'that']);
 
 const COORD = new Set(['and', 'but', 'or', 'yet', 'nor', 'so', 'for']);
 
+/** 逻辑连接词 → 中文提示。第五步要体现转折/因果/递进关系 */
+const LOGIC_WORDS: Record<string, string> = {
+  however: '转折（然而）', nevertheless: '转折（尽管如此）', nonetheless: '转折（尽管如此）',
+  instead: '转折（相反）', therefore: '因果（因此）', thus: '因果（因而）',
+  consequently: '因果（结果）', accordingly: '因果（于是）', moreover: '递进（而且）',
+  furthermore: '递进（此外）', besides: '递进（此外）', meanwhile: '并列（与此同时）',
+  otherwise: '转折（否则）', 'in contrast': '对比（相反）', 'as a result': '因果（结果）',
+  'for example': '举例（例如）', 'in fact': '递进（事实上）',
+};
+
 /** 常见副词 / 否定词：夹在助动词与实义动词之间，合并谓语时需跳过 */
 const SKIP_IN_VP = new Set(['not', 'never', 'also', 'still', 'just', 'already', 'always', 'often', 'generally', 'actually', 'first', 'then', 'only', 'even', 'simply', 'really', 'likely', 'probably', 'partly', 'largely', 'widely', 'rapidly', 'significantly', 'notably', 'ultimately', 'typically', 'however', 'therefore', 'thus', 'meanwhile', 'further', 'instead']);
 
@@ -56,7 +66,7 @@ const clean = (s: string) => s.toLowerCase().replace(/[^a-z']/g, '');
 /** 这些介词长得像动词，是学习者最容易误判的一类，值得单独点出 */
 const CONFUSABLE_PREP = new Set(['like', 'past', 'save', 'except', 'given', 'considering', 'regarding', 'concerning', 'according', 'following', 'including', 'unlike', 'despite', 'barring', 'pending']);
 
-function classifyVerb(t: TaggedTerm): PredicateRole | null {
+function classifyVerb(t: TaggedTerm, terms: TaggedTerm[], i: number): PredicateRole | null {
   const tags = t.tags;
   const has = (...arr: string[]) => arr.some((x) => tags.includes(x));
   const w = clean(t.text);
@@ -70,7 +80,14 @@ function classifyVerb(t: TaggedTerm): PredicateRole | null {
   if (w.endsWith('ing') && w.length > 4 && has('Verb', 'Auxiliary', 'Gerund')) {
     return 'nonfinite';
   }
-  if (has('Infinitive')) return 'nonfinite';
+  // ⚠️ compromise 会把「现在时拼写与不定式相同」的动词同时标上 Infinitive
+  // （account / remove / provide …），所以必须先确认它是否真被 "to" 引导
+  if (has('Infinitive')) {
+    const prevWord = clean(terms[i - 1]?.text ?? '');
+    if (prevWord === 'to') return 'nonfinite';
+    // 没有被 to 引导，且带有时态标记 → 就是谓语，交给下面的判断
+    if (!has('PresentTense', 'PastTense', 'Modal', 'Auxiliary', 'Copula')) return 'nonfinite';
+  }
 
   // 介词：只保留容易误判成动词的那些，其余（in/at/of/with…）太常见，不必逐个列出
   if (has('Preposition')) return CONFUSABLE_PREP.has(w) ? 'preposition' : null;
@@ -151,7 +168,7 @@ function buildPredicates(en: string): PredicateItem[] {
   const quoted = quotedRanges(en);
   const inQuote = (idx: number) => quoted.some(([a, b]) => idx > a && idx < b);
 
-  const baseRoles: Array<PredicateRole | null> = terms.map((t) => (inQuote(t.index) ? null : classifyVerb(t)));
+  const baseRoles: Array<PredicateRole | null> = terms.map((t, i) => (inQuote(t.index) ? null : classifyVerb(t, terms, i)));
   const roles: Array<PredicateRole | null> = baseRoles.map((r, i) =>
     r === 'predicate' && terms[i].tags.includes('PastTense') && looksLikeReducedRelative(terms, baseRoles, i, en)
       ? 'nonfinite'
@@ -374,32 +391,57 @@ function buildParallels(en: string): ParallelGroup[] {
   return out.slice(0, 4);
 }
 
-function buildModifiers(en: string): string[] {
+function buildModifiers(en: string, terms: TaggedTerm[]): string[] {
   const out: string[] = [];
-  // 插入语：成对逗号 / 破折号之间
-  for (const m of en.matchAll(/[,—–]\s*([^,;—–]{6,60})\s*[,—–]/g)) {
-    const seg = m[1].trim();
-    // 含谓语动词的长串多半是分句而非插入语，跳过
-    if (/\b(is|are|was|were|has|have|had|will|would|can|could|should|must)\b/i.test(seg)) continue;
-    if (seg.split(/\s+/).length > 9) continue;
-    out.push(`${seg}（插入语——先跳过，主句依然完整）`);
-    if (out.length >= 3) break;
+  const shrink = (t: string, n = 46) => (t.length > n ? t.slice(0, n - 2) + '…' : t);
+
+  // ① 定语从句：关系词前面能找到先行名词
+  for (let i = 1; i < terms.length; i++) {
+    const w = clean(terms[i].text);
+    if (!['who', 'which', 'whom', 'whose', 'where', 'that'].includes(w)) continue;
+    const ante = [...terms.slice(0, i)].reverse().find((t) =>
+      t.tags.some((x) => x === 'Noun' || x === 'ProperNoun' || x === 'Plural'));
+    const tail = en.slice(terms[i].index).split(/[,;]/).slice(0, 2).join(',').trim();
+    out.push(
+      ante
+        ? `"${shrink(tail)}"（定语从句，修饰名词 **${ante.text}**——它给这个名词补充信息，翻译时通常前置成"……的"）`
+        : `"${shrink(tail)}"（定语从句，修饰前面的名词）`,
+    );
+    if (out.length >= 2) break;
   }
-  // 同位语：名词 + 逗号 + the/a + 名词短语
-  for (const m of en.matchAll(/,\s*((?:the|a|an)\s+[^,;]{4,60})\s*[,.]/g)) {
-    const seg = `${m[1].trim()}（同位语——解释前面那个名词）`;
-    if (out.some((o) => o.startsWith(m[1].trim().slice(0, 10)))) continue;
-    out.push(seg);
+
+  // ② 句首的介词短语 / 分词短语 → 状语（修饰全句或主句动作）
+  const head = en.match(/^([A-Za-z][A-Za-z'’\- ]{2,40}?[,，])/);
+  if (head && !/^(The|This|That|These|Those|It|He|She|They|We|I|A|An)\b/.test(head[1])) {
+    out.push(`"${head[1].trim()}"（句首状语，交代背景或前提——中文习惯先译它）`);
+  }
+
+  // ③ 名词后的介词短语 → 后置定语
+  for (const m of en.matchAll(/\b([a-z]{4,})\s+(of|in|on|for|with|from|by|to)\s+([a-z][^,;.]{2,40})/gi)) {
+    const seg = `${m[1]} ${m[2]} ${m[3]}`.trim();
+    if (out.some((o) => o.includes(seg.slice(0, 14)))) continue;
+    out.push(`"${shrink(seg)}"（后置定语，修饰名词 **${m[1]}**）`);
     if (out.length >= 4) break;
   }
-  return out.slice(0, 4);
+
+  // ④ 插入语（成对逗号/破折号之间）
+  for (const m of en.matchAll(/[,—–]\s*([^,;—–]{6,60})\s*[,—–]/g)) {
+    const seg = m[1].trim();
+    if (/\b(is|are|was|were|has|have|had|will|would|can|could|should|must)\b/i.test(seg)) continue;
+    if (seg.split(/\s+/).length > 9) continue;
+    if (out.some((o) => o.includes(seg.slice(0, 12)))) continue;
+    out.push(`"${shrink(seg)}"（插入语——删掉不影响主句结构，可先跳过）`);
+    if (out.length >= 5) break;
+  }
+
+  return out.slice(0, 5);
 }
 
 /* ------------------------------------------------------------------ */
 /* 第 5 步：翻译路径                                                    */
 /* ------------------------------------------------------------------ */
 
-function buildPath(segs: Segment[], parallels: ParallelGroup[]): { steps: string[]; summary: string } {
+function buildPath(segs: Segment[], parallels: ParallelGroup[], en: string): { steps: string[]; summary: string } {
   const steps: string[] = [];
   const subs = segs.filter((s) => !s.isMain && !s.type.startsWith('并列分句'));
   const main = segs.find((s) => s.isMain);
@@ -416,6 +458,15 @@ function buildPath(segs: Segment[], parallels: ParallelGroup[]): { steps: string
   if (parallels.length) {
     steps.push(`${n++}. 处理平行结构：${parallels[0].members.join(' ／ ')}——平行成分逐一对译，不要打乱顺序`);
   }
+  // 逻辑连接词：转折 / 因果 / 递进，译文必须体现
+  const hitLogic = Object.keys(LOGIC_WORDS).filter((w) =>
+    new RegExp(`(^|[,;\\s])${w.replace(' ', '\\s+')}\\b`, 'i').test(en),
+  );
+  if (hitLogic.length) {
+    const w = hitLogic[0];
+    steps.push(`${n++}. 注意逻辑词 **${w}**：${LOGIC_WORDS[w]}——译文要把这层关系译出来，否则会读成平铺直叙。`);
+  }
+
   const relation = subs.length ? (SUB_INFO[clean(subs[0].text.split(/\s+/).find((w) => SUB_INFO[clean(w)]) ?? '')]?.relation ?? '修饰') : null;
   steps.push(
     subs.length
@@ -446,10 +497,23 @@ export function analyzeFiveStep(en: string): FiveStep | undefined {
   const breaks = buildBreaks(text, realPredicates);
   const segments = buildSegments(text, breaks);
   const parallels = buildParallels(text);
-  const modifiers = buildModifiers(text);
-  const path = buildPath(segments, parallels);
+  const modifiers = buildModifiers(text, tagTerms(text));
+  const path = buildPath(segments, parallels, text);
 
   const main = segments.find((s) => s.isMain);
+
+  // 第三步补充：用句法分析取出主干的 主语 / 谓语 / 宾语或表语
+  const sv = analyzeSentence(text);
+  const cut = (t?: string) => (t && t.length > 40 ? t.slice(0, 38) + '...' : t ?? '');
+  const sPart = sv.chunks.find((c) => c.role === 'S');
+  const vPart = sv.chunks.find((c) => c.role === 'V');
+  const oPart = sv.chunks.find((c) => c.role === 'O') ?? sv.chunks.find((c) => c.role === 'C');
+  const parts: string[] = [];
+  if (sPart) parts.push('主语 = "' + cut(sPart.text) + '"');
+  if (vPart) parts.push('谓语 = "' + cut(vPart.text) + '"');
+  if (oPart) parts.push((oPart.role === 'C' ? '表语' : '宾语') + ' = "' + cut(oPart.text) + '"');
+  const trunk = parts.join('；');
+  if (main && trunk) main.hint = '主干拆解 —— ' + trunk;
 
   return {
     step1: {
@@ -469,7 +533,8 @@ export function analyzeFiveStep(en: string): FiveStep | undefined {
       segments,
       mainText: main?.text ?? '',
       summary: main
-        ? `主句是「${main.text.length > 46 ? main.text.slice(0, 44) + '…' : main.text}」，其余 ${segments.length - 1} 段都是挂在这一主干上的修饰或从句。`
+        ? `主句是「${main.text.length > 46 ? main.text.slice(0, 44) + '…' : main.text}」，其余 ${segments.length - 1} 段都是挂在这一主干上的修饰或从句。` +
+          (trunk ? ` 主干拆解：${trunk}` : '')
         : '未能确定主句，建议先按标点切分逐段理解。',
     },
     step4: {

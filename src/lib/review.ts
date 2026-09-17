@@ -11,8 +11,11 @@ export const MAX_BOX = 6;
 
 export type Grade = 'forget' | 'vague' | 'remember';
 
-/** 根据 box 计算下次到期时间戳 */
+/** 根据 box 计算下次到期时间戳。
+ *  box=0（新卡 / 刚「忘记」的卡）直接返回 now-1，保证「当场即可复习」，
+ *  避免 due 恰好等于 now 时因时钟微调被误判为未到期。 */
 export function nextDue(box: number, now: number = Date.now()): number {
+  if (box <= 0) return now - 1;
   const b = Math.max(0, Math.min(box, INTERVALS.length - 1));
   return now + INTERVALS[b] * DAY;
 }
@@ -73,7 +76,7 @@ export function cardFromFavItem(item: {
     articleTitle: item.articleTitle,
     sentenceId: item.sentenceId,
     box: 0,
-    due: now,
+    due: now - 1,
     right: 0,
     wrong: 0,
     updatedAt: new Date(now).toISOString(),

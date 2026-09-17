@@ -12,21 +12,25 @@ export function ReviewDialog({ onClose }: { onClose: () => void }) {
 
   const [queue, setQueue] = useState<ReviewCard[]>([]);
   const [dueCount, setDueCount] = useState(0);
+  const [earlyReview, setEarlyReview] = useState(false);
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [results, setResults] = useState<Grade[]>([]);
   const [finished, setFinished] = useState(false);
   const startedRef = useRef(false);
 
-  // 首次挂载：同步收藏→卡片，构建到期队列
+  // 首次挂载：同步收藏→卡片，构建复习队列（永不阻塞）
   useEffect(() => {
     if (startedRef.current) return;
     startedRef.current = true;
     syncReviewCards();
     const cards = useStore.getState().reviewCards;
     const due = cards.filter(isDue);
-    setQueue(due);
+    // 到期卡为空但仍有卡片：回退为复习全部卡片（"提前复习"），绝不让用户进不来
+    const early = due.length === 0 && cards.length > 0;
+    setQueue(early ? cards : due);
     setDueCount(due.length);
+    setEarlyReview(early);
     track({ name: 'review_open', due: due.length });
   }, [syncReviewCards]);
 
@@ -71,19 +75,9 @@ export function ReviewDialog({ onClose }: { onClose: () => void }) {
 
         {queue.length === 0 ? (
           <div className="review-empty">
-            {reviewCards.length === 0 ? (
-              <>
-                <div className="review-empty-emoji">🗂️</div>
-                <p>还没有可复习的卡片。</p>
-                <p className="hint">先去「收藏夹」收藏一些句子或单词，再来这里复习吧。</p>
-              </>
-            ) : (
-              <>
-                <div className="review-empty-emoji">🎉</div>
-                <p>今天没有待复习的卡片 🎉</p>
-                <p className="hint">已收藏的内容都记得很牢，明天再来看看。</p>
-              </>
-            )}
+            <div className="review-empty-emoji">🗂️</div>
+            <p>还没有可复习的卡片。</p>
+            <p className="hint">先去「收藏夹」收藏一些句子或单词，再来这里复习吧。</p>
             <div className="actions">
               <button className="primary" onClick={onClose}>关闭</button>
             </div>
@@ -101,8 +95,13 @@ export function ReviewDialog({ onClose }: { onClose: () => void }) {
           <>
             <div className="review-progress">
               <span>待复习 {index + 1} / {queue.length}</span>
-              <span className="review-due">今日到期 {dueCount} 张</span>
+              <span className="review-due">
+                {earlyReview ? '提前复习 · 共 ' + queue.length + ' 张' : '今日到期 ' + dueCount + ' 张'}
+              </span>
             </div>
+            {earlyReview && (
+              <div className="review-early-note">今天没有到期的卡片，正在进行提前复习。</div>
+            )}
 
             <div className="flashcard">
               {!flipped ? (

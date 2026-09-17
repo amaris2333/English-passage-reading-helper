@@ -445,7 +445,8 @@ export const useStore = create<AppState>((set, get) => ({
           articleTitle: f.articleTitle,
           sentenceId: f.sentenceId,
           box: 0,
-          due: now,
+          // now - 1 保证刚收藏的卡一定到期，可立即复习（负责人要求）
+          due: now - 1,
           right: 0,
           wrong: 0,
           updatedAt: new Date(now).toISOString(),

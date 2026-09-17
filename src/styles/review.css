@@ -25,6 +25,15 @@
   margin-bottom: 12px;
 }
 .review-due { color: var(--accent); }
+.review-early-note {
+  font-size: 12.5px;
+  color: var(--text-2);
+  background: var(--accent-soft);
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
 .quiz-kind {
   background: var(--accent-soft);
   color: var(--accent);
@@ -144,6 +153,20 @@
 /* ---------- 小测：结果 ---------- */
 .quiz-result { padding: 4px 0; }
 .quiz-result h4 { text-align: center; margin: 6px 0; font-size: 16px; }
+.quiz-dim-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 4px 0 16px;
+}
+.quiz-dim-chip {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 13px;
+}
 .quiz-score { text-align: center; font-size: 30px; margin: 10px 0 16px; color: var(--accent); }
 .quiz-score b { font-size: 38px; }
 .wrong-list { margin: 8px 0 16px; max-height: 46vh; overflow-y: auto; }

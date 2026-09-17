@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>隐私说明 · 英语外刊精读</title>
+  <style>
+    :root {
+      --primary: #4a5d8f;
+      --bg: #f7f6f3;
+      --text: #333;
+      --muted: #777;
+      --border: #e3e1db;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+    h1 {
+      color: var(--primary);
+      font-size: 26px;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    .sub {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0 0 32px;
+    }
+    h2 {
+      color: var(--primary);
+      font-size: 18px;
+      font-weight: 600;
+      margin: 36px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+    p { margin: 12px 0; }
+    ul { margin: 12px 0; padding-left: 22px; }
+    li { margin: 8px 0; }
+    .danger {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 6px;
+      padding: 16px 18px;
+      margin: 16px 0;
+    }
+    .danger strong { color: var(--primary); }
+    .key {
+      display: inline-block;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1px 7px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      color: var(--primary);
+    }
+    a { color: var(--primary); }
+    .foot {
+      margin-top: 48px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>隐私说明</h1>
+    <p class="sub">英语外刊精读 · 最后更新：2026 年 9 月</p>
+
+    <p>
+      我们非常重视你的隐私。本应用是一款<strong>纯前端</strong>的英语学习工具，
+      你的绝大部分数据都只存在于你自己的设备上。下面说明我们收集的匿名行为数据，
+      以及我们<strong>绝不</strong>收集的内容。
+    </p>
+
+    <h2>一、我们收集什么</h2>
+    <p>为了改进产品，我们只会记录<strong>匿名的「行为事件」</strong>，例如：</p>
+    <ul>
+      <li>你打开了哪篇文章（仅文章 <span class="key">id</span>，不含文章内容）</li>
+      <li>你展开 / 精读了几个句子、查了几个单词</li>
+      <li>是否导出了 PDF、导出的语言与是否包含笔迹</li>
+      <li>闪卡复习与自测小测的使用情况（如复习数量、是否答对等<strong>枚举 / 数值</strong>）</li>
+      <li>应用启动、导入文章（来自 PDF 还是粘贴）等使用情况</li>
+    </ul>
+    <p>这些事件只包含<strong>事件名称 + 少量数值 / 枚举属性</strong>，用于了解功能的整体使用情况，无法回溯到任何具体内容。</p>
+
+    <h2>二、我们绝不收集什么（重点）</h2>
+    <div class="danger">
+      <p style="margin:0;">
+        以下<strong>由你输入的文字，任何情况下都不会离开你的浏览器</strong>：
+      </p>
+      <ul style="margin:10px 0 0;">
+        <li>你的<strong>译文</strong>（你写的每一句中文翻译）</li>
+        <li>你的<strong>笔记正文</strong>与便签文字</li>
+        <li>你<strong>收藏的具体句子或单词</strong></li>
+        <li>任何<strong>输入框</strong>里你敲下的内容</li>
+      </ul>
+      <p style="margin:10px 0 0;">
+        我们不采集、不上传、不存储你的任何用户内容。即便埋点开启，
+        上报的也只是「你做了某个动作」这一事实，而非动作对应的文字本身。
+      </p>
+    </div>
+
+    <h2>三、数据存在哪里</h2>
+    <ul>
+      <li>
+        <strong>本地数据</strong>：你的文章、笔记、收藏、笔迹等，全部保存在你浏览器自带的
+        <span class="key">IndexedDB</span> 中，仅存在于本机，不会自动上传到任何服务器。
+      </li>
+      <li>
+        <strong>匿名行为事件</strong>：仅当你开启埋点后，上述「行为事件」会发往
+        <strong>PostHog</strong>（第三方产品分析服务，<span class="key">us.i.posthog.com</span>），
+        用于产品运营分析。其中不含任何用户内容。
+      </li>
+    </ul>
+
+    <h2>四、如何关闭埋点</h2>
+    <p>我们不希望你在不知情的情况下被统计。你可以随时选择退出：</p>
+    <ul>
+      <li>安装并启用<strong>广告拦截 / 隐私保护类浏览器扩展</strong>（如 uBlock Origin），即可拦截发往 PostHog 的请求。</li>
+      <li>在浏览器中<strong>禁用 JavaScript</strong> 也能阻止埋点（但应用本身将无法运行）。</li>
+      <li>当站点未配置有效的分析 Key 时，埋点会自动完全关闭，等同于 no-op，网站照常运行。</li>
+    </ul>
+
+    <h2>五、联系与变更</h2>
+    <p>
+      如你对隐私有任何疑问，或通过本页面预留的渠道联系我们（占位：
+      <span class="key">privacy@example.com</span>）。
+    </p>
+    <p>
+      本说明可能随产品更新而调整。如有实质性变更，我们会在应用内或本页面予以告知。
+      （预留：更新日志 / 变更说明链接）
+    </p>
+
+    <div class="foot">
+      © 英语外刊精读 · 本页面为纯静态说明，不加载任何外部资源。
+    </div>
+  </div>
+</body>
+</html>

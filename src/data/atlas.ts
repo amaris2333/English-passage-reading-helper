@@ -76,15 +76,9 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   },
                   {
-                    "text": "have spurred further research",
+                    "text": "have spurred",
                     "start": 162,
-                    "end": 191,
-                    "role": "predicate"
-                  },
-                  {
-                    "text": "debate",
-                    "start": 196,
-                    "end": 202,
+                    "end": 174,
                     "role": "predicate"
                   },
                   {
@@ -94,8 +88,8 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   }
                 ],
-                "count": 5,
-                "summary": "句中共有 5 个谓语动词（have existed / been used / have spurred further research / debate / could impact），意味着有 5 件事要译。"
+                "count": 4,
+                "summary": "句中共有 4 个谓语动词（have existed / been used / have spurred / could impact），意味着有 4 件事要译。"
               },
               "step2": {
                 "breaks": [
@@ -105,17 +99,12 @@ export const ATLAS_ARTICLES: Article[] = [
                     "reason": "标点处断开——先按标点把长句切成短段"
                   },
                   {
-                    "pos": 146,
-                    "marker": "such",
-                    "reason": "such 引导定语从句"
-                  },
-                  {
                     "pos": 151,
                     "marker": "as",
                     "reason": "as 引导时间/原因状语从句"
                   }
                 ],
-                "summary": "找到 3 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
+                "summary": "找到 2 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
               },
               "step3": {
                 "segments": [
@@ -130,25 +119,25 @@ export const ATLAS_ARTICLES: Article[] = [
                   },
                   {
                     "id": "seg-1",
-                    "text": "the recent popularization of AI products",
+                    "text": "the recent popularization of AI products such",
                     "start": 105,
-                    "end": 145,
+                    "end": 150,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"the recent popularization of AI produc...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-2",
-                    "text": "such as ChatGPT have spurred further research and debate about how these technologies could impact the economy.",
-                    "start": 146,
+                    "text": "as ChatGPT have spurred further research and debate about how these technologies could impact the economy.",
+                    "start": 151,
                     "end": 257,
-                    "type": "定语从句",
+                    "type": "时间/原因状语从句",
                     "isMain": false,
-                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                    "hint": "作时间或原因成分，翻译时通常放在主句之前"
                   }
                 ],
-                "mainText": "the recent popularization of AI products",
-                "summary": "主句是「the recent popularization of AI products」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"the recent popularization of AI produc...\""
+                "mainText": "the recent popularization of AI products such",
+                "summary": "主句是「the recent popularization of AI products such」，其余 2 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -162,7 +151,7 @@ export const ATLAS_ARTICLES: Article[] = [
               "step5": {
                 "steps": [
                   "1. 先译【时间/让步状语从句】「While various forms of artificia…」——作同时或让步成分，翻译时通常放在主句之前",
-                  "2. 先译【定语从句】「such as ChatGPT have spurred fur…」——作修饰成分，翻译时通常放在主句之前",
+                  "2. 先译【时间/原因状语从句】「as ChatGPT have spurred further …」——作时间或原因成分，翻译时通常放在主句之前",
                   "3. 再译【主句】「the recent popularization of AI …」——这是整句的骨架",
                   "4. 按「同时或让步」关系组装：中文习惯把同时或让步类信息放在主句之前，再补上主句的结论。"
                 ],
@@ -297,7 +286,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 76,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"AI potentially\"；谓语 = \"has\"；表语 = \"wide-ranging uses in the production of...\""
+                    "hint": "主干拆解 —— 主语 = \"AI potentially\"；谓语 = \"has + uses\"；宾语/表语 = \"in the production of goods and services\""
                   },
                   {
                     "id": "seg-1",
@@ -328,7 +317,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "AI potentially has wide-ranging uses in the production of goods and services",
-                "summary": "主句是「AI potentially has wide-ranging uses in the …」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"AI potentially\"；谓语 = \"has\"；表语 = \"wide-ranging uses in the production of...\""
+                "summary": "主句是「AI potentially has wide-ranging uses in the …」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"AI potentially\"；谓语 = \"has + uses\"；宾语/表语 = \"in the production of goods and services\""
               },
               "step4": {
                 "parallels": [
@@ -463,7 +452,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 36,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"However, whether AI will prove to be a...\""
+                    "hint": "主干拆解 —— 主语 = \"However, whether AI\"；谓语 = \"will prove\"；宾语/表语 = \"to be\""
                   },
                   {
                     "id": "seg-1",
@@ -485,7 +474,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "However, whether AI will prove to be",
-                "summary": "主句是「However, whether AI will prove to be」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"However, whether AI will prove to be a...\""
+                "summary": "主句是「However, whether AI will prove to be」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"However, whether AI\"；谓语 = \"will prove\"；宾语/表语 = \"to be\""
               },
               "step4": {
                 "parallels": [],
@@ -592,7 +581,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 58,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Some Members of Congress\"；谓语 = \"are\"；宾语 = \"increasingly interested in AI, includi...\""
+                    "hint": "主干拆解 —— 主语 = \"Some Members of Congress\"；谓语 = \"are + interested\"；宾语/表语 = \"in AI\""
                   },
                   {
                     "id": "seg-1",
@@ -605,7 +594,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Some Members of Congress are increasingly interested in AI",
-                "summary": "主句是「Some Members of Congress are increasingly in…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Some Members of Congress\"；谓语 = \"are\"；宾语 = \"increasingly interested in AI, includi...\""
+                "summary": "主句是「Some Members of Congress are increasingly in…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Some Members of Congress\"；谓语 = \"are + interested\"；宾语/表语 = \"in AI\""
               },
               "step4": {
                 "parallels": [],
@@ -819,20 +808,14 @@ export const ATLAS_ARTICLES: Article[] = [
                     "note": "不定式 to do，不能作谓语"
                   },
                   {
-                    "text": "solve",
-                    "start": 153,
-                    "end": 158,
-                    "role": "predicate"
-                  },
-                  {
                     "text": "mimics",
                     "start": 193,
                     "end": 199,
                     "role": "predicate"
                   }
                 ],
-                "count": 5,
-                "summary": "句中共有 5 个谓语动词（is / aim / tasks / solve / mimics），意味着有 5 件事要译；另有 4 个\"看着像动词其实不是\"的干扰项，需要排除。"
+                "count": 4,
+                "summary": "句中共有 4 个谓语动词（is / aim / tasks / mimics），意味着有 4 件事要译；另有 4 个\"看着像动词其实不是\"的干扰项，需要排除。"
               },
               "step2": {
                 "breaks": [
@@ -858,7 +841,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 57,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"AI\"；谓语 = \"is\"；表语 = \"a broad term referring to algorithms a...\""
+                    "hint": "主干拆解 —— 主语 = \"AI\"；谓语 = \"is\"；宾语/表语 = \"a broad term referring to algorithms a...\""
                   },
                   {
                     "id": "seg-1",
@@ -880,7 +863,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "AI is a broad term referring to algorithms and techniques",
-                "summary": "主句是「AI is a broad term referring to algorithms a…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"AI\"；谓语 = \"is\"；表语 = \"a broad term referring to algorithms a...\""
+                "summary": "主句是「AI is a broad term referring to algorithms a…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"AI\"；谓语 = \"is\"；宾语/表语 = \"a broad term referring to algorithms a...\""
               },
               "step4": {
                 "parallels": [],
@@ -961,7 +944,7 @@ export const ATLAS_ARTICLES: Article[] = [
               "step1": {
                 "predicates": [
                   {
-                    "text": "is generally considered",
+                    "text": "is considered",
                     "start": 22,
                     "end": 45,
                     "role": "predicate"
@@ -987,7 +970,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "count": 3,
-                "summary": "句中共有 3 个谓语动词（is generally considered / can learn / optimize），意味着有 3 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+                "summary": "句中共有 3 个谓语动词（is considered / can learn / optimize），意味着有 3 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
               },
               "step2": {
                 "breaks": [
@@ -1013,7 +996,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 92,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Machine learning (ML) \"；谓语 = \"is\"；表语 = \"generally considered a subfield of AI ...\""
+                    "hint": "主干拆解 —— 主语 = \"Machine learning (ML)\"；谓语 = \"is considered\"；宾语/表语 = \"a subfield of AI focused on developing...\""
                   },
                   {
                     "id": "seg-1",
@@ -1035,7 +1018,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Machine learning (ML) is generally considered a subfield of AI focused on developing systems",
-                "summary": "主句是「Machine learning (ML) is generally considere…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Machine learning (ML) \"；谓语 = \"is\"；表语 = \"generally considered a subfield of AI ...\""
+                "summary": "主句是「Machine learning (ML) is generally considere…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Machine learning (ML)\"；谓语 = \"is considered\"；宾语/表语 = \"a subfield of AI focused on developing...\""
               },
               "step4": {
                 "parallels": [],
@@ -1120,8 +1103,8 @@ export const ATLAS_ARTICLES: Article[] = [
                 "breaks": [
                   {
                     "pos": 26,
-                    "marker": ", + such",
-                    "reason": "such 引导定语从句，此处必须断开"
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
                   },
                   {
                     "pos": 33,
@@ -1145,16 +1128,16 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 26,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"AI/ML\"；谓语 = \"is\"；表语 = \"neither one thing, such\""
+                    "hint": "主干拆解 —— 主语 = \"AI/ML\"；谓语 = \"is\"；宾语/表语 = \"neither one thing\""
                   },
                   {
                     "id": "seg-1",
                     "text": "such as a discrete computer application",
                     "start": 28,
                     "end": 67,
-                    "type": "定语从句",
+                    "type": "并列分句（承接前文）",
                     "isMain": false,
-                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
                   },
                   {
                     "id": "seg-2",
@@ -1167,7 +1150,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "AI/ML is neither one thing",
-                "summary": "主句是「AI/ML is neither one thing」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"AI/ML\"；谓语 = \"is\"；表语 = \"neither one thing, such\""
+                "summary": "主句是「AI/ML is neither one thing」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"AI/ML\"；谓语 = \"is\"；宾语/表语 = \"neither one thing\""
               },
               "step4": {
                 "parallels": [],
@@ -1178,11 +1161,10 @@ export const ATLAS_ARTICLES: Article[] = [
               },
               "step5": {
                 "steps": [
-                  "1. 先译【定语从句】「such as a discrete computer appl…」——作修饰成分，翻译时通常放在主句之前",
-                  "2. 再译【主句】「AI/ML is neither one thing」——这是整句的骨架",
-                  "3. 按「修饰」关系组装：中文习惯把修饰类信息放在主句之前，再补上主句的结论。"
+                  "1. 再译【主句】「AI/ML is neither one thing」——这是整句的骨架",
+                  "2. 按中文语序顺译即可；若句中有插入语，先译出来再删掉试试通不通顺。"
                 ],
-                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+                "summary": "这是单层结构，找到主干后直接顺译即可。"
               },
               "generatedBy": "rule"
             }
@@ -1309,7 +1291,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 33,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Instead, it\"；谓语 = \"is\"；表语 = \"a group of systems\""
+                    "hint": "主干拆解 —— 主语 = \"Instead, it\"；谓语 = \"is\"；宾语/表语 = \"a group of systems\""
                   },
                   {
                     "id": "seg-1",
@@ -1322,7 +1304,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Instead, it is a group of systems",
-                "summary": "主句是「Instead, it is a group of systems」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Instead, it\"；谓语 = \"is\"；表语 = \"a group of systems\""
+                "summary": "主句是「Instead, it is a group of systems」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Instead, it\"；谓语 = \"is\"；宾语/表语 = \"a group of systems\""
               },
               "step4": {
                 "parallels": [],
@@ -1406,7 +1388,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 41,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"The suite of AI products in the spotli...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -1419,7 +1401,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "The suite of AI products in the spotlight",
-                "summary": "主句是「The suite of AI products in the spotlight」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The suite of AI products in the spotli...\""
+                "summary": "主句是「The suite of AI products in the spotlight」，其余 1 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -1504,8 +1486,14 @@ export const ATLAS_ARTICLES: Article[] = [
                     "note": "动名词 / 现在分词 doing，不能作谓语"
                   },
                   {
-                    "text": "help models better understand",
+                    "text": "help models",
                     "start": 153,
+                    "end": 164,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "better understand",
+                    "start": 165,
                     "end": 182,
                     "role": "predicate"
                   },
@@ -1523,8 +1511,8 @@ export const ATLAS_ARTICLES: Article[] = [
                     "note": "不定式 to do，不能作谓语"
                   }
                 ],
-                "count": 5,
-                "summary": "句中共有 5 个谓语动词（can generate / written / prompts / help models better understand / influence），意味着有 5 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+                "count": 6,
+                "summary": "句中共有 6 个谓语动词（can generate / written / prompts / help models / better understand / influence），意味着有 6 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
               },
               "step2": {
                 "breaks": [
@@ -1535,8 +1523,8 @@ export const ATLAS_ARTICLES: Article[] = [
                   },
                   {
                     "pos": 60,
-                    "marker": "— + such",
-                    "reason": "such 引导定语从句，此处必须断开"
+                    "marker": "—",
+                    "reason": "标点处断开——先按标点把长句切成短段"
                   },
                   {
                     "pos": 66,
@@ -1575,7 +1563,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 34,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Generative AI refers to AI systems tha...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -1591,9 +1579,9 @@ export const ATLAS_ARTICLES: Article[] = [
                     "text": "such as written material",
                     "start": 61,
                     "end": 85,
-                    "type": "定语从句",
+                    "type": "并列分句（承接前文）",
                     "isMain": false,
-                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
                   },
                   {
                     "id": "seg-3",
@@ -1624,7 +1612,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Generative AI refers to AI systems",
-                "summary": "主句是「Generative AI refers to AI systems」，其余 5 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Generative AI refers to AI systems tha...\""
+                "summary": "主句是「Generative AI refers to AI systems」，其余 5 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [
@@ -1650,13 +1638,12 @@ export const ATLAS_ARTICLES: Article[] = [
               "step5": {
                 "steps": [
                   "1. 先译【名词性 / 定语从句】「that can generate content」——作说明成分，翻译时通常放在主句之前",
-                  "2. 先译【定语从句】「such as written material」——作修饰成分，翻译时通常放在主句之前",
-                  "3. 先译【名词性 / 定语从句】「that help models better understa…」——作说明成分，翻译时通常放在主句之前",
-                  "4. 再译【主句】「Generative AI refers to AI systems」——这是整句的骨架",
-                  "5. 处理平行结构：generate content—such as written material ／ art ／ computer code—from prompts using advanced——平行成分逐一对译，不要打乱顺序",
-                  "6. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                  "2. 先译【名词性 / 定语从句】「that help models better understa…」——作说明成分，翻译时通常放在主句之前",
+                  "3. 再译【主句】「Generative AI refers to AI systems」——这是整句的骨架",
+                  "4. 处理平行结构：generate content—such as written material ／ art ／ computer code—from prompts using advanced——平行成分逐一对译，不要打乱顺序",
+                  "5. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
                 ],
-                "summary": "全句由 3 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+                "summary": "全句由 2 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
               },
               "generatedBy": "rule"
             }
@@ -1742,14 +1729,14 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   },
                   {
-                    "text": "has also raised",
+                    "text": "has raised",
                     "start": 157,
                     "end": 172,
                     "role": "predicate"
                   }
                 ],
                 "count": 4,
-                "summary": "句中共有 4 个谓语动词（believe / can transform / rely / has also raised），意味着有 4 件事要译。"
+                "summary": "句中共有 4 个谓语动词（believe / can transform / rely / has raised），意味着有 4 件事要译。"
               },
               "step2": {
                 "breaks": [
@@ -1798,7 +1785,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 254,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"it\"；谓语 = \"has\"；宾语 = \"also raised concerns of misuse by bad ...\""
+                    "hint": "主干拆解 —— 主语 = \"it\"；谓语 = \"has raised\"；宾语/表语 = \"concerns of misuse by bad actors and m...\""
                   },
                   {
                     "id": "seg-3",
@@ -1811,7 +1798,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "it has also raised concerns of misuse by bad actors and misrepresentation in the form of “deep fakes",
-                "summary": "主句是「it has also raised concerns of misuse by bad…」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"it\"；谓语 = \"has\"；宾语 = \"also raised concerns of misuse by bad ...\""
+                "summary": "主句是「it has also raised concerns of misuse by bad…」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"it\"；谓语 = \"has raised\"；宾语/表语 = \"concerns of misuse by bad actors and m...\""
               },
               "step4": {
                 "parallels": [
@@ -1928,11 +1915,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 72,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"The effects of AI on the economy largely\"；谓语 = \"depend\"；宾语 = \"on the extent of AI use.\""
+                    "hint": "主干拆解 —— 主语 = \"The effects of AI on the economy large...\"；谓语 = \"use.\""
                   }
                 ],
                 "mainText": "The effects of AI on the economy largely depend on the extent of AI use.",
-                "summary": "主句是「The effects of AI on the economy largely dep…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The effects of AI on the economy largely\"；谓语 = \"depend\"；宾语 = \"on the extent of AI use.\""
+                "summary": "主句是「The effects of AI on the economy largely dep…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The effects of AI on the economy large...\"；谓语 = \"use.\""
               },
               "step4": {
                 "parallels": [],
@@ -1986,14 +1973,20 @@ export const ATLAS_ARTICLES: Article[] = [
               "step1": {
                 "predicates": [
                   {
-                    "text": "has been limited.",
+                    "text": "has been",
                     "start": 55,
+                    "end": 63,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "limited.",
+                    "start": 64,
                     "end": 72,
                     "role": "predicate"
                   }
                 ],
-                "count": 1,
-                "summary": "句中共有 1 个谓语动词（has been limited.），意味着有 1 件事要译。"
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（has been / limited.），意味着有 2 件事要译。"
               },
               "step2": {
                 "breaks": [],
@@ -2008,11 +2001,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 72,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"The overall adoption of AI by business...\"；谓语 = \"has been limited.\""
+                    "hint": "主干拆解 —— 主语 = \"The overall adoption of AI by business...\"；谓语 = \"has been + limited.\""
                   }
                 ],
                 "mainText": "The overall adoption of AI by businesses to this point has been limited.",
-                "summary": "主句是「The overall adoption of AI by businesses to …」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The overall adoption of AI by business...\"；谓语 = \"has been limited.\""
+                "summary": "主句是「The overall adoption of AI by businesses to …」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The overall adoption of AI by business...\"；谓语 = \"has been + limited.\""
               },
               "step4": {
                 "parallels": [],
@@ -2115,7 +2108,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 65,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 谓语 = \"According\"；宾语 = \"to the Census Business Trends and Outl...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -2128,7 +2121,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "According to the Census Business Trends and Outlook Survey (BTOS)",
-                "summary": "主句是「According to the Census Business Trends and …」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：谓语 = \"According\"；宾语 = \"to the Census Business Trends and Outl...\""
+                "summary": "主句是「According to the Census Business Trends and …」，其余 1 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -2214,7 +2207,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 29,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Further, as shown in Figure 1, adoptio...\""
+                    "hint": "主干拆解 —— 主语 = \"Further, as\"；谓语 = \"shown\"；宾语/表语 = \"in Figure 1\""
                   },
                   {
                     "id": "seg-1",
@@ -2227,7 +2220,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Further, as shown in Figure 1",
-                "summary": "主句是「Further, as shown in Figure 1」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Further, as shown in Figure 1, adoptio...\""
+                "summary": "主句是「Further, as shown in Figure 1」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Further, as\"；谓语 = \"shown\"；宾语/表语 = \"in Figure 1\""
               },
               "step4": {
                 "parallels": [],
@@ -2315,7 +2308,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 81,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"The information sector’s usage of AI (...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -2337,7 +2330,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "The information sector’s usage of AI (18.1%) far surpasses usage in other sectors",
-                "summary": "主句是「The information sector’s usage of AI (18.1%)…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The information sector’s usage of AI (...\""
+                "summary": "主句是「The information sector’s usage of AI (18.1%)…」，其余 2 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -2429,20 +2422,14 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   },
                   {
-                    "text": "indicate",
-                    "start": 62,
-                    "end": 70,
-                    "role": "predicate"
-                  },
-                  {
                     "text": "will remain",
                     "start": 79,
                     "end": 90,
                     "role": "predicate"
                   }
                 ],
-                "count": 5,
-                "summary": "句中共有 5 个谓语动词（use / has been / limited does / indicate / will remain），意味着有 5 件事要译。"
+                "count": 4,
+                "summary": "句中共有 4 个谓语动词（use / has been / limited does / will remain），意味着有 4 件事要译。"
               },
               "step2": {
                 "breaks": [
@@ -2588,7 +2575,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 16,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"In February 2024, businesses\"；谓语 = \"indicated\"；宾语 = \"an expected rate of AI use at 6.6% by ...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -2610,7 +2597,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "In February 2024",
-                "summary": "主句是「In February 2024」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"In February 2024, businesses\"；谓语 = \"indicated\"；宾语 = \"an expected rate of AI use at 6.6% by ...\""
+                "summary": "主句是「In February 2024」，其余 2 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -2693,14 +2680,20 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   },
                   {
-                    "text": "could be adopted",
+                    "text": "could be",
                     "start": 121,
+                    "end": 129,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "adopted",
+                    "start": 130,
                     "end": 137,
                     "role": "predicate"
                   }
                 ],
-                "count": 2,
-                "summary": "句中共有 2 个谓语动词（indicate / could be adopted），意味着有 2 件事要译。"
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（indicate / could be / adopted），意味着有 3 件事要译。"
               },
               "step2": {
                 "breaks": [
@@ -2711,8 +2704,8 @@ export const ATLAS_ARTICLES: Article[] = [
                   },
                   {
                     "pos": 49,
-                    "marker": "— + such",
-                    "reason": "such 引导定语从句，此处必须断开"
+                    "marker": "—",
+                    "reason": "标点处断开——先按标点把长句切成短段"
                   },
                   {
                     "pos": 55,
@@ -2757,9 +2750,9 @@ export const ATLAS_ARTICLES: Article[] = [
                     "text": "such as large language models",
                     "start": 50,
                     "end": 79,
-                    "type": "定语从句",
+                    "type": "并列分句（承接前文）",
                     "isMain": false,
-                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
                   },
                   {
                     "id": "seg-3",
@@ -2795,12 +2788,11 @@ export const ATLAS_ARTICLES: Article[] = [
               "step5": {
                 "steps": [
                   "1. 先译【名词性 / 定语从句】「that certain types of AI」——作说明成分，翻译时通常放在主句之前",
-                  "2. 先译【定语从句】「such as large language models」——作修饰成分，翻译时通常放在主句之前",
-                  "3. 先译【非限定性定语从句】「which underpin many generative A…」——对前面的名词做补充说明，翻译时可另起一小句",
-                  "4. 再译【主句】「Other estimates indicate」——这是整句的骨架",
-                  "5. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
+                  "2. 先译【非限定性定语从句】「which underpin many generative A…」——对前面的名词做补充说明，翻译时可另起一小句",
+                  "3. 再译【主句】「Other estimates indicate」——这是整句的骨架",
+                  "4. 按「说明」关系组装：中文习惯把说明类信息放在主句之前，再补上主句的结论。"
                 ],
-                "summary": "全句由 3 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+                "summary": "全句由 2 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
               },
               "generatedBy": "rule"
             }
@@ -2867,11 +2859,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 129,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"One projection of future private U.S. ...\"；谓语 = \"indicates\"；宾语 = \"growth to $81.7 billion in 2025 from $...\""
+                    "hint": "主干拆解 —— 主语 = \"One projection of future private U.S. ...\"；谓语 = \"indicates\"；宾语/表语 = \"growth to $81.7 billion in 2025 from $...\""
                   }
                 ],
                 "mainText": "One projection of future private U.S. investment in AI also indicates growth to $81.7 billion in 2025 from $47.4 billion in 2022.",
-                "summary": "主句是「One projection of future private U.S. invest…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"One projection of future private U.S. ...\"；谓语 = \"indicates\"；宾语 = \"growth to $81.7 billion in 2025 from $...\""
+                "summary": "主句是「One projection of future private U.S. invest…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"One projection of future private U.S. ...\"；谓语 = \"indicates\"；宾语/表语 = \"growth to $81.7 billion in 2025 from $...\""
               },
               "step4": {
                 "parallels": [],
@@ -2987,7 +2979,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 89,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"How much usage\"；谓语 = \"would be\"；表语 = \"necessary to create structural shifts ...\""
+                    "hint": "主干拆解 —— 主语 = \"How much usage\"；谓语 = \"would be + is\"；宾语/表语 = \"uncertain\""
                   },
                   {
                     "id": "seg-1",
@@ -3000,7 +2992,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "How much usage would be necessary to create structural shifts in the economy is uncertain",
-                "summary": "主句是「How much usage would be necessary to create …」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"How much usage\"；谓语 = \"would be\"；表语 = \"necessary to create structural shifts ...\""
+                "summary": "主句是「How much usage would be necessary to create …」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"How much usage\"；谓语 = \"would be + is\"；宾语/表语 = \"uncertain\""
               },
               "step4": {
                 "parallels": [],
@@ -3060,20 +3052,20 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   },
                   {
-                    "text": "indicate",
-                    "start": 81,
-                    "end": 89,
+                    "text": "will be",
+                    "start": 98,
+                    "end": 105,
                     "role": "predicate"
                   },
                   {
-                    "text": "will be used",
-                    "start": 98,
+                    "text": "used",
+                    "start": 106,
                     "end": 110,
                     "role": "predicate"
                   }
                 ],
                 "count": 4,
-                "summary": "句中共有 4 个谓语动词（has / use / indicate / will be used），意味着有 4 件事要译。"
+                "summary": "句中共有 4 个谓语动词（has / use / will be / used），意味着有 4 件事要译。"
               },
               "step2": {
                 "breaks": [
@@ -3104,7 +3096,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 89,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Further, just because a technology has...\""
+                    "hint": "主干拆解 —— 主语 = \"Further, just because a technology\"；谓语 = \"has + use\"；宾语/表语 = \"does not necessarily indicate\""
                   },
                   {
                     "id": "seg-1",
@@ -3117,7 +3109,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Further, just because a technology has the capacity for use does not necessarily indicate",
-                "summary": "主句是「Further, just because a technology has the c…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Further, just because a technology has...\""
+                "summary": "主句是「Further, just because a technology has the c…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Further, just because a technology\"；谓语 = \"has + use\"；宾语/表语 = \"does not necessarily indicate\""
               },
               "step4": {
                 "parallels": [],
@@ -3210,11 +3202,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 53,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"The diffusion of past technologies\"；谓语 = \"has varied\"；宾语 = \"widely.\""
+                    "hint": "主干拆解 —— 主语 = \"The diffusion of past technologies\"；谓语 = \"has varied\"；宾语/表语 = \"widely.\""
                   }
                 ],
                 "mainText": "The diffusion of past technologies has varied widely.",
-                "summary": "主句是「The diffusion of past technologies has varie…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The diffusion of past technologies\"；谓语 = \"has varied\"；宾语 = \"widely.\""
+                "summary": "主句是「The diffusion of past technologies has varie…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The diffusion of past technologies\"；谓语 = \"has varied\"；宾语/表语 = \"widely.\""
               },
               "step4": {
                 "parallels": [],
@@ -3309,12 +3301,6 @@ export const ATLAS_ARTICLES: Article[] = [
                     "note": "是介词，不是动词"
                   },
                   {
-                    "text": "cloud",
-                    "start": 139,
-                    "end": 144,
-                    "role": "predicate"
-                  },
-                  {
                     "text": "computing,",
                     "start": 145,
                     "end": 155,
@@ -3328,8 +3314,8 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   }
                 ],
-                "count": 4,
-                "summary": "句中共有 4 个谓语动词（appears / be / cloud / were adopted），意味着有 4 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（appears / be / were adopted），意味着有 3 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
               },
               "step2": {
                 "breaks": [
@@ -3355,7 +3341,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 50,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 谓语 = \"According\"；表语 = \"to the Federal Reserve Bank of St. Lou...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -3377,7 +3363,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "According to the Federal Reserve Bank of St. Louis",
-                "summary": "主句是「According to the Federal Reserve Bank of St.…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：谓语 = \"According\"；表语 = \"to the Federal Reserve Bank of St. Lou...\""
+                "summary": "主句是「According to the Federal Reserve Bank of St.…」，其余 2 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -3493,7 +3479,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 13,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"The extent to which AI use becomes ubi...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -3524,7 +3510,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "The extent to",
-                "summary": "主句是「The extent to」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The extent to which AI use becomes ubi...\""
+                "summary": "主句是「The extent to」，其余 3 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -3628,28 +3614,23 @@ export const ATLAS_ARTICLES: Article[] = [
               "step2": {
                 "breaks": [
                   {
-                    "pos": 3,
-                    "marker": "such,",
-                    "reason": "such, 引导定语从句"
-                  },
-                  {
                     "pos": 7,
                     "marker": ",",
                     "reason": "标点处断开——先按标点把长句切成短段"
                   }
                 ],
-                "summary": "找到 2 个断点，可以把句子切成 1 段。断句依据是标点与连接词。"
+                "summary": "找到 1 个断点，可以把句子切成 1 段。断句依据是标点与连接词。"
               },
               "step3": {
                 "segments": [
                   {
                     "id": "seg-0",
-                    "text": "such, the effects of AI on the economy may be relatively small for the time being but may grow over time.",
-                    "start": 3,
+                    "text": "As such, the effects of AI on the economy may be relatively small for the time being but may grow over time.",
+                    "start": 0,
                     "end": 108,
-                    "type": "定语从句",
+                    "type": "时间/原因状语从句",
                     "isMain": false,
-                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                    "hint": "作时间或原因成分，翻译时通常放在主句之前"
                   }
                 ],
                 "mainText": "",
@@ -3665,8 +3646,8 @@ export const ATLAS_ARTICLES: Article[] = [
               },
               "step5": {
                 "steps": [
-                  "1. 先译【定语从句】「such, the effects of AI on the e…」——作修饰成分，翻译时通常放在主句之前",
-                  "2. 按「修饰」关系组装：中文习惯把修饰类信息放在主句之前，再补上主句的结论。"
+                  "1. 先译【时间/原因状语从句】「As such, the effects of AI on th…」——作时间或原因成分，翻译时通常放在主句之前",
+                  "2. 按「时间或原因」关系组装：中文习惯把时间或原因类信息放在主句之前，再补上主句的结论。"
                 ],
                 "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
               },
@@ -3750,11 +3731,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 93,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Questions around how technologies\"；谓语 = \"may cause\"；宾语 = \"structural labor market shifts are lon...\""
+                    "hint": "主干拆解 —— 主语 = \"Questions around how technologies\"；谓语 = \"may cause + are\"；宾语/表语 = \"long-standing.\""
                   }
                 ],
                 "mainText": "Questions around how technologies may cause structural labor market shifts are long-standing.",
-                "summary": "主句是「Questions around how technologies may cause …」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Questions around how technologies\"；谓语 = \"may cause\"；宾语 = \"structural labor market shifts are lon...\""
+                "summary": "主句是「Questions around how technologies may cause …」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Questions around how technologies\"；谓语 = \"may cause + are\"；宾语/表语 = \"long-standing.\""
               },
               "step4": {
                 "parallels": [],
@@ -3871,8 +3852,8 @@ export const ATLAS_ARTICLES: Article[] = [
                   },
                   {
                     "pos": 100,
-                    "marker": ", + such",
-                    "reason": "such 引导定语从句，此处必须断开"
+                    "marker": ",",
+                    "reason": "标点处断开——先按标点把长句切成短段"
                   },
                   {
                     "pos": 107,
@@ -3891,7 +3872,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 11,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"In the past, some economists\"；谓语 = \"voiced concerns\"；表语 = \"about the extent to\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -3916,13 +3897,13 @@ export const ATLAS_ARTICLES: Article[] = [
                     "text": "such as in manufacturing.",
                     "start": 102,
                     "end": 127,
-                    "type": "定语从句",
+                    "type": "并列分句（承接前文）",
                     "isMain": false,
-                    "hint": "作修饰成分，翻译时通常放在主句之前"
+                    "hint": "与前面的分句并列，翻译时按同一层级处理"
                   }
                 ],
                 "mainText": "In the past",
-                "summary": "主句是「In the past」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"In the past, some economists\"；谓语 = \"voiced concerns\"；表语 = \"about the extent to\""
+                "summary": "主句是「In the past」，其余 3 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -3936,11 +3917,10 @@ export const ATLAS_ARTICLES: Article[] = [
               "step5": {
                 "steps": [
                   "1. 先译【定语从句】「which automation could replace j…」——作修饰成分，翻译时通常放在主句之前",
-                  "2. 先译【定语从句】「such as in manufacturing.」——作修饰成分，翻译时通常放在主句之前",
-                  "3. 再译【主句】「In the past」——这是整句的骨架",
-                  "4. 按「修饰」关系组装：中文习惯把修饰类信息放在主句之前，再补上主句的结论。"
+                  "2. 再译【主句】「In the past」——这是整句的骨架",
+                  "3. 按「修饰」关系组装：中文习惯把修饰类信息放在主句之前，再补上主句的结论。"
                 ],
-                "summary": "全句由 2 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+                "summary": "全句由 1 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
               },
               "generatedBy": "rule"
             }
@@ -4033,11 +4013,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 59,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Today, similar questions\"；谓语 = \"are being asked\"；宾语 = \"with regard to AI.\""
+                    "hint": "主干拆解 —— 主语 = \"Today, similar questions\"；谓语 = \"are + asked\"；宾语/表语 = \"with regard to AI.\""
                   }
                 ],
                 "mainText": "Today, similar questions are being asked with regard to AI.",
-                "summary": "主句是「Today, similar questions are being asked wit…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Today, similar questions\"；谓语 = \"are being asked\"；宾语 = \"with regard to AI.\""
+                "summary": "主句是「Today, similar questions are being asked wit…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Today, similar questions\"；谓语 = \"are + asked\"；宾语/表语 = \"with regard to AI.\""
               },
               "step4": {
                 "parallels": [],
@@ -4371,7 +4351,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 19,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"This\"；谓语 = \"indicates\""
+                    "hint": "主干拆解 —— 主语 = \"This\"；谓语 = \"indicates\"；宾语/表语 = \"that\""
                   },
                   {
                     "id": "seg-1",
@@ -4393,7 +4373,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "This indicates that",
-                "summary": "主句是「This indicates that」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"This\"；谓语 = \"indicates\""
+                "summary": "主句是「This indicates that」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"This\"；谓语 = \"indicates\"；宾语/表语 = \"that\""
               },
               "step4": {
                 "parallels": [],
@@ -4502,7 +4482,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 39,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"However, businesses\"；谓语 = \"report\"；表语 = \"expectations\""
+                    "hint": "主干拆解 —— 主语 = \"However, businesses\"；谓语 = \"report\"；宾语/表语 = \"expectations\""
                   },
                   {
                     "id": "seg-1",
@@ -4515,7 +4495,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "However, businesses report expectations",
-                "summary": "主句是「However, businesses report expectations」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"However, businesses\"；谓语 = \"report\"；表语 = \"expectations\""
+                "summary": "主句是「However, businesses report expectations」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"However, businesses\"；谓语 = \"report\"；宾语/表语 = \"expectations\""
               },
               "step4": {
                 "parallels": [],
@@ -4630,7 +4610,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 69,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Nonetheless, as has happened in past e...\""
+                    "hint": "主干拆解 —— 主语 = \"Nonetheless, as\"；谓语 = \"has happened\"；宾语/表语 = \"in past episodes of technological change\""
                   },
                   {
                     "id": "seg-1",
@@ -4652,7 +4632,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Nonetheless, as has happened in past episodes of technological change",
-                "summary": "主句是「Nonetheless, as has happened in past episode…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Nonetheless, as has happened in past e...\""
+                "summary": "主句是「Nonetheless, as has happened in past episode…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Nonetheless, as\"；谓语 = \"has happened\"；宾语/表语 = \"in past episodes of technological change\""
               },
               "step4": {
                 "parallels": [],
@@ -5090,7 +5070,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 36,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"In general, studies\"；谓语 = \"tend\"；表语 = \"to conclude\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -5121,7 +5101,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "In general, studies tend to conclude",
-                "summary": "主句是「In general, studies tend to conclude」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"In general, studies\"；谓语 = \"tend\"；表语 = \"to conclude\""
+                "summary": "主句是「In general, studies tend to conclude」，其余 3 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -5204,8 +5184,14 @@ export const ATLAS_ARTICLES: Article[] = [
               "step1": {
                 "predicates": [
                   {
-                    "text": "may be affected",
+                    "text": "may be",
                     "start": 29,
+                    "end": 35,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "affected",
+                    "start": 36,
                     "end": 44,
                     "role": "predicate"
                   },
@@ -5235,8 +5221,8 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   }
                 ],
-                "count": 4,
-                "summary": "句中共有 4 个谓语动词（may be affected / is / depends, / tasks use），意味着有 4 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+                "count": 5,
+                "summary": "句中共有 5 个谓语动词（may be / affected / is / depends, / tasks use），意味着有 5 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
               },
               "step2": {
                 "breaks": [
@@ -5267,7 +5253,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 72,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"How total labor productivity\"；谓语 = \"may be affected\"；表语 = \"by AI is harder to estimate,\""
+                    "hint": "主干拆解 —— 主语 = \"How total labor productivity\"；谓语 = \"may be + affected + is\"；宾语/表语 = \"harder to estimate\""
                   },
                   {
                     "id": "seg-1",
@@ -5289,7 +5275,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "How total labor productivity may be affected by AI is harder to estimate",
-                "summary": "主句是「How total labor productivity may be affected…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"How total labor productivity\"；谓语 = \"may be affected\"；表语 = \"by AI is harder to estimate,\""
+                "summary": "主句是「How total labor productivity may be affected…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"How total labor productivity\"；谓语 = \"may be + affected + is\"；宾语/表语 = \"harder to estimate\""
               },
               "step4": {
                 "parallels": [],
@@ -5367,8 +5353,14 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   },
                   {
-                    "text": "tasks are automated",
+                    "text": "tasks are",
                     "start": 50,
+                    "end": 59,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "automated",
+                    "start": 60,
                     "end": 69,
                     "role": "predicate"
                   },
@@ -5379,8 +5371,8 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   }
                 ],
-                "count": 3,
-                "summary": "句中共有 3 个谓语动词（estimates / tasks are automated / would increase），意味着有 3 件事要译。"
+                "count": 4,
+                "summary": "句中共有 4 个谓语动词（estimates / tasks are / automated / would increase），意味着有 4 件事要译。"
               },
               "step2": {
                 "breaks": [
@@ -5551,7 +5543,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 67,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"AI also\"；谓语 = \"has\"；表语 = \"the potential to impact total factor p...\""
+                    "hint": "主干拆解 —— 主语 = \"AI also\"；谓语 = \"has\"；宾语/表语 = \"the potential to impact total factor p...\""
                   },
                   {
                     "id": "seg-1",
@@ -5564,7 +5556,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "AI also has the potential to impact total factor productivity (TFP)",
-                "summary": "主句是「AI also has the potential to impact total fa…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"AI also\"；谓语 = \"has\"；表语 = \"the potential to impact total factor p...\""
+                "summary": "主句是「AI also has the potential to impact total fa…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"AI also\"；谓语 = \"has\"；宾语/表语 = \"the potential to impact total factor p...\""
               },
               "step4": {
                 "parallels": [],
@@ -5679,11 +5671,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 152,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"this\"；谓语 = \"would increase\"；宾语 = \"the growth rate of TFP and long-run ec...\""
+                    "hint": "主干拆解 —— 主语 = \"this\"；谓语 = \"would increase\"；宾语/表语 = \"the growth rate of TFP and long-run ec...\""
                   }
                 ],
                 "mainText": "this would increase the growth rate of TFP and long-run economic growth.",
-                "summary": "主句是「this would increase the growth rate of TFP a…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"this\"；谓语 = \"would increase\"；宾语 = \"the growth rate of TFP and long-run ec...\""
+                "summary": "主句是「this would increase the growth rate of TFP a…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"this\"；谓语 = \"would increase\"；宾语/表语 = \"the growth rate of TFP and long-run ec...\""
               },
               "step4": {
                 "parallels": [],
@@ -5897,11 +5889,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 88,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Productivity growth\"；谓语 = \"is\"；宾语 = \"an important determinant of long-term ...\""
+                    "hint": "主干拆解 —— 主语 = \"Productivity growth\"；谓语 = \"is\"；宾语/表语 = \"an important determinant of long-term ...\""
                   }
                 ],
                 "mainText": "Productivity growth is an important determinant of long-term economic growth and income.",
-                "summary": "主句是「Productivity growth is an important determin…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Productivity growth\"；谓语 = \"is\"；宾语 = \"an important determinant of long-term ...\""
+                "summary": "主句是「Productivity growth is an important determin…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Productivity growth\"；谓语 = \"is\"；宾语/表语 = \"an important determinant of long-term ...\""
               },
               "step4": {
                 "parallels": [],
@@ -6001,7 +5993,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 83,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Gains in productivity\"；谓语 = \"allow\"；宾语 = \"for the more efficient production of g...\""
+                    "hint": "主干拆解 —— 主语 = \"Gains in productivity\"；谓语 = \"allow\"；宾语/表语 = \"for the more efficient production of g...\""
                   },
                   {
                     "id": "seg-1",
@@ -6014,7 +6006,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Gains in productivity allow for the more efficient production of goods and services",
-                "summary": "主句是「Gains in productivity allow for the more eff…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Gains in productivity\"；谓语 = \"allow\"；宾语 = \"for the more efficient production of g...\""
+                "summary": "主句是「Gains in productivity allow for the more eff…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Gains in productivity\"；谓语 = \"allow\"；宾语/表语 = \"for the more efficient production of g...\""
               },
               "step4": {
                 "parallels": [],
@@ -6103,11 +6095,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 126,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Estimates of the effects of AI on U.S....\"；谓语 = \"vary\"；宾语 = \"but are typically positive.\""
+                    "hint": "主干拆解 —— 主语 = \"Estimates of the effects of AI on U.S....\"；谓语 = \"vary + are\"；宾语/表语 = \"typically positive.\""
                   }
                 ],
                 "mainText": "Estimates of the effects of AI on U.S. gross domestic product (GDP) in the short and long run vary but are typically positive.",
-                "summary": "主句是「Estimates of the effects of AI on U.S. gross…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Estimates of the effects of AI on U.S....\"；谓语 = \"vary\"；宾语 = \"but are typically positive.\""
+                "summary": "主句是「Estimates of the effects of AI on U.S. gross…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Estimates of the effects of AI on U.S....\"；谓语 = \"vary + are\"；宾语/表语 = \"typically positive.\""
               },
               "step4": {
                 "parallels": [],
@@ -6375,7 +6367,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 53,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"more questions\"；谓语 = \"arise:\"；宾语 = \"How many and what types of new tasks w...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-2",
@@ -6388,7 +6380,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "more questions arise",
-                "summary": "主句是「more questions arise」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"more questions\"；谓语 = \"arise:\"；宾语 = \"How many and what types of new tasks w...\""
+                "summary": "主句是「more questions arise」，其余 2 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -6450,8 +6442,14 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   },
                   {
-                    "text": "based tasks become",
+                    "text": "based tasks",
                     "start": 8,
+                    "end": 19,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "become",
+                    "start": 20,
                     "end": 26,
                     "role": "predicate"
                   },
@@ -6463,8 +6461,8 @@ export const ATLAS_ARTICLES: Article[] = [
                     "note": "不定式 to do，不能作谓语"
                   }
                 ],
-                "count": 2,
-                "summary": "句中共有 2 个谓语动词（Will / based tasks become），意味着有 2 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（Will / based tasks / become），意味着有 3 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
               },
               "step2": {
                 "breaks": [],
@@ -6479,11 +6477,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 71,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 谓语 = \"Will\"；宾语 = \"AI-based tasks become more advanced an...\""
+                    "hint": "主干拆解 —— 主语 = \"\"；谓语 = \"Will + based tasks + become\"；宾语/表语 = \"more advanced and therefore harder to ...\""
                   }
                 ],
                 "mainText": "Will AI-based tasks become more advanced and therefore harder to learn?",
-                "summary": "主句是「Will AI-based tasks become more advanced and…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：谓语 = \"Will\"；宾语 = \"AI-based tasks become more advanced an...\""
+                "summary": "主句是「Will AI-based tasks become more advanced and…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"\"；谓语 = \"Will + based tasks + become\"；宾语/表语 = \"more advanced and therefore harder to ...\""
               },
               "step4": {
                 "parallels": [],
@@ -6570,11 +6568,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 58,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 谓语 = \"Will\"；宾语 = \"AI adoption be even across sectors or ...\""
+                    "hint": "主干拆解 —— 主语 = \"\"；谓语 = \"Will + be + tasks?\""
                   }
                 ],
                 "mainText": "Will AI adoption be even across sectors or types of tasks?",
-                "summary": "主句是「Will AI adoption be even across sectors or t…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：谓语 = \"Will\"；宾语 = \"AI adoption be even across sectors or ...\""
+                "summary": "主句是「Will AI adoption be even across sectors or t…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"\"；谓语 = \"Will + be + tasks?\""
               },
               "step4": {
                 "parallels": [],
@@ -6663,11 +6661,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 118,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"How\"；谓语 = \"will\"；宾语 = \"short-run effects of AI and policy dec...\""
+                    "hint": "主干拆解 —— 主语 = \"How\"；谓语 = \"will + affect\"；宾语/表语 = \"future economic and policy responses?\""
                   }
                 ],
                 "mainText": "How will short-run effects of AI and policy decisions in the coming years affect future economic and policy responses?",
-                "summary": "主句是「How will short-run effects of AI and policy …」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"How\"；谓语 = \"will\"；宾语 = \"short-run effects of AI and policy dec...\""
+                "summary": "主句是「How will short-run effects of AI and policy …」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"How\"；谓语 = \"will + affect\"；宾语/表语 = \"future economic and policy responses?\""
               },
               "step4": {
                 "parallels": [],
@@ -7094,7 +7092,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 52,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 谓语 = \"Owing\"；宾语 = \"to the expected effects on productivit...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -7107,7 +7105,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Owing to the expected effects on productivity growth",
-                "summary": "主句是「Owing to the expected effects on productivit…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：谓语 = \"Owing\"；宾语 = \"to the expected effects on productivit...\""
+                "summary": "主句是「Owing to the expected effects on productivit…」，其余 1 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -7177,7 +7175,7 @@ export const ATLAS_ARTICLES: Article[] = [
               "step1": {
                 "predicates": [
                   {
-                    "text": "does not mean",
+                    "text": "does mean",
                     "start": 14,
                     "end": 27,
                     "role": "predicate"
@@ -7190,7 +7188,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "count": 2,
-                "summary": "句中共有 2 个谓语动词（does not mean / will benefit.），意味着有 2 件事要译。"
+                "summary": "句中共有 2 个谓语动词（does mean / will benefit.），意味着有 2 件事要译。"
               },
               "step2": {
                 "breaks": [
@@ -7216,7 +7214,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 27,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"However, this\"；谓语 = \"does\"；表语 = \"not mean\""
+                    "hint": "主干拆解 —— 主语 = \"However, this\"；谓语 = \"does mean\""
                   },
                   {
                     "id": "seg-1",
@@ -7229,7 +7227,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "However, this does not mean",
-                "summary": "主句是「However, this does not mean」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"However, this\"；谓语 = \"does\"；表语 = \"not mean\""
+                "summary": "主句是「However, this does not mean」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"However, this\"；谓语 = \"does mean\""
               },
               "step4": {
                 "parallels": [],
@@ -7299,14 +7297,20 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   },
                   {
-                    "text": "have largely been concentrated",
+                    "text": "have been",
                     "start": 81,
+                    "end": 98,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "concentrated",
+                    "start": 99,
                     "end": 111,
                     "role": "predicate"
                   }
                 ],
-                "count": 2,
-                "summary": "句中共有 2 个谓语动词（gains / have largely been concentrated），意味着有 2 件事要译。"
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（gains / have been / concentrated），意味着有 3 件事要译。"
               },
               "step2": {
                 "breaks": [
@@ -7346,7 +7350,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 129,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"For example, in recent decades, produc...\"；谓语 = \"gains\"；宾语 = \"from technological innovation have lar...\""
+                    "hint": "主干拆解 —— 主语 = \"productivity\"；谓语 = \"gains + have been + concentrated\"；宾语/表语 = \"among high-income\""
                   },
                   {
                     "id": "seg-2",
@@ -7359,7 +7363,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "productivity gains from technological innovation have largely been concentrated among high-income",
-                "summary": "主句是「productivity gains from technological innova…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"For example, in recent decades, produc...\"；谓语 = \"gains\"；宾语 = \"from technological innovation have lar...\""
+                "summary": "主句是「productivity gains from technological innova…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"productivity\"；谓语 = \"gains + have been + concentrated\"；宾语/表语 = \"among high-income\""
               },
               "step4": {
                 "parallels": [],
@@ -7437,14 +7441,20 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   },
                   {
-                    "text": "use would have",
+                    "text": "use would",
                     "start": 27,
+                    "end": 36,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "have",
+                    "start": 37,
                     "end": 41,
                     "role": "predicate"
                   }
                 ],
-                "count": 2,
-                "summary": "句中共有 2 个谓语动词（is / use would have），意味着有 2 件事要译。"
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（is / use would / have），意味着有 3 件事要译。"
               },
               "step2": {
                 "breaks": [
@@ -7465,7 +7475,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 15,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"It\"；谓语 = \"is\"；表语 = \"not clear\""
+                    "hint": "主干拆解 —— 主语 = \"It\"；谓语 = \"is\"；宾语/表语 = \"not clear\""
                   },
                   {
                     "id": "seg-1",
@@ -7478,7 +7488,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "It is not clear",
-                "summary": "主句是「It is not clear」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"It\"；谓语 = \"is\"；表语 = \"not clear\""
+                "summary": "主句是「It is not clear」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"It\"；谓语 = \"is\"；宾语/表语 = \"not clear\""
               },
               "step4": {
                 "parallels": [],
@@ -7583,7 +7593,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 15,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"On the one hand, evidence\"；谓语 = \"has suggested\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -7614,7 +7624,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "On the one hand",
-                "summary": "主句是「On the one hand」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"On the one hand, evidence\"；谓语 = \"has suggested\""
+                "summary": "主句是「On the one hand」，其余 3 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -7856,7 +7866,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 147,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"On average, this\"；谓语 = \"use\"；宾语 = \"of AI increased productivity significa...\""
+                    "hint": "主干拆解 —— 主语 = \"On average, this\"；谓语 = \"use + increased + levels\"；宾语/表语 = \"than for more experienced\""
                   },
                   {
                     "id": "seg-1",
@@ -7869,7 +7879,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "On average, this use of AI increased productivity significantly more for those with less experience or lower skill levels than for more experienced",
-                "summary": "主句是「On average, this use of AI increased product…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"On average, this\"；谓语 = \"use\"；宾语 = \"of AI increased productivity significa...\""
+                "summary": "主句是「On average, this use of AI increased product…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"On average, this\"；谓语 = \"use + increased + levels\"；宾语/表语 = \"than for more experienced\""
               },
               "step4": {
                 "parallels": [],
@@ -7945,12 +7955,6 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   },
                   {
-                    "text": "normalize",
-                    "start": 27,
-                    "end": 36,
-                    "role": "predicate"
-                  },
-                  {
                     "text": "resulting",
                     "start": 90,
                     "end": 99,
@@ -7965,8 +7969,8 @@ export const ATLAS_ARTICLES: Article[] = [
                     "note": "动名词 / 现在分词 doing，不能作谓语"
                   }
                 ],
-                "count": 2,
-                "summary": "句中共有 2 个谓语动词（could / normalize），意味着有 2 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（could），意味着有 1 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
               },
               "step2": {
                 "breaks": [
@@ -7992,7 +7996,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 78,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Thus, AI\"；谓语 = \"could\"；宾语 = \"potentially normalize outcomes across ...\""
+                    "hint": "主干拆解 —— 主语 = \"Thus, AI\"；谓语 = \"could\"；宾语/表语 = \"potentially normalize outcomes across ...\""
                   },
                   {
                     "id": "seg-1",
@@ -8005,7 +8009,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Thus, AI could potentially normalize outcomes across workers within businesses",
-                "summary": "主句是「Thus, AI could potentially normalize outcome…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Thus, AI\"；谓语 = \"could\"；宾语 = \"potentially normalize outcomes across ...\""
+                "summary": "主句是「Thus, AI could potentially normalize outcome…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Thus, AI\"；谓语 = \"could\"；宾语/表语 = \"potentially normalize outcomes across ...\""
               },
               "step4": {
                 "parallels": [],
@@ -8079,20 +8083,14 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   },
                   {
-                    "text": "produce",
-                    "start": 47,
-                    "end": 54,
-                    "role": "predicate"
-                  },
-                  {
                     "text": "gains",
                     "start": 75,
                     "end": 80,
                     "role": "predicate"
                   }
                 ],
-                "count": 3,
-                "summary": "句中共有 3 个谓语动词（is expected / produce / gains），意味着有 3 件事要译。"
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（is expected / gains），意味着有 2 件事要译。"
               },
               "step2": {
                 "breaks": [
@@ -8113,7 +8111,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 17,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"On the other hand, AI\"；谓语 = \"is expected\"；宾语 = \"to generally produce higher productivi...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -8126,7 +8124,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "On the other hand",
-                "summary": "主句是「On the other hand」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"On the other hand, AI\"；谓语 = \"is expected\"；宾语 = \"to generally produce higher productivi...\""
+                "summary": "主句是「On the other hand」，其余 1 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -8326,16 +8324,10 @@ export const ATLAS_ARTICLES: Article[] = [
                     "start": 26,
                     "end": 31,
                     "role": "predicate"
-                  },
-                  {
-                    "text": "use",
-                    "start": 54,
-                    "end": 57,
-                    "role": "predicate"
                   }
                 ],
-                "count": 2,
-                "summary": "句中共有 2 个谓语动词（arise / use），意味着有 2 件事要译。"
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（arise），意味着有 1 件事要译。"
               },
               "step2": {
                 "breaks": [],
@@ -8350,11 +8342,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 90,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Numerous policy questions\"；谓语 = \"arise\"；宾语 = \"from the adoption and use of AI in the...\""
+                    "hint": "主干拆解 —— 主语 = \"Numerous policy questions\"；谓语 = \"arise\"；宾语/表语 = \"from the adoption and use of AI in the...\""
                   }
                 ],
                 "mainText": "Numerous policy questions arise from the adoption and use of AI in the production process.",
-                "summary": "主句是「Numerous policy questions arise from the ado…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Numerous policy questions\"；谓语 = \"arise\"；宾语 = \"from the adoption and use of AI in the...\""
+                "summary": "主句是「Numerous policy questions arise from the ado…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Numerous policy questions\"；谓语 = \"arise\"；宾语/表语 = \"from the adoption and use of AI in the...\""
               },
               "step4": {
                 "parallels": [
@@ -8473,7 +8465,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 73,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Many of the most frequently\"；谓语 = \"asked\"；表语 = \"questions involve labor market outcomes,\""
+                    "hint": "主干拆解 —— 主语 = \"Many of the most frequently\"；谓语 = \"asked + involve\"；宾语/表语 = \"labor market outcomes\""
                   },
                   {
                     "id": "seg-1",
@@ -8486,7 +8478,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Many of the most frequently asked questions involve labor market outcomes",
-                "summary": "主句是「Many of the most frequently asked questions …」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Many of the most frequently\"；谓语 = \"asked\"；表语 = \"questions involve labor market outcomes,\""
+                "summary": "主句是「Many of the most frequently asked questions …」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Many of the most frequently\"；谓语 = \"asked + involve\"；宾语/表语 = \"labor market outcomes\""
               },
               "step4": {
                 "parallels": [],
@@ -8569,20 +8561,20 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   },
                   {
-                    "text": "change",
-                    "start": 55,
-                    "end": 61,
+                    "text": "might be",
+                    "start": 137,
+                    "end": 145,
                     "role": "predicate"
                   },
                   {
-                    "text": "might be distributed.",
-                    "start": 137,
+                    "text": "distributed.",
+                    "start": 146,
                     "end": 158,
                     "role": "predicate"
                   }
                 ],
                 "count": 4,
-                "summary": "句中共有 4 个谓语动词（consider / could / change / might be distributed.），意味着有 4 件事要译。"
+                "summary": "句中共有 4 个谓语动词（consider / could / might be / distributed.），意味着有 4 件事要译。"
               },
               "step2": {
                 "breaks": [
@@ -8600,14 +8592,9 @@ export const ATLAS_ARTICLES: Article[] = [
                     "pos": 91,
                     "marker": ",",
                     "reason": "标点处断开——先按标点把长句切成短段"
-                  },
-                  {
-                    "pos": 123,
-                    "marker": "such",
-                    "reason": "such 引导定语从句"
                   }
                 ],
-                "summary": "找到 4 个断点，可以把句子切成 4 段。断句依据是标点与连接词。"
+                "summary": "找到 3 个断点，可以把句子切成 3 段。断句依据是标点与连接词。"
               },
               "step3": {
                 "segments": [
@@ -8631,25 +8618,16 @@ export const ATLAS_ARTICLES: Article[] = [
                   },
                   {
                     "id": "seg-2",
-                    "text": "if so, how the costs and benefits of",
+                    "text": "if so, how the costs and benefits of such a change might be distributed.",
                     "start": 86,
-                    "end": 122,
+                    "end": 158,
                     "type": "条件状语从句",
                     "isMain": false,
                     "hint": "作条件成分，翻译时通常放在主句之前"
-                  },
-                  {
-                    "id": "seg-3",
-                    "text": "such a change might be distributed.",
-                    "start": 123,
-                    "end": 158,
-                    "type": "定语从句",
-                    "isMain": false,
-                    "hint": "作修饰成分，翻译时通常放在主句之前"
                   }
                 ],
                 "mainText": "Questions often consider",
-                "summary": "主句是「Questions often consider」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Questions often\"；谓语 = \"consider\""
+                "summary": "主句是「Questions often consider」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Questions often\"；谓语 = \"consider\""
               },
               "step4": {
                 "parallels": [],
@@ -8664,11 +8642,10 @@ export const ATLAS_ARTICLES: Article[] = [
                 "steps": [
                   "1. 先译【名词性从句】「whether AI could structurally ch…」——作选择成分，翻译时通常放在主句之前",
                   "2. 先译【条件状语从句】「if so, how the costs and benefit…」——作条件成分，翻译时通常放在主句之前",
-                  "3. 先译【定语从句】「such a change might be distribut…」——作修饰成分，翻译时通常放在主句之前",
-                  "4. 再译【主句】「Questions often consider」——这是整句的骨架",
-                  "5. 按「选择」关系组装：中文习惯把选择类信息放在主句之前，再补上主句的结论。"
+                  "3. 再译【主句】「Questions often consider」——这是整句的骨架",
+                  "4. 按「选择」关系组装：中文习惯把选择类信息放在主句之前，再补上主句的结论。"
                 ],
-                "summary": "全句由 3 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
+                "summary": "全句由 2 个从属分句 + 1 个主句构成，按「先分句、后主句」的顺序翻译，最后按逻辑关系组装。"
               },
               "generatedBy": "rule"
             }
@@ -8763,24 +8740,6 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   },
                   {
-                    "text": "prevent",
-                    "start": 57,
-                    "end": 64,
-                    "role": "predicate"
-                  },
-                  {
-                    "text": "mitigate",
-                    "start": 68,
-                    "end": 76,
-                    "role": "predicate"
-                  },
-                  {
-                    "text": "provide",
-                    "start": 118,
-                    "end": 125,
-                    "role": "predicate"
-                  },
-                  {
                     "text": "are",
                     "start": 158,
                     "end": 161,
@@ -8799,8 +8758,8 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   }
                 ],
-                "count": 8,
-                "summary": "句中共有 8 个谓语动词（may wish / would / prevent / mitigate / provide / are / displaced / do take），意味着有 8 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+                "count": 5,
+                "summary": "句中共有 5 个谓语动词（may wish / would / are / displaced / do take），意味着有 5 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
               },
               "step2": {
                 "breaks": [
@@ -8831,7 +8790,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 38,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Congress\"；谓语 = \"may wish\"；表语 = \"to consider policies\""
+                    "hint": "主干拆解 —— 主语 = \"Congress\"；谓语 = \"may wish\"；宾语/表语 = \"to consider policies\""
                   },
                   {
                     "id": "seg-1",
@@ -8862,7 +8821,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Congress may wish to consider policies",
-                "summary": "主句是「Congress may wish to consider policies」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Congress\"；谓语 = \"may wish\"；表语 = \"to consider policies\""
+                "summary": "主句是「Congress may wish to consider policies」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Congress\"；谓语 = \"may wish\"；宾语/表语 = \"to consider policies\""
               },
               "step4": {
                 "parallels": [
@@ -8902,7 +8861,7 @@ export const ATLAS_ARTICLES: Article[] = [
       }
     ],
     "createdAt": "2026-09-15T00:00:00.000Z",
-    "updatedAt": "2026-09-17T07:53:31.110Z"
+    "updatedAt": "2026-09-17T13:28:08.249Z"
   },
   {
     "schemaVersion": 1,
@@ -9010,7 +8969,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 102,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Across the street from the Flamingo Vi...\"；谓语 = \"was\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -9032,7 +8991,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Across the street from the Flamingo Visitor’s Center at the foot of Florida’s Everglades National Park",
-                "summary": "主句是「Across the street from the Flamingo Visitor’…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Across the street from the Flamingo Vi...\"；谓语 = \"was\""
+                "summary": "主句是「Across the street from the Flamingo Visitor’…」，其余 2 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -9120,11 +9079,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 89,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Now, the skeletal remains of the trees\"；谓语 = \"form\"；宾语 = \"one of the Everglades’ largest ghost f...\""
+                    "hint": "主干拆解 —— 主语 = \"the skeletal remains of the trees\"；谓语 = \"form\"；宾语/表语 = \"one of the Everglades’ largest ghost f...\""
                   }
                 ],
                 "mainText": "the skeletal remains of the trees form one of the Everglades’ largest ghost forests.",
-                "summary": "主句是「the skeletal remains of the trees form one o…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Now, the skeletal remains of the trees\"；谓语 = \"form\"；宾语 = \"one of the Everglades’ largest ghost f...\""
+                "summary": "主句是「the skeletal remains of the trees form one o…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"the skeletal remains of the trees\"；谓语 = \"form\"；宾语/表语 = \"one of the Everglades’ largest ghost f...\""
               },
               "step4": {
                 "parallels": [],
@@ -9269,7 +9228,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 148,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"violent winds\"；谓语 = \"battered\"；宾语 = \"the shore and a storm surge swept acro...\""
+                    "hint": "主干拆解 —— 主语 = \"violent winds\"；谓语 = \"battered + swept\"；宾语/表语 = \"across the coast\""
                   },
                   {
                     "id": "seg-3",
@@ -9282,7 +9241,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "violent winds battered the shore and a storm surge swept across the coast",
-                "summary": "主句是「violent winds battered the shore and a storm…」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"violent winds\"；谓语 = \"battered\"；宾语 = \"the shore and a storm surge swept acro...\""
+                "summary": "主句是「violent winds battered the shore and a storm…」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"violent winds\"；谓语 = \"battered + swept\"；宾语/表语 = \"across the coast\""
               },
               "step4": {
                 "parallels": [],
@@ -9372,7 +9331,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 17,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Seven years later, most of the mangrov...\"；谓语 = \"haven’t seen\"；宾语 = \"any new growth.\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -9385,7 +9344,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Seven years later",
-                "summary": "主句是「Seven years later」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Seven years later, most of the mangrov...\"；谓语 = \"haven’t seen\"；宾语 = \"any new growth.\""
+                "summary": "主句是「Seven years later」，其余 1 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -9485,7 +9444,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 14,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"At this point, I\"；谓语 = \"doubt\"；宾语 = \"they’ll recover,” said David Lagomasin...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -9516,7 +9475,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "“At this point",
-                "summary": "主句是「“At this point」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"At this point, I\"；谓语 = \"doubt\"；宾语 = \"they’ll recover,” said David Lagomasin...\""
+                "summary": "主句是「“At this point」，其余 3 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -9649,7 +9608,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 53,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Lagomasino\"；谓语 = \"was\"；表语 = \"in the Everglades conducting fieldwork\""
+                    "hint": "主干拆解 —— 主语 = \"Lagomasino\"；谓语 = \"was\"；宾语/表语 = \"in the Everglades conducting fieldwork\""
                   },
                   {
                     "id": "seg-1",
@@ -9680,7 +9639,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Lagomasino was in the Everglades conducting fieldwork",
-                "summary": "主句是「Lagomasino was in the Everglades conducting …」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Lagomasino\"；谓语 = \"was\"；表语 = \"in the Everglades conducting fieldwork\""
+                "summary": "主句是「Lagomasino was in the Everglades conducting …」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Lagomasino\"；谓语 = \"was\"；宾语/表语 = \"in the Everglades conducting fieldwork\""
               },
               "step4": {
                 "parallels": [],
@@ -9749,16 +9708,10 @@ export const ATLAS_ARTICLES: Article[] = [
                     "start": 11,
                     "end": 17,
                     "role": "predicate"
-                  },
-                  {
-                    "text": "have",
-                    "start": 38,
-                    "end": 42,
-                    "role": "predicate"
                   }
                 ],
-                "count": 2,
-                "summary": "句中共有 2 个谓语动词（absorb / have），意味着有 2 件事要译。"
+                "count": 1,
+                "summary": "句中共有 1 个谓语动词（absorb），意味着有 1 件事要译。"
               },
               "step2": {
                 "breaks": [],
@@ -9773,11 +9726,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 82,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Both gases\"；谓语 = \"absorb\"；宾语 = \"solar radiation and have a warming eff...\""
+                    "hint": "主干拆解 —— 主语 = \"Both gases\"；谓语 = \"absorb\"；宾语/表语 = \"solar radiation and have a warming eff...\""
                   }
                 ],
                 "mainText": "Both gases absorb solar radiation and have a warming effect on Earth’s atmosphere.",
-                "summary": "主句是「Both gases absorb solar radiation and have a…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Both gases\"；谓语 = \"absorb\"；宾语 = \"solar radiation and have a warming eff...\""
+                "summary": "主句是「Both gases absorb solar radiation and have a…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Both gases\"；谓语 = \"absorb\"；宾语/表语 = \"solar radiation and have a warming eff...\""
               },
               "step4": {
                 "parallels": [
@@ -9919,7 +9872,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 34,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"The campaign\"；谓语 = \"is led\"；表语 = \"by Ben Poulter, a researcher at NASA’s...\""
+                    "hint": "主干拆解 —— 主语 = \"The campaign\"；谓语 = \"is led\"；宾语/表语 = \"by Ben Poulter\""
                   },
                   {
                     "id": "seg-1",
@@ -9941,7 +9894,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "The campaign is led by Ben Poulter",
-                "summary": "主句是「The campaign is led by Ben Poulter」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The campaign\"；谓语 = \"is led\"；表语 = \"by Ben Poulter, a researcher at NASA’s...\""
+                "summary": "主句是「The campaign is led by Ben Poulter」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The campaign\"；谓语 = \"is led\"；宾语/表语 = \"by Ben Poulter\""
               },
               "step4": {
                 "parallels": [],
@@ -10111,7 +10064,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 76,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 谓语 = \"rising\"；宾语 = \"sea levels, and severe weather, Poulte...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-2",
@@ -10133,7 +10086,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "rising sea levels",
-                "summary": "主句是「rising sea levels」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：谓语 = \"rising\"；宾语 = \"sea levels, and severe weather, Poulte...\""
+                "summary": "主句是「rising sea levels」，其余 3 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [
@@ -10232,16 +10185,10 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 72,
                     "role": "nonfinite",
                     "note": "不定式 to do，不能作谓语"
-                  },
-                  {
-                    "text": "monitor",
-                    "start": 77,
-                    "end": 84,
-                    "role": "predicate"
                   }
                 ],
-                "count": 3,
-                "summary": "句中共有 3 个谓语动词（will help / develop / monitor），意味着有 3 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（will help / develop），意味着有 2 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
               },
               "step2": {
                 "breaks": [],
@@ -10256,11 +10203,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 149,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Ultimately this research\"；谓语 = \"will help\"；宾语 = \"scientists develop models to estimate ...\""
+                    "hint": "主干拆解 —— 主语 = \"Ultimately this research\"；谓语 = \"will help + develop\"；宾语/表语 = \"models to estimate and monitor greenho...\""
                   }
                 ],
                 "mainText": "Ultimately this research will help scientists develop models to estimate and monitor greenhouse gas concentrations in coastal areas around the globe.",
-                "summary": "主句是「Ultimately this research will help scientist…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Ultimately this research\"；谓语 = \"will help\"；宾语 = \"scientists develop models to estimate ...\""
+                "summary": "主句是「Ultimately this research will help scientist…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Ultimately this research\"；谓语 = \"will help + develop\"；宾语/表语 = \"models to estimate and monitor greenho...\""
               },
               "step4": {
                 "parallels": [],
@@ -10384,11 +10331,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 157,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"they\"；谓语 = \"remove\"；宾语 = \"a significant amount of carbon dioxide...\""
+                    "hint": "主干拆解 —— 主语 = \"they\"；谓语 = \"remove\"；宾语/表语 = \"a significant amount of carbon dioxide...\""
                   }
                 ],
                 "mainText": "they remove a significant amount of carbon dioxide from the atmosphere.",
-                "summary": "主句是「they remove a significant amount of carbon d…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"they\"；谓语 = \"remove\"；宾语 = \"a significant amount of carbon dioxide...\""
+                "summary": "主句是「they remove a significant amount of carbon d…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"they\"；谓语 = \"remove\"；宾语/表语 = \"a significant amount of carbon dioxide...\""
               },
               "step4": {
                 "parallels": [],
@@ -10479,11 +10426,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 88,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Florida’s coastal wetlands alone\"；谓语 = \"remove\"；宾语 = \"an estimated 31.8 million metric tons ...\""
+                    "hint": "主干拆解 —— 主语 = \"Florida’s coastal wetlands alone\"；谓语 = \"remove + estimated\"；宾语/表语 = \"31.8 million metric tons each year.\""
                   }
                 ],
                 "mainText": "Florida’s coastal wetlands alone remove an estimated 31.8 million metric tons each year.",
-                "summary": "主句是「Florida’s coastal wetlands alone remove an e…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Florida’s coastal wetlands alone\"；谓语 = \"remove\"；宾语 = \"an estimated 31.8 million metric tons ...\""
+                "summary": "主句是「Florida’s coastal wetlands alone remove an e…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Florida’s coastal wetlands alone\"；谓语 = \"remove + estimated\"；宾语/表语 = \"31.8 million metric tons each year.\""
               },
               "step4": {
                 "parallels": [],
@@ -10582,7 +10529,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 65,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"A commercial aircraft\"；谓语 = \"would have to circle\"；宾语 = \"the globe more than 26,000 times to pr...\""
+                    "hint": "主干拆解 —— 主语 = \"A commercial aircraft\"；谓语 = \"would have\"；宾语/表语 = \"to circle the globe more than 26\""
                   },
                   {
                     "id": "seg-1",
@@ -10595,7 +10542,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "A commercial aircraft would have to circle the globe more than 26",
-                "summary": "主句是「A commercial aircraft would have to circle t…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"A commercial aircraft\"；谓语 = \"would have to circle\"；宾语 = \"the globe more than 26,000 times to pr...\""
+                "summary": "主句是「A commercial aircraft would have to circle t…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"A commercial aircraft\"；谓语 = \"would have\"；宾语/表语 = \"to circle the globe more than 26\""
               },
               "step4": {
                 "parallels": [],
@@ -10702,7 +10649,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 54,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Coastal wetlands also\"；谓语 = \"store\"；宾语 = \"carbon in marine sediments, keeping it...\""
+                    "hint": "主干拆解 —— 主语 = \"Coastal wetlands also\"；谓语 = \"store\"；宾语/表语 = \"carbon in marine sediments\""
                   },
                   {
                     "id": "seg-1",
@@ -10733,7 +10680,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Coastal wetlands also store carbon in marine sediments",
-                "summary": "主句是「Coastal wetlands also store carbon in marine…」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Coastal wetlands also\"；谓语 = \"store\"；宾语 = \"carbon in marine sediments, keeping it...\""
+                "summary": "主句是「Coastal wetlands also store carbon in marine…」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Coastal wetlands also\"；谓语 = \"store\"；宾语/表语 = \"carbon in marine sediments\""
               },
               "step4": {
                 "parallels": [],
@@ -10847,7 +10794,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 54,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"This carbon storage capacity of oceans...\"；谓语 = \"is\"；表语 = \"so robust\""
+                    "hint": "主干拆解 —— 主语 = \"This carbon storage capacity of oceans...\"；谓语 = \"is\""
                   },
                   {
                     "id": "seg-1",
@@ -10869,7 +10816,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "This carbon storage capacity of oceans and wetlands is",
-                "summary": "主句是「This carbon storage capacity of oceans and w…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"This carbon storage capacity of oceans...\"；谓语 = \"is\"；表语 = \"so robust\""
+                "summary": "主句是「This carbon storage capacity of oceans and w…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"This carbon storage capacity of oceans...\"；谓语 = \"is\""
               },
               "step4": {
                 "parallels": [],
@@ -10971,7 +10918,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 27,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"We’re worried about\"；谓语 = \"losing\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -10993,7 +10940,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "“We’re worried about losing",
-                "summary": "主句是「“We’re worried about losing」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"We’re worried about\"；谓语 = \"losing\""
+                "summary": "主句是「“We’re worried about losing」，其余 2 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -11197,8 +11144,14 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   },
                   {
-                    "text": "will be used to",
+                    "text": "will be",
                     "start": 51,
+                    "end": 58,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "used to",
+                    "start": 59,
                     "end": 66,
                     "role": "predicate"
                   },
@@ -11236,8 +11189,8 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   }
                 ],
-                "count": 4,
-                "summary": "句中共有 4 个谓语动词（collected / will be used to / respond / cyclones.），意味着有 4 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
+                "count": 5,
+                "summary": "句中共有 5 个谓语动词（collected / will be / used to / respond / cyclones.），意味着有 5 件事要译；另有 3 个\"看着像动词其实不是\"的干扰项，需要排除。"
               },
               "step2": {
                 "breaks": [
@@ -11258,7 +11211,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 225,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"The one-meter core samples\"；谓语 = \"collected\"；宾语 = \"by Lagomasino will be used to identify...\""
+                    "hint": "主干拆解 —— 主语 = \"The one-meter core samples\"；谓语 = \"collected + will be + used to + respond\"；宾语/表语 = \"to specific environmental pressures\""
                   },
                   {
                     "id": "seg-1",
@@ -11271,7 +11224,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "The one-meter core samples collected by Lagomasino will be used to identify historic rates of blue carbon development in mangrove forests and to evaluate how rates of carbon storage respond to specific environmental pressures",
-                "summary": "主句是「The one-meter core samples collected by Lago…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The one-meter core samples\"；谓语 = \"collected\"；宾语 = \"by Lagomasino will be used to identify...\""
+                "summary": "主句是「The one-meter core samples collected by Lago…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The one-meter core samples\"；谓语 = \"collected + will be + used to + respond\"；宾语/表语 = \"to specific environmental pressures\""
               },
               "step4": {
                 "parallels": [],
@@ -11715,7 +11668,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 43,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"During his most recent fieldwork deplo...\"；谓语 = \"used\"；宾语 = \"a small skiff to taxi from one researc...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -11737,7 +11690,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "During his most recent fieldwork deployment",
-                "summary": "主句是「During his most recent fieldwork deployment」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"During his most recent fieldwork deplo...\"；谓语 = \"used\"；宾语 = \"a small skiff to taxi from one researc...\""
+                "summary": "主句是「During his most recent fieldwork deployment」，其余 2 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [
@@ -11867,7 +11820,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 12,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"At each site, he\"；谓语 = \"opened\"；表语 = \"a broad, black case and removed a meta...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -11898,7 +11851,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "At each site",
-                "summary": "主句是「At each site」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"At each site, he\"；谓语 = \"opened\"；表语 = \"a broad, black case and removed a meta...\""
+                "summary": "主句是「At each site」，其余 3 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -11991,11 +11944,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 67,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"The instrument\"；谓语 = \"is designed\"；宾语 = \"to extract core samples from soft soils.\""
+                    "hint": "主干拆解 —— 主语 = \"The instrument\"；谓语 = \"is designed\"；宾语/表语 = \"to extract core samples from soft soils.\""
                   }
                 ],
                 "mainText": "The instrument is designed to extract core samples from soft soils.",
-                "summary": "主句是「The instrument is designed to extract core s…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The instrument\"；谓语 = \"is designed\"；宾语 = \"to extract core samples from soft soils.\""
+                "summary": "主句是「The instrument is designed to extract core s…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The instrument\"；谓语 = \"is designed\"；宾语/表语 = \"to extract core samples from soft soils.\""
               },
               "step4": {
                 "parallels": [],
@@ -12108,7 +12061,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 70,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Everglades peat — which is composed al...\""
+                    "hint": "主干拆解 —— 主语 = \"Everglades peat — which\"；谓语 = \"is composed\"；宾语/表语 = \"almost entirely of the carbon-rich\""
                   },
                   {
                     "id": "seg-1",
@@ -12139,7 +12092,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Everglades peat — which is composed almost entirely of the carbon-rich",
-                "summary": "主句是「Everglades peat — which is composed almost e…」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Everglades peat — which is composed al...\""
+                "summary": "主句是「Everglades peat — which is composed almost e…」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Everglades peat — which\"；谓语 = \"is composed\"；宾语/表语 = \"almost entirely of the carbon-rich\""
               },
               "step4": {
                 "parallels": [
@@ -12255,7 +12208,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 42,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Lagomasino\"；谓语 = \"plunged\"；宾语 = \"the auger into the soil, using his bod...\""
+                    "hint": "主干拆解 —— 主语 = \"Lagomasino\"；谓语 = \"plunged\"；宾语/表语 = \"the auger into the soil\""
                   },
                   {
                     "id": "seg-1",
@@ -12268,7 +12221,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Lagomasino plunged the auger into the soil",
-                "summary": "主句是「Lagomasino plunged the auger into the soil」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Lagomasino\"；谓语 = \"plunged\"；宾语 = \"the auger into the soil, using his bod...\""
+                "summary": "主句是「Lagomasino plunged the auger into the soil」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Lagomasino\"；谓语 = \"plunged\"；宾语/表语 = \"the auger into the soil\""
               },
               "step4": {
                 "parallels": [],
@@ -12393,7 +12346,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 61,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"he\"；谓语 = \"freed\"；宾语 = \"the tool from the Earth, presenting a ...\""
+                    "hint": "主干拆解 —— 主语 = \"he\"；谓语 = \"freed\"；宾语/表语 = \"the tool from the Earth\""
                   },
                   {
                     "id": "seg-2",
@@ -12406,7 +12359,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "he freed the tool from the Earth",
-                "summary": "主句是「he freed the tool from the Earth」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"he\"；谓语 = \"freed\"；宾语 = \"the tool from the Earth, presenting a ...\""
+                "summary": "主句是「he freed the tool from the Earth」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"he\"；谓语 = \"freed\"；宾语/表语 = \"the tool from the Earth\""
               },
               "step4": {
                 "parallels": [],
@@ -12525,7 +12478,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 50,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Each sample\"；谓语 = \"was sealed\"；表语 = \"and shipped back to the lab —\""
+                    "hint": "主干拆解 —— 主语 = \"Each sample\"；谓语 = \"was sealed + shipped\"；宾语/表语 = \"back to the lab\""
                   },
                   {
                     "id": "seg-1",
@@ -12538,7 +12491,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Each sample was sealed and shipped back to the lab",
-                "summary": "主句是「Each sample was sealed and shipped back to t…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Each sample\"；谓语 = \"was sealed\"；表语 = \"and shipped back to the lab —\""
+                "summary": "主句是「Each sample was sealed and shipped back to t…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Each sample\"；谓语 = \"was sealed + shipped\"；宾语/表语 = \"back to the lab\""
               },
               "step4": {
                 "parallels": [],
@@ -12622,11 +12575,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 30,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Everglades peat\"；谓语 = \"forms\"；宾语 = \"quickly.\""
+                    "hint": "主干拆解 —— 主语 = \"Everglades peat\"；谓语 = \"forms\"；宾语/表语 = \"quickly.\""
                   }
                 ],
                 "mainText": "Everglades peat forms quickly.",
-                "summary": "主句是「Everglades peat forms quickly.」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Everglades peat\"；谓语 = \"forms\"；宾语 = \"quickly.\""
+                "summary": "主句是「Everglades peat forms quickly.」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Everglades peat\"；谓语 = \"forms\"；宾语/表语 = \"quickly.\""
               },
               "step4": {
                 "parallels": [],
@@ -12739,7 +12692,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 29,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"In Florida’s mangrove forests, around ...\"；谓语 = \"are added\"；宾语 = \"to the forest floor each year, buildin...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -12761,7 +12714,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "In Florida’s mangrove forests",
-                "summary": "主句是「In Florida’s mangrove forests」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"In Florida’s mangrove forests, around ...\"；谓语 = \"are added\"；宾语 = \"to the forest floor each year, buildin...\""
+                "summary": "主句是「In Florida’s mangrove forests」，其余 2 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -12863,7 +12816,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 21,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Much\"；谓语 = \"like\"；宾语 = \"an ice core, sediment cores offer a wi...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -12876,7 +12829,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Much like an ice core",
-                "summary": "主句是「Much like an ice core」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Much\"；谓语 = \"like\"；宾语 = \"an ice core, sediment cores offer a wi...\""
+                "summary": "主句是「Much like an ice core」，其余 1 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -12963,7 +12916,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 19,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"The deeper the core, the further into ...\"；谓语 = \"can see.\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -12976,7 +12929,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "The deeper the core",
-                "summary": "主句是「The deeper the core」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The deeper the core, the further into ...\"；谓语 = \"can see.\""
+                "summary": "主句是「The deeper the core」，其余 1 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -13076,7 +13029,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 46,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"By\"；谓语 = \"looking\"；宾语 = \"closely at the contents of the soil, r...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -13089,7 +13042,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "By looking closely at the contents of the soil",
-                "summary": "主句是「By looking closely at the contents of the soil」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"By\"；谓语 = \"looking\"；宾语 = \"closely at the contents of the soil, r...\""
+                "summary": "主句是「By looking closely at the contents of the soil」，其余 1 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -13222,7 +13175,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 31,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"In some parts of the Everglades, soil ...\"；谓语 = \"can reach\"；表语 = \"depths of up to 3 meters (10 feet),\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -13253,7 +13206,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "In some parts of the Everglades",
-                "summary": "主句是「In some parts of the Everglades」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"In some parts of the Everglades, soil ...\"；谓语 = \"can reach\"；表语 = \"depths of up to 3 meters (10 feet),\""
+                "summary": "主句是「In some parts of the Everglades」，其余 3 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -13374,7 +13327,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 29,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Deep in the Amazon rainforest, by comp...\"；谓语 = \"sized,\"；宾语 = \"one-meter deposit could take more than...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -13405,7 +13358,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Deep in the Amazon rainforest",
-                "summary": "主句是「Deep in the Amazon rainforest」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Deep in the Amazon rainforest, by comp...\"；谓语 = \"sized,\"；宾语 = \"one-meter deposit could take more than...\""
+                "summary": "主句是「Deep in the Amazon rainforest」，其余 3 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -13479,8 +13432,14 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   },
                   {
-                    "text": "can be restored",
+                    "text": "can be",
                     "start": 90,
+                    "end": 96,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "restored",
+                    "start": 97,
                     "end": 105,
                     "role": "predicate"
                   },
@@ -13491,8 +13450,8 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   }
                 ],
-                "count": 3,
-                "summary": "句中共有 3 个谓语动词（is / can be restored / might be），意味着有 3 件事要译。"
+                "count": 4,
+                "summary": "句中共有 4 个谓语动词（is / can be / restored / might be），意味着有 4 件事要译。"
               },
               "step2": {
                 "breaks": [
@@ -13518,7 +13477,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 55,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"This\"；谓语 = \"is\"；宾语 = \"important in the context of restoratio...\""
+                    "hint": "主干拆解 —— 主语 = \"This\"；谓语 = \"is\"；宾语/表语 = \"important in the context of restoratio...\""
                   },
                   {
                     "id": "seg-1",
@@ -13540,7 +13499,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "This is important in the context of restoration efforts",
-                "summary": "主句是「This is important in the context of restorat…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"This\"；谓语 = \"is\"；宾语 = \"important in the context of restoratio...\""
+                "summary": "主句是「This is important in the context of restorat…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"This\"；谓语 = \"is\"；宾语/表语 = \"important in the context of restoratio...\""
               },
               "step4": {
                 "parallels": [],
@@ -13654,7 +13613,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 93,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"There \"；谓语 = \"are\"；宾语 = \"also significant differences in fluxes...\""
+                    "hint": "主干拆解 —— 主语 = \"“There\"；谓语 = \"are + degraded\"；宾语/表语 = \"ones\""
                   },
                   {
                     "id": "seg-1",
@@ -13676,7 +13635,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "“There are also significant differences in fluxes between healthy mangroves and degraded ones",
-                "summary": "主句是「“There are also significant differences in f…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"There \"；谓语 = \"are\"；宾语 = \"also significant differences in fluxes...\""
+                "summary": "主句是「“There are also significant differences in f…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"“There\"；谓语 = \"are + degraded\"；宾语/表语 = \"ones\""
               },
               "step4": {
                 "parallels": [
@@ -13803,7 +13762,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 45,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"In areas where mangrove forests are su...\""
+                    "hint": "主干拆解 —— 主语 = \"In areas where mangrove forests\"；谓语 = \"are\"；宾语/表语 = \"suffering\""
                   },
                   {
                     "id": "seg-1",
@@ -13834,7 +13793,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "In areas where mangrove forests are suffering",
-                "summary": "主句是「In areas where mangrove forests are suffering」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"In areas where mangrove forests are su...\""
+                "summary": "主句是「In areas where mangrove forests are suffering」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"In areas where mangrove forests\"；谓语 = \"are\"；宾语/表语 = \"suffering\""
               },
               "step4": {
                 "parallels": [],
@@ -13930,16 +13889,10 @@ export const ATLAS_ARTICLES: Article[] = [
                     "start": 90,
                     "end": 99,
                     "role": "predicate"
-                  },
-                  {
-                    "text": "monitor",
-                    "start": 122,
-                    "end": 129,
-                    "role": "predicate"
                   }
                 ],
-                "count": 3,
-                "summary": "句中共有 3 个谓语动词（responds / will help / monitor），意味着有 3 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
+                "count": 2,
+                "summary": "句中共有 2 个谓语动词（responds / will help），意味着有 2 件事要译；另有 1 个\"看着像动词其实不是\"的干扰项，需要排除。"
               },
               "step2": {
                 "breaks": [
@@ -13969,11 +13922,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 207,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"the data product\"；谓语 = \"will help\"；宾语 = \"researchers precisely monitor the impa...\""
+                    "hint": "主干拆解 —— 主语 = \"the data product\"；谓语 = \"will help\"；宾语/表语 = \"researchers precisely monitor the impa...\""
                   }
                 ],
                 "mainText": "the data product will help researchers precisely monitor the impact of ecological changes on global carbon dioxide and methane levels.",
-                "summary": "主句是「the data product will help researchers preci…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"the data product\"；谓语 = \"will help\"；宾语 = \"researchers precisely monitor the impa...\""
+                "summary": "主句是「the data product will help researchers preci…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"the data product\"；谓语 = \"will help\"；宾语/表语 = \"researchers precisely monitor the impa...\""
               },
               "step4": {
                 "parallels": [],
@@ -14078,7 +14031,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 41,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Methane\"；谓语 = \"is\"；表语 = \"naturally produced by microbes\""
+                    "hint": "主干拆解 —— 主语 = \"Methane\"；谓语 = \"is + produced\"；宾语/表语 = \"by microbes\""
                   },
                   {
                     "id": "seg-1",
@@ -14091,7 +14044,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Methane is naturally produced by microbes",
-                "summary": "主句是「Methane is naturally produced by microbes」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Methane\"；谓语 = \"is\"；表语 = \"naturally produced by microbes\""
+                "summary": "主句是「Methane is naturally produced by microbes」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Methane\"；谓语 = \"is + produced\"；宾语/表语 = \"by microbes\""
               },
               "step4": {
                 "parallels": [],
@@ -14199,7 +14152,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 89,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"But as wetland conditions change, the ...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-2",
@@ -14212,7 +14165,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "the growth rate of methane-producing microbes can spike",
-                "summary": "主句是「the growth rate of methane-producing microbe…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"But as wetland conditions change, the ...\""
+                "summary": "主句是「the growth rate of methane-producing microbe…」，其余 2 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -14361,7 +14314,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 150,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 谓语 = \"possessing\"；表语 = \"a warming potential 84 times greater o...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-2",
@@ -14392,7 +14345,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "possessing a warming potential 84 times greater over a 25-year period",
-                "summary": "主句是「possessing a warming potential 84 times grea…」，其余 4 段都是挂在这一主干上的修饰或从句。 主干拆解：谓语 = \"possessing\"；表语 = \"a warming potential 84 times greater o...\""
+                "summary": "主句是「possessing a warming potential 84 times grea…」，其余 4 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -14555,7 +14508,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 157,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Lola Fatoyinbo, a research scientist i...\"；谓语 = \"measured\"；表语 = \"the rate at\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-2",
@@ -14595,7 +14548,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Lola Fatoyinbo, a research scientist in NASA’s Biospheric Sciences Lab",
-                "summary": "主句是「Lola Fatoyinbo, a research scientist in NASA…」，其余 5 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Lola Fatoyinbo, a research scientist i...\"；谓语 = \"measured\"；表语 = \"the rate at\""
+                "summary": "主句是「Lola Fatoyinbo, a research scientist in NASA…」，其余 5 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [
@@ -14834,7 +14787,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 78,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"The scientists\"；谓语 = \"measure\"；表语 = \"flux using chambers designed to adhere...\""
+                    "hint": "主干拆解 —— 主语 = \"The scientists\"；谓语 = \"measure + designed + points\""
                   },
                   {
                     "id": "seg-1",
@@ -14847,7 +14800,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "The scientists measure flux using chambers designed to adhere neatly to points",
-                "summary": "主句是「The scientists measure flux using chambers d…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The scientists\"；谓语 = \"measure\"；表语 = \"flux using chambers designed to adhere...\""
+                "summary": "主句是「The scientists measure flux using chambers d…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The scientists\"；谓语 = \"measure + designed + points\""
               },
               "step4": {
                 "parallels": [],
@@ -14965,7 +14918,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 64,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"They\"；谓语 = \"secure\"；表语 = \"box-like chambers to above-ground root...\""
+                    "hint": "主干拆解 —— 主语 = \"They\"；谓语 = \"secure + branches\""
                   },
                   {
                     "id": "seg-1",
@@ -14978,7 +14931,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "They secure box-like chambers to above-ground roots and branches",
-                "summary": "主句是「They secure box-like chambers to above-groun…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"They\"；谓语 = \"secure\"；表语 = \"box-like chambers to above-ground root...\""
+                "summary": "主句是「They secure box-like chambers to above-groun…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"They\"；谓语 = \"secure + branches\""
               },
               "step4": {
                 "parallels": [],
@@ -15070,11 +15023,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 73,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"The concentration of gases\"；谓语 = \"trapped\"；宾语 = \"in each chamber is measured over time.\""
+                    "hint": "主干拆解 —— 主语 = \"The concentration of gases trapped in ...\"；谓语 = \"is\"；宾语/表语 = \"measured over time.\""
                   }
                 ],
                 "mainText": "The concentration of gases trapped in each chamber is measured over time.",
-                "summary": "主句是「The concentration of gases trapped in each c…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The concentration of gases\"；谓语 = \"trapped\"；宾语 = \"in each chamber is measured over time.\""
+                "summary": "主句是「The concentration of gases trapped in each c…」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The concentration of gases trapped in ...\"；谓语 = \"is\"；宾语/表语 = \"measured over time.\""
               },
               "step4": {
                 "parallels": [],
@@ -15132,14 +15085,14 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   },
                   {
-                    "text": "methane is",
-                    "start": 96,
+                    "text": "is",
+                    "start": 104,
                     "end": 106,
                     "role": "predicate"
                   }
                 ],
                 "count": 3,
-                "summary": "句中共有 3 个谓语动词（declines, / is / methane is），意味着有 3 件事要译。"
+                "summary": "句中共有 3 个谓语动词（declines, / is / is），意味着有 3 件事要译。"
               },
               "step2": {
                 "breaks": [
@@ -15170,7 +15123,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 53,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"In general, as the health of wetland e...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -15192,7 +15145,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "In general, as the health of wetland ecology declines",
-                "summary": "主句是「In general, as the health of wetland ecology…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"In general, as the health of wetland e...\""
+                "summary": "主句是「In general, as the health of wetland ecology…」，其余 2 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [
@@ -15395,7 +15348,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 41,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"What\"；谓语 = \"does\"；宾语 = \"flux look like in ghost forests, for e...\""
+                    "hint": "主干拆解 —— 主语 = \"What\"；谓语 = \"does\"；宾语/表语 = \"flux look like in ghost forests\""
                   },
                   {
                     "id": "seg-1",
@@ -15408,7 +15361,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "What does flux look like in ghost forests",
-                "summary": "主句是「What does flux look like in ghost forests」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"What\"；谓语 = \"does\"；宾语 = \"flux look like in ghost forests, for e...\""
+                "summary": "主句是「What does flux look like in ghost forests」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"What\"；谓语 = \"does\"；宾语/表语 = \"flux look like in ghost forests\""
               },
               "step4": {
                 "parallels": [],
@@ -15590,7 +15543,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 48,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"We’re especially\"；谓语 = \"interested\"；宾语 = \"in the methane part,” Fatoyinbo said.\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -15603,7 +15556,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "“We’re especially interested in the methane part",
-                "summary": "主句是「“We’re especially interested in the methane …」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"We’re especially\"；谓语 = \"interested\"；宾语 = \"in the methane part,” Fatoyinbo said.\""
+                "summary": "主句是「“We’re especially interested in the methane …」，其余 1 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -15683,7 +15636,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 26,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"It’s the least understood, and there’s...\"；谓语 = \"thought.”\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -15696,7 +15649,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "“It’s the least understood",
-                "summary": "主句是「“It’s the least understood」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"It’s the least understood, and there’s...\"；谓语 = \"thought.”\""
+                "summary": "主句是「“It’s the least understood」，其余 1 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -15784,20 +15737,14 @@ export const ATLAS_ARTICLES: Article[] = [
                     "role": "predicate"
                   },
                   {
-                    "text": "produce",
-                    "start": 133,
-                    "end": 140,
-                    "role": "predicate"
-                  },
-                  {
                     "text": "said.",
                     "start": 182,
                     "end": 187,
                     "role": "predicate"
                   }
                 ],
-                "count": 4,
-                "summary": "句中共有 4 个谓语动词（Based / remove / produce / said.），意味着有 4 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+                "count": 3,
+                "summary": "句中共有 3 个谓语动词（Based / remove / said.），意味着有 3 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
               },
               "step2": {
                 "breaks": [
@@ -15828,7 +15775,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 49,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 谓语 = \"Based\"；表语 = \"on data collected during BlueFlux fiel...\""
+                    "hint": "主干拆解 —— 主语 = \"\"；谓语 = \"Based\"；宾语/表语 = \"on data collected during BlueFlux fiel...\""
                   },
                   {
                     "id": "seg-1",
@@ -15850,7 +15797,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Based on data collected during BlueFlux fieldwork",
-                "summary": "主句是「Based on data collected during BlueFlux fiel…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：谓语 = \"Based\"；表语 = \"on data collected during BlueFlux fiel...\""
+                "summary": "主句是「Based on data collected during BlueFlux fiel…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"\"；谓语 = \"Based\"；宾语/表语 = \"on data collected during BlueFlux fiel...\""
               },
               "step4": {
                 "parallels": [],
@@ -15982,11 +15929,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 122,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"But overall, these ecosystems\"；谓语 = \"appear\"；宾语 = \"to provide a net climate benefit, remo...\""
+                    "hint": "主干拆解 —— 主语 = \"removing more greenhouse gases than they\"；谓语 = \"produce.”\""
                   }
                 ],
                 "mainText": "removing more greenhouse gases than they produce.”",
-                "summary": "主句是「removing more greenhouse gases than they pro…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"But overall, these ecosystems\"；谓语 = \"appear\"；宾语 = \"to provide a net climate benefit, remo...\""
+                "summary": "主句是「removing more greenhouse gases than they pro…」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"removing more greenhouse gases than they\"；谓语 = \"produce.”\""
               },
               "step4": {
                 "parallels": [],
@@ -16204,7 +16151,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 32,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Florida’s wetlands\"；谓语 = \"are\"；宾语 = \"roughly 5,000 years old.\""
+                    "hint": "主干拆解 —— 主语 = \"Florida’s wetlands\"；谓语 = \"are\"；宾语/表语 = \"roughly 5\""
                   },
                   {
                     "id": "seg-1",
@@ -16217,7 +16164,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "Florida’s wetlands are roughly 5",
-                "summary": "主句是「Florida’s wetlands are roughly 5」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Florida’s wetlands\"；谓语 = \"are\"；宾语 = \"roughly 5,000 years old.\""
+                "summary": "主句是「Florida’s wetlands are roughly 5」，其余 1 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Florida’s wetlands\"；谓语 = \"are\"；宾语/表语 = \"roughly 5\""
               },
               "step4": {
                 "parallels": [],
@@ -16283,8 +16230,14 @@ export const ATLAS_ARTICLES: Article[] = [
                     "note": "是介词，不是动词"
                   },
                   {
-                    "text": "has been lost",
+                    "text": "has been",
                     "start": 86,
+                    "end": 94,
+                    "role": "predicate"
+                  },
+                  {
+                    "text": "lost",
+                    "start": 95,
                     "end": 99,
                     "role": "predicate"
                   },
@@ -16308,8 +16261,8 @@ export const ATLAS_ARTICLES: Article[] = [
                     "note": "不定式 to do，不能作谓语"
                   }
                 ],
-                "count": 3,
-                "summary": "句中共有 3 个谓语动词（has been lost / was cleared / was drained），意味着有 3 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
+                "count": 4,
+                "summary": "句中共有 4 个谓语动词（has been / lost / was cleared / was drained），意味着有 4 件事要译；另有 2 个\"看着像动词其实不是\"的干扰项，需要排除。"
               },
               "step2": {
                 "breaks": [
@@ -16344,7 +16297,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 99,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"But in just the past century, more tha...\"；谓语 = \"has been lost\""
+                    "hint": "主干拆解 —— 主语 = \"more than half of the state’s original...\"；谓语 = \"has been + lost\""
                   },
                   {
                     "id": "seg-2",
@@ -16357,7 +16310,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "more than half of the state’s original wetland coverage has been lost",
-                "summary": "主句是「more than half of the state’s original wetla…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"But in just the past century, more tha...\"；谓语 = \"has been lost\""
+                "summary": "主句是「more than half of the state’s original wetla…」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"more than half of the state’s original...\"；谓语 = \"has been + lost\""
               },
               "step4": {
                 "parallels": [],
@@ -16462,11 +16415,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 106,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"The Everglades system now\"；谓语 = \"contains\"；宾语 = \"65% less peat and 77% less stored carb...\""
+                    "hint": "主干拆解 —— 主语 = \"The Everglades system now\"；谓语 = \"contains + stored + did\"；宾语/表语 = \"prior to drainage.\""
                   }
                 ],
                 "mainText": "The Everglades system now contains 65% less peat and 77% less stored carbon than it did prior to drainage.",
-                "summary": "主句是「The Everglades system now contains 65% less …」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The Everglades system now\"；谓语 = \"contains\"；宾语 = \"65% less peat and 77% less stored carb...\""
+                "summary": "主句是「The Everglades system now contains 65% less …」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The Everglades system now\"；谓语 = \"contains + stored + did\"；宾语/表语 = \"prior to drainage.\""
               },
               "step4": {
                 "parallels": [],
@@ -16569,7 +16522,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 27,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"The future of the ecosystem — which is...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -16600,7 +16553,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "The future of the ecosystem",
-                "summary": "主句是「The future of the ecosystem」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The future of the ecosystem — which is...\""
+                "summary": "主句是「The future of the ecosystem」，其余 3 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -16698,11 +16651,11 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 111,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Scientists who have dedicated their ca...\""
+                    "hint": "主干拆解 —— 主语 = \"Scientists who\"；谓语 = \"have dedicated + are\"；宾语/表语 = \"hopeful.\""
                   }
                 ],
                 "mainText": "Scientists who have dedicated their careers to understanding and restoring South Florida’s ecology are hopeful.",
-                "summary": "主句是「Scientists who have dedicated their careers …」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Scientists who have dedicated their ca...\""
+                "summary": "主句是「Scientists who have dedicated their careers …」，其余 0 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Scientists who\"；谓语 = \"have dedicated + are\"；宾语/表语 = \"hopeful.\""
               },
               "step4": {
                 "parallels": [],
@@ -16796,7 +16749,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 30,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"Nature and people\"；谓语 = \"can coexist,” said\"；宾语 = \"Meenakshi Chabba, an ecologist and res...\""
+                    "hint": "这是整句的骨架，先把它译通再挂修饰"
                   },
                   {
                     "id": "seg-1",
@@ -16818,7 +16771,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "“Nature and people can coexist",
-                "summary": "主句是「“Nature and people can coexist」，其余 2 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"Nature and people\"；谓语 = \"can coexist,” said\"；宾语 = \"Meenakshi Chabba, an ecologist and res...\""
+                "summary": "主句是「“Nature and people can coexist」，其余 2 段都是挂在这一主干上的修饰或从句。"
               },
               "step4": {
                 "parallels": [],
@@ -17102,7 +17055,7 @@ export const ATLAS_ARTICLES: Article[] = [
                     "end": 95,
                     "type": "主句",
                     "isMain": true,
-                    "hint": "主干拆解 —— 主语 = \"The next step for NASA’s BlueFlux\"；谓语 = \"campaign is\"；表语 = \"the development of a satellite-based d...\""
+                    "hint": "主干拆解 —— 主语 = \"The next step for NASA’s BlueFlux\"；谓语 = \"campaign is\"；宾语/表语 = \"the development of a satellite-based d...\""
                   },
                   {
                     "id": "seg-1",
@@ -17133,7 +17086,7 @@ export const ATLAS_ARTICLES: Article[] = [
                   }
                 ],
                 "mainText": "The next step for NASA’s BlueFlux campaign is the development of a satellite-based data product",
-                "summary": "主句是「The next step for NASA’s BlueFlux campaign i…」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The next step for NASA’s BlueFlux\"；谓语 = \"campaign is\"；表语 = \"the development of a satellite-based d...\""
+                "summary": "主句是「The next step for NASA’s BlueFlux campaign i…」，其余 3 段都是挂在这一主干上的修饰或从句。 主干拆解：主语 = \"The next step for NASA’s BlueFlux\"；谓语 = \"campaign is\"；宾语/表语 = \"the development of a satellite-based d...\""
               },
               "step4": {
                 "parallels": [],
@@ -17161,7 +17114,7 @@ export const ATLAS_ARTICLES: Article[] = [
       }
     ],
     "createdAt": "2026-09-15T00:00:00.000Z",
-    "updatedAt": "2026-09-17T07:53:31.110Z"
+    "updatedAt": "2026-09-17T13:28:08.249Z"
   }
 ];
 

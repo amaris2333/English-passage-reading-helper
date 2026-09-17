@@ -1,4 +1,4 @@
-import { analyzeSentence, tagTerms, type TaggedTerm } from './analyze';
+import { tagTerms, type TaggedTerm } from './analyze';
 import type { BreakPoint, FiveStep, ParallelGroup, PredicateItem, PredicateRole, Segment } from '../types';
 
 /**
@@ -37,7 +37,6 @@ const SUB_INFO: Record<string, { type: string; relation: string }> = {
   whose: { type: '定语从句', relation: '修饰' },
   where: { type: '定语从句', relation: '修饰' },
   so: { type: '目的 / 结果状语从句', relation: '目的或结果' },
-  such: { type: '定语从句', relation: '修饰' },
 };
 
 const RELATIVE = new Set(['which', 'who', 'whom', 'whose', 'where', 'that']);
@@ -96,6 +95,22 @@ function classifyVerb(t: TaggedTerm, terms: TaggedTerm[], i: number): PredicateR
   if (has('Conjunction', 'Subordinator')) return null;
 
   if (has('Modal', 'Auxiliary', 'Copula')) return 'predicate';
+
+  // ⚠️ research / debate / increase / use / change 这类词既是名词又是动词，
+  // compromise 会同时打上 Noun 和 Verb 标签。若它处在名词位置（前有形容词/限定词，
+  // 或后面紧跟介词），应视为名词，不能算谓语。
+  if (has('Noun') && has('Verb')) {
+    const prev = terms[i - 1];
+    const nxt = terms[i + 1];
+    const prevIsModifier = !!prev && prev.tags.some((x) =>
+      x === 'Adjective' || x === 'Determiner' || x === 'Possessive' || x === 'Gerund');
+    const prevIsNounish = !!prev && prev.tags.some((x) => x === 'Noun' || x === 'ProperNoun' || x === 'Plural');
+    const nextIsPrep = !!nxt && (nxt.tags.includes('Preposition') || CONFUSABLE_PREP.has(clean(nxt.text)));
+    const coordWithNoun = !!prev && /^\s*(and|or)\s*$/i.test(prev.text);
+    if ((prevIsModifier || nextIsPrep || coordWithNoun || prevIsNounish) && !has('Auxiliary', 'Modal')) {
+      return null;   // 当作名词，不列入动词候选
+    }
+  }
 
   if (has('PastTense', 'PresentTense')) {
     if (has('Participle') && !has('PastTense')) return 'nonfinite';
@@ -169,6 +184,27 @@ function buildPredicates(en: string): PredicateItem[] {
   const inQuote = (idx: number) => quoted.some(([a, b]) => idx > a && idx < b);
 
   const baseRoles: Array<PredicateRole | null> = terms.map((t, i) => (inQuote(t.index) ? null : classifyVerb(t, terms, i)));
+
+  // 宾语位置的「光杆动词形」纠正。
+  // 难点：research / debate / increase / use 这类词的现在时与不定式同形，
+  // compromise 只给 Verb,PresentTense,Infinitive 标签（连 Noun 都不给），
+  // 于是 "have spurred further research and debate" 里的 research / debate 会被误当谓语。
+  // 判据：① 是光杆形式（无 Modal/Auxiliary）
+  //       ② 紧跟在副词或并列连词之后
+  //       ③ 句中已经出现过谓语（说明它处在宾语位置而非主句谓语）
+  let seenPredicate = false;
+  for (let i = 0; i < terms.length; i++) {
+    const t = terms[i];
+    if (baseRoles[i] !== 'predicate') continue;
+    const bare = t.tags.includes('Infinitive') && !t.tags.includes('Modal') && !t.tags.includes('Auxiliary');
+    const prev = terms[i - 1];
+    const prevIsOpen = !!prev && prev.tags.some((x) => x === 'Adverb' || x === 'Conjunction');
+    if (seenPredicate && bare && prevIsOpen) {
+      baseRoles[i] = null;            // 处在宾语位置，是名词而非谓语
+      continue;
+    }
+    seenPredicate = true;
+  }
   const roles: Array<PredicateRole | null> = baseRoles.map((r, i) =>
     r === 'predicate' && terms[i].tags.includes('PastTense') && looksLikeReducedRelative(terms, baseRoles, i, en)
       ? 'nonfinite'
@@ -183,28 +219,26 @@ function buildPredicates(en: string): PredicateItem[] {
     const end = start + t.text.length;
 
     if (role === 'predicate') {
-      // 合并「助动词 + 副词 + 实义动词」为一个谓语
-      let j = i;
+      // 只向下合并「一个」动词（助动词 + 实义动词），中间最多夹一个副词。
+      // 之前会连续吞并，导致 "have spurred further research and debate" 整段被当成谓语。
+      const parts = [t.text];
       let lastEnd = end;
-      let lastText = t.text;
       let k = i + 1;
-      while (k < terms.length) {
-        const kw = clean(terms[k].text);
-        if (roles[k] === 'predicate') { lastEnd = terms[k].index + terms[k].text.length; lastText += ' ' + terms[k].text; k++; j = k - 1; continue; }
-        if (SKIP_IN_VP.has(kw)) { k++; continue; }
+      let skipped = 0;
+      while (k < terms.length && skipped < 4) {
+        if (roles[k] === 'predicate') {
+          parts.push(terms[k].text);
+          lastEnd = terms[k].index + terms[k].text.length;
+          i = k;
+          break;
+        }
+        if (SKIP_IN_VP.has(clean(terms[k].text))) { k++; skipped++; continue; }
         break;
       }
-      // 跳过副词后若紧跟动词，也并入
-      const nxt = terms[k];
-      if (nxt && roles[k] === 'predicate' && k > i + 1) {
-        lastEnd = nxt.index + nxt.text.length;
-        lastText += ' ' + nxt.text;
-        j = k;
-      }
-      items.push({ text: en.slice(start, lastEnd), start, end: lastEnd, role: 'predicate' });
-      i = j;
+      items.push({ text: parts.join(' '), start, end: lastEnd, role: 'predicate' });
       continue;
     }
+
 
     let note: string | undefined;
     if (role === 'nonfinite') {
@@ -503,15 +537,26 @@ export function analyzeFiveStep(en: string): FiveStep | undefined {
   const main = segments.find((s) => s.isMain);
 
   // 第三步补充：用句法分析取出主干的 主语 / 谓语 / 宾语或表语
-  const sv = analyzeSentence(text);
+  const sv = { chunks: [] as Array<{ role: string; text: string; start: number; end: number }> };
   const cut = (t?: string) => (t && t.length > 40 ? t.slice(0, 38) + '...' : t ?? '');
-  const sPart = sv.chunks.find((c) => c.role === 'S');
-  const vPart = sv.chunks.find((c) => c.role === 'V');
-  const oPart = sv.chunks.find((c) => c.role === 'O') ?? sv.chunks.find((c) => c.role === 'C');
+  // 从主句段自身拆主干：主句内的谓语动词之前的 = 主语，之后的 = 宾语/表语
+  const mainPreds = main
+    ? realPredicates.filter((q) => q.start >= main.start && q.end <= main.end)
+    : [];
+  const sPart = mainPreds.length
+    ? { text: text.slice(main!.start, mainPreds[0].start).trim() }
+    : undefined;
+  const lastPred = mainPreds[mainPreds.length - 1];
+  const vPart = mainPreds.length
+    ? { text: mainPreds.map((q) => q.text).join(' + ') }
+    : undefined;
+  const oPart = lastPred && main
+    ? { text: text.slice(lastPred.end, main!.end).trim() }
+    : undefined;
   const parts: string[] = [];
   if (sPart) parts.push('主语 = "' + cut(sPart.text) + '"');
   if (vPart) parts.push('谓语 = "' + cut(vPart.text) + '"');
-  if (oPart) parts.push((oPart.role === 'C' ? '表语' : '宾语') + ' = "' + cut(oPart.text) + '"');
+  if (oPart && oPart.text) parts.push('宾语/表语 = "' + cut(oPart.text) + '"');
   const trunk = parts.join('；');
   if (main && trunk) main.hint = '主干拆解 —— ' + trunk;
 

@@ -15,6 +15,7 @@ export const TAG_VOCAB = [
   '心理与社会',
   '文化教育',
   '国际政治',
+  '能源材料',
 ] as const;
 
 const TAG_KEYWORDS: Record<string, string[]> = {
@@ -57,6 +58,12 @@ const TAG_KEYWORDS: Record<string, string[]> = {
     'government', 'policy', 'election', 'parliament', 'congress', 'president', 'minister',
     'treaty', 'sanction', 'diplomacy', 'war', 'conflict', 'military', 'regulation', 'law',
     'legislation', 'court', 'vote', 'campaign', 'nation',
+  ],
+  能源材料: [
+    'battery', 'batteries', 'electrode', 'anode', 'cathode', 'electrolyte', 'lithium',
+    'supercapacitor', 'fuel cell', 'solar cell', 'photovoltaic', 'semiconductor',
+    'catalyst', 'material', 'materials science', 'nanoparticle', 'graphene', 'alloy',
+    'energy storage', 'rechargeable', 'corrosion', 'thermal',
   ],
 };
 

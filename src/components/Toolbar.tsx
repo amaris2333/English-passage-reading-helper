@@ -72,7 +72,16 @@ export function Toolbar() {
               · 释义与考试分级：<a href="https://github.com/skywind3000/ECDICT" target="_blank" rel="noreferrer">ECDICT</a>（MIT License）<br />
               · 例句：<a href="https://tatoeba.org" target="_blank" rel="noreferrer">Tatoeba</a>（CC BY 2.0 FR），
               由 <a href="https://tatoeba.org/zh-cn/stats/sentences_by_language/eng" target="_blank" rel="noreferrer">社区贡献者</a> 提供<br />
-              · 内置范例：美国国会研究服务处（CRS）、NASA（均为公共领域）
+              · 内置范例：美国国会研究服务处（CRS）、NASA、美国能源部（DOE）、NIST
+              （均为美国联邦政府作品，公共领域）；{' '}
+              <a
+                href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3002053"
+                target="_blank"
+                rel="noreferrer"
+              >
+                PLOS Biology
+              </a>
+              （CC BY 4.0）
             </div>
 
             <div className="row" style={{ marginTop: 12 }}>

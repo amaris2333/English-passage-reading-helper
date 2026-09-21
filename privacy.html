@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>隐私说明 · 英语外刊精读</title>
+  <style>
+    :root {
+      --primary: #4a5d8f;
+      --bg: #f7f6f3;
+      --text: #333;
+      --muted: #777;
+      --border: #e3e1db;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+    h1 {
+      color: var(--primary);
+      font-size: 26px;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    .sub {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0 0 32px;
+    }
+    h2 {
+      color: var(--primary);
+      font-size: 18px;
+      font-weight: 600;
+      margin: 36px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+    p { margin: 12px 0; }
+    ul { margin: 12px 0; padding-left: 22px; }
+    li { margin: 8px 0; }
+    .danger {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 6px;
+      padding: 16px 18px;
+      margin: 16px 0;
+    }
+    .danger strong { color: var(--primary); }
+    .key {
+      display: inline-block;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1px 7px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      color: var(--primary);
+    }
+    a { color: var(--primary); }
+    .foot {
+      margin-top: 48px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>隐私说明</h1>
+    <p class="sub">英语外刊精读 · 最后更新：2026 年 9 月 21 日</p>
+
+    <p>
+      我们非常重视你的隐私。本应用是一款<strong>纯前端</strong>的英语学习工具，
+      你的绝大部分数据都只存在于你自己的设备上。下面说明我们统计的访问数据，
+      以及我们<strong>绝不</strong>收集的内容。
+    </p>
+
+    <h2>一、我们统计什么</h2>
+    <p>为了知道<strong>有多少人在使用这个工具</strong>，我们只统计<strong>页面访问量</strong>：</p>
+    <ul>
+      <li>页面被打开的次数，以及独立访客数</li>
+      <li>访客来源（例如来自小红书、搜索引擎，还是直接访问）</li>
+      <li>国家 / 地区级别的粗略位置</li>
+      <li>访客的浏览器与设备类型（桌面 / 移动）</li>
+    </ul>
+    <p>
+      这些数据<strong>不包含任何可以识别「你是谁」的信息</strong>：不使用 cookie，
+      不存储 IP 地址，也不使用持久化的用户标识或设备指纹。
+    </p>
+
+    <div class="danger">
+      <p style="margin:0;">
+        <strong>另外说明</strong>：本应用的代码中内置了一套可选的「功能使用埋点」
+        （用于记录诸如「打开了哪篇文章」「展开了几个句子」这类功能使用情况）。
+        这套埋点<strong>目前完全关闭，未接入任何分析服务</strong>。
+        如果将来启用，我们会先更新本页面。
+      </p>
+    </div>
+
+    <h2>二、我们绝不收集什么（重点）</h2>
+    <div class="danger">
+      <p style="margin:0;">
+        以下<strong>由你输入的文字，任何情况下都不会离开你的浏览器</strong>：
+      </p>
+      <ul style="margin:10px 0 0;">
+        <li>你的<strong>译文</strong>（你写的每一句中文翻译）</li>
+        <li>你的<strong>笔记正文</strong>与便签文字</li>
+        <li>你<strong>收藏的具体句子或单词</strong></li>
+        <li>任何<strong>输入框</strong>里你敲下的内容</li>
+      </ul>
+      <p style="margin:10px 0 0;">
+        我们不采集、不上传、不存储你的任何用户内容。
+        访问统计只记录「有人打开了这个页面」这一事实，与你读了什么、写了什么毫无关系。
+      </p>
+    </div>
+
+    <h2>三、数据存在哪里</h2>
+    <ul>
+      <li>
+        <strong>本地数据</strong>：你的文章、笔记、收藏、笔迹等，全部保存在你浏览器自带的
+        <span class="key">IndexedDB</span> 中，仅存在于本机，不会自动上传到任何服务器。
+      </li>
+      <li>
+        <strong>访问统计</strong>：页面访问量由 <strong>GoatCounter</strong>
+        （开源统计服务，<span class="key">amaris2333.goatcounter.com</span>）统计。
+        它不使用 cookie、不存储 IP 地址，也不建立跨站点的用户画像。
+        统计数据<strong>只在站点所有者登录后的后台可见，页面上不显示任何数字</strong>。
+      </li>
+    </ul>
+
+    <h2>四、如何退出统计</h2>
+    <p>我们不希望你在不知情的情况下被统计。你可以随时选择退出：</p>
+    <ul>
+      <li>
+        安装并启用<strong>广告拦截 / 隐私保护类浏览器扩展</strong>（如 uBlock Origin），
+        即可拦截发往 <span class="key">goatcounter.com</span> 与 <span class="key">gc.zgo.at</span> 的请求。
+      </li>
+      <li>在浏览器中<strong>禁用 JavaScript</strong> 也能阻止统计（但应用本身将无法运行）。</li>
+      <li>使用<strong>无痕 / 隐私浏览模式</strong>，关闭窗口后不留痕迹。</li>
+    </ul>
+
+    <h2>五、联系与变更</h2>
+    <p>
+      如你对隐私有任何疑问，或通过本页面预留的渠道联系我们（占位：
+      <span class="key">privacy@example.com</span>）。
+    </p>
+    <p>
+      本说明可能随产品更新而调整。如有实质性变更，我们会在应用内或本页面予以告知。
+      （预留：更新日志 / 变更说明链接）
+    </p>
+
+    <div class="foot">
+      © 英语外刊精读 · 本页面为纯静态说明，不加载任何外部资源，也不包含统计代码。
+    </div>
+  </div>
+</body>
+</html>

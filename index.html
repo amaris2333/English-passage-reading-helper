@@ -22,8 +22,12 @@
     <script type="module" src="/src/main.tsx"></script>
     <!-- 访问量统计（GoatCounter）：不使用 cookie、不记录 IP，仅统计页面访问次数。
          它不在页面上显示任何内容；数据只能在站点所有者登录的后台中查看。
-         如需排除自己的访问：在网址末尾加上 #toggle-goatcounter 后回车。 -->
+         如需排除自己的访问：在网址末尾加上 #toggle-goatcounter 后回车。
+
+         注意：脚本用同源的 ./count.js（GoatCounter 官方脚本，ISC 许可，v 见 public/count.js 头部），
+         而不是官方 CDN 的 gc.zgo.at —— 该域名在国内网络下不可达（实测 502），
+         会导致脚本加载失败、数据一条也收不到。自托管后仅「上报」请求发往 goatcounter.com。 -->
     <script data-goatcounter="https://amaris2333.goatcounter.com/count"
-            async src="//gc.zgo.at/count.js"></script>
+            async src="./count.js"></script>
   </body>
 </html>
